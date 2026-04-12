@@ -19,7 +19,7 @@ export default function BaureinigungPage() {
 <Link className="font-manrope tracking-tight text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="/landing/spezialreinigung" >Institutionell</Link>
 <Link className="font-manrope tracking-tight text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="/landing/saisonale-pflege" >Saisonal</Link>
 </div>
-<Link href="/kontakt" className="hidden md:inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-emerald-700 hover:bg-emerald-800 transition-colors duration-300">
+<Link href="#contact" className="hidden md:inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-emerald-700 hover:bg-emerald-800 transition-colors duration-300">
             Jetzt buchen
         </Link>
 </div>
@@ -37,7 +37,7 @@ export default function BaureinigungPage() {
                     Nahtloser Übergang von der Baustelle zur schlüsselfertigen Übergabe. Unsere spezialisierten Teams entfernen feinsten Staub, Schutt und Rückstände, die Standardreiniger übersehen.
                 </p>
 <div className="flex flex-col sm:flex-row gap-4">
-<a className="hero-gradient text-on-primary px-8 py-4 rounded-xl font-bold text-center transition-all hover:shadow-xl hover:shadow-primary/20 flex items-center justify-center gap-2" href="#contact" >
+<a className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-center transition-all hover:bg-emerald-800 hover:shadow-xl hover:shadow-primary/20 flex items-center justify-center gap-2" href="#contact" >
                         Termin vereinbaren
                         <span className="material-symbols-outlined text-lg" >arrow_forward</span>
 </a>
@@ -213,7 +213,7 @@ export default function BaureinigungPage() {
 <label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant" >Telefonnummer</label>
 <input className="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="+49 (0) 000 000000" type="tel" />
 </div>
-<button className="w-full hero-gradient text-on-primary py-4 rounded-xl font-bold text-lg hover:shadow-lg transition-all active:scale-[0.98]" type="submit" >
+<button className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:bg-emerald-800 transition-all active:scale-[0.98]" type="submit" >
                             Termin vereinbaren
                         </button>
 </form>

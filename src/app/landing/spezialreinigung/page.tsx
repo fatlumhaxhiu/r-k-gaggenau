@@ -17,14 +17,14 @@ export default function SpezialreinigungPage() {
 <Link className="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-600 transition-colors font-manrope tracking-tight text-sm" href="/landing/baureinigung" >Baugrundreinigung</Link>
 <Link className="text-emerald-700 dark:text-emerald-400 font-bold border-b-2 border-emerald-700 dark:border-emerald-400 pb-1 font-manrope tracking-tight text-sm" href="/landing/spezialreinigung" >Institutionell</Link>
 <Link className="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-600 transition-colors font-manrope tracking-tight text-sm" href="/landing/saisonale-pflege" >Saisonal</Link></div>
-<Link href="/kontakt" className="hidden md:inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-emerald-700 hover:bg-emerald-800 transition-colors duration-300">Jetzt buchen</Link>
+<Link href="#contact" className="hidden md:inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-emerald-700 hover:bg-emerald-800 transition-colors duration-300">Jetzt buchen</Link>
 </div>
 </nav>
 {/*  Hero Section  */}
 <header className="relative min-h-[921px] flex items-center overflow-hidden">
 <div className="absolute inset-0 z-0">
-<img className="w-full h-full object-cover grayscale-[20%] opacity-90" data-alt="Moderne High-End-Zahnklinik mit makellosen weißen Oberflächen, präziser chirurgischer Beleuchtung und architektonischen Glastrennwänden in einer sanften Tageslichtatmosphäre" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4BVmIY4y3QmVwZmeLxww0P4frIvGlhVftF76Xo2L10f4H4Tm2xO6zXtrHh_UOD_UwDY6SpHFCaz--0mCphXLMmMsozLUkeDJEdcxutAl0kSjft8ib0IOIa9GM4i8oYqUM_pMl93Ncp00oQY-1aZeHoXd5c6D7kxYkCQVXXQCDtk40B_86c3awQIg34ROuqnUEJt9fIN1Usi-abl0lW18F15O6czo7ejnL8H2trQv0e05i8EgHk4Z8637IkaPHmLrwHxWKHh0AGpQ"  />
-<div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+<img className="w-full h-full object-cover grayscale-20 opacity-90" data-alt="Moderne High-End-Zahnklinik mit makellosen weißen Oberflächen, präziser chirurgischer Beleuchtung und architektonischen Glastrennwänden in einer sanften Tageslichtatmosphäre" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4BVmIY4y3QmVwZmeLxww0P4frIvGlhVftF76Xo2L10f4H4Tm2xO6zXtrHh_UOD_UwDY6SpHFCaz--0mCphXLMmMsozLUkeDJEdcxutAl0kSjft8ib0IOIa9GM4i8oYqUM_pMl93Ncp00oQY-1aZeHoXd5c6D7kxYkCQVXXQCDtk40B_86c3awQIg34ROuqnUEJt9fIN1Usi-abl0lW18F15O6czo7ejnL8H2trQv0e05i8EgHk4Z8637IkaPHmLrwHxWKHh0AGpQ"  />
+<div className="absolute inset-0 bg-linear-to-r from-surface via-surface/60 to-transparent"></div>
 </div>
 <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
 <div className="max-w-2xl">
@@ -36,7 +36,7 @@ export default function SpezialreinigungPage() {
                     Spezialisierte Reinigung auf wissenschaftlichem Niveau. Wir bieten klinische Desinfektion für das Gesundheitswesen, Bildungseinrichtungen und anspruchsvolle Architektur.
                 </p>
 <div className="flex flex-col sm:flex-row gap-4">
-<button className="gradient-cta text-on-primary px-10 py-4 rounded-lg font-bold text-base shadow-xl hover:shadow-primary/20 transition-all" >
+<button className="bg-primary text-white px-10 py-4 rounded-lg font-bold text-base shadow-xl hover:bg-emerald-800 transition-all" >
                         Termin vereinbaren
                     </button>
 <button className="bg-surface-container-highest/50 backdrop-blur-md text-on-surface px-10 py-4 rounded-lg font-bold text-base hover:bg-surface-container-highest transition-all" >
@@ -73,7 +73,7 @@ export default function SpezialreinigungPage() {
 </div>
 <div className="md:col-span-3 relative rounded-xl overflow-hidden min-h-[300px]">
 <img className="absolute inset-0 w-full h-full object-cover" data-alt="Professioneller Reinigungstechniker in einem minimalistischen medizinischen Büro mit modernster Sanierungsausrüstung, klaren architektonischen Linien und weichem natürlichem Licht" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrWogrDKLnEj-ozPSsh0pvOLLUTIy_wsrzOm8mPvAbPE4ZBur2TD64h6PC0bQo-P16eAhIGEQRqSygPJd2oHbSHxxYeVp2OaJWEoEoN28mFLZqbTHRSn_PWB3Ayo9MSNwouPRrYlZ7tFv4KFEugdN4Kj6uAK6QQ3AWFCA66Il_0XWhw3clqN3bmtYk87AXZ7AYpPMYcWkCO6t0m8omR9IIr0rvMvRWu9vxSUMU-541y_DEV1nektwLQzr6SqvJbSs103vtdbj6wlk"  />
-<div className="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div className="absolute inset-0 bg-linear-to-t from-on-surface/80 via-transparent to-transparent"></div>
 <div className="absolute bottom-0 left-0 p-10">
 <h4 className="text-white font-headline text-2xl font-bold" >Der Goldstandard in der Präzision</h4>
 </div>
@@ -94,9 +94,9 @@ export default function SpezialreinigungPage() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 {/*  Service 1  */}
-<div className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-lowest transition-transform hover:-translate-y-2 duration-500">
+<div className="group relative aspect-4/5 overflow-hidden rounded-xl bg-surface-container-lowest transition-transform hover:-translate-y-2 duration-500">
 <img className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="Steriler moderner Arztpraxis-Untersuchungsraum mit hochwertigen klinischen Möbeln und makellosen Oberflächen in kühler chirurgischer Beleuchtung" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6UwcMQuVjBpBuO2g92O81wAUjkIzgvMclcGSRLt9auSX7j-Pb7uwgWQhOFzzbMWdSZAiud6j7jiaULUAArtP4X9xiMoMSmdcpdgu02POagqdfE-3hpvxwsCyz8LdReclpjKgIuJPjk6Wh7OlXr1RodKCu_irj19UtiXxyxBcVbF1ayaR93Si5z5WjORGN5p6PoY-HJKIakUM0nHyV1_zee3DL_SDRLtilXUCckAWNdHYRkexLR2HnL-XW244NLal0upmvhHzxfZA"  />
-<div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/20 to-transparent"></div>
+<div className="absolute inset-0 bg-linear-to-t from-surface-container-lowest via-surface-container-lowest/20 to-transparent"></div>
 <div className="absolute bottom-0 p-8 w-full">
 <span className="text-secondary font-bold text-4xl opacity-20 mb-2 block font-headline" >01</span>
 <h3 className="font-headline text-xl font-bold text-on-surface mb-2" >Arztpraxisreinigung</h3>
@@ -104,9 +104,9 @@ export default function SpezialreinigungPage() {
 </div>
 </div>
 {/*  Service 2  */}
-<div className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-lowest transition-transform hover:-translate-y-2 duration-500 md:mt-12">
+<div className="group relative aspect-4/5 overflow-hidden rounded-xl bg-surface-container-lowest transition-transform hover:-translate-y-2 duration-500 md:mt-12">
 <img className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="Heller moderner High-School-Korridor mit minimalistischen Schließfächern und polierten architektonischen Betonböden in heller Nachmittagssonne" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrbr5-uUtST7WmsAmPpkrfjlznEyZri_A5JORUR0UNE7fUc6mNNowBIVSLhJ7GeUHC5Ybv4dwtgms3UgxboPICJjEL3AijVIrrsFzrZ9uoqMZPo0P8oNtqPa_KAIgh41AkK1N72o7FM646TAIkTrXCnEkFBQPbxPpK-118YcgnH8Vg1G_FhatNw5EBm24gDT7LRzSZSuOk3kF-yEyZC_6Gd2e1oRdkvzqhj4bFWT30lhR4KrXHSyg5kCXtddv1reuA1A44H2gOg6g"  />
-<div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/20 to-transparent"></div>
+<div className="absolute inset-0 bg-linear-to-t from-surface-container-lowest via-surface-container-lowest/20 to-transparent"></div>
 <div className="absolute bottom-0 p-8 w-full">
 <span className="text-secondary font-bold text-4xl opacity-20 mb-2 block font-headline" >02</span>
 <h3 className="font-headline text-xl font-bold text-on-surface mb-2" >Schulreinigung</h3>
@@ -114,9 +114,9 @@ export default function SpezialreinigungPage() {
 </div>
 </div>
 {/*  Service 3  */}
-<div className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-lowest transition-transform hover:-translate-y-2 duration-500">
+<div className="group relative aspect-4/5 overflow-hidden rounded-xl bg-surface-container-lowest transition-transform hover:-translate-y-2 duration-500">
 <img className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="Lebendiges, gehobenes Kindergarten-Spielzimmer mit Designer-Holzspielzeug und umweltfreundlichen Oberflächen in warmem, sonnigem Morgenlicht" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqEh7GfHE9Ajz7UcxC1XE8IbPWZLPs6Kzcdq3y47yh3I_n1BtfGs3X8cYZ1V7hv2i1QjiUtxfKTlL0GlhKTttZtLFXslPZW0JC3c6W54X63G4D0AcFS-YECVuCVb0RlewiGufOTsRTblaEoS8BiatLxAxeM_cdl6K4ktRoRvbqAPt_qG1JkNB7MLEFanlFk4FFrBjVlLsXk3R2-CXUj4ZWA78qZpty3tx9hIeOrApfajQbKqkdG7dE5i0b-suGqDy4FmHVvwtTpwU"  />
-<div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/20 to-transparent"></div>
+<div className="absolute inset-0 bg-linear-to-t from-surface-container-lowest via-surface-container-lowest/20 to-transparent"></div>
 <div className="absolute bottom-0 p-8 w-full">
 <span className="text-secondary font-bold text-4xl opacity-20 mb-2 block font-headline" >03</span>
 <h3 className="font-headline text-xl font-bold text-on-surface mb-2" >Kindergartenreinigung</h3>
@@ -124,9 +124,9 @@ export default function SpezialreinigungPage() {
 </div>
 </div>
 {/*  Service 4  */}
-<div className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-lowest transition-transform hover:-translate-y-2 duration-500 md:mt-12">
+<div className="group relative aspect-4/5 overflow-hidden rounded-xl bg-surface-container-lowest transition-transform hover:-translate-y-2 duration-500 md:mt-12">
 <img className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="Nahaufnahme einer modernen Wolkenkratzer-Glasfassade, die einen blauen Himmel mit funkelnder Kristallklarheit widerspiegelt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbyDPekcWr72T3naGkyjUn8Ql2UZHStcoCsQPGgDTYfEVRuDHHwGilaCN0LB0NR34W0BDUwgC-hd-Ca-yuHCEhWqXK0jvO4E-3AEvA9PD-EIAXeUkNV39wTU-JB5vLvPxJxiRZWZvry84e6GS1t0ZaNgYjJFxONMDUlvQ5OsOgiscvXgRCu3FIP9-NumvX_UJo4jGUkuJzRa9vT15WJBTBFQm8MR1QwImCCWbIcWYpZEode0LDsDLAA2o3NcMkZNQIGcEOQWIlEZ4"  />
-<div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/20 to-transparent"></div>
+<div className="absolute inset-0 bg-linear-to-t from-surface-container-lowest via-surface-container-lowest/20 to-transparent"></div>
 <div className="absolute bottom-0 p-8 w-full">
 <span className="text-secondary font-bold text-4xl opacity-20 mb-2 block font-headline" >04</span>
 <h3 className="font-headline text-xl font-bold text-on-surface mb-2" >Glas- &amp; Fassadenreinigung</h3>
@@ -146,7 +146,7 @@ export default function SpezialreinigungPage() {
 <h2 className="font-headline text-4xl font-extrabold tracking-tight mb-8" >Jahrzehntelange kompromisslose Expertise</h2>
 <div className="space-y-6">
 <div className="flex gap-4">
-<div className="w-12 h-12 flex-shrink-0 bg-primary-container rounded-lg flex items-center justify-center">
+<div className="w-12 h-12 shrink-0 bg-primary-container rounded-lg flex items-center justify-center">
 <span className="material-symbols-outlined text-on-primary-container" >psychology</span>
 </div>
 <div>
@@ -155,7 +155,7 @@ export default function SpezialreinigungPage() {
 </div>
 </div>
 <div className="flex gap-4">
-<div className="w-12 h-12 flex-shrink-0 bg-secondary rounded-lg flex items-center justify-center">
+<div className="w-12 h-12 shrink-0 bg-secondary rounded-lg flex items-center justify-center">
 <span className="material-symbols-outlined text-on-secondary" >verified</span>
 </div>
 <div>
@@ -230,7 +230,7 @@ export default function SpezialreinigungPage() {
 <input className="w-full px-6 py-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all text-on-surface" placeholder="+49 000 000000" type="tel" />
 </div>
 <div className="md:col-span-2 pt-4">
-<button className="w-full gradient-cta text-on-primary py-5 rounded-lg font-bold text-lg shadow-lg hover:shadow-primary/30 transition-all flex items-center justify-center gap-2" >
+<button className="w-full bg-primary text-white py-5 rounded-lg font-bold text-lg shadow-lg hover:bg-emerald-800 transition-all flex items-center justify-center gap-2" >
 <span className="" >Termin vereinbaren</span>
 <span className="material-symbols-outlined" >arrow_forward</span>
 </button>

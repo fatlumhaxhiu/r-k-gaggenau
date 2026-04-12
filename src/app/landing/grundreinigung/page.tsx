@@ -16,7 +16,7 @@ export default function GrundreinigungPage() {
 <Link className="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-600 transition-colors" href="/landing/baureinigung">Baugrundreinigung</Link>
 <Link className="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-600 transition-colors" href="/landing/spezialreinigung">Institutionell</Link>
 <Link className="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-600 transition-colors" href="/landing/saisonale-pflege">Saisonal</Link></div>
-<Link href="/kontakt" className="hidden md:inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-emerald-700 hover:bg-emerald-800 transition-colors duration-300">Jetzt buchen</Link>
+<Link href="#appointment" className="hidden md:inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-emerald-700 hover:bg-emerald-800 transition-colors duration-300">Jetzt buchen</Link>
 </div>
 </nav>
 <header className="relative overflow-hidden pt-20 pb-32 lg:pt-32 lg:pb-48 bg-surface">
@@ -32,14 +32,14 @@ export default function GrundreinigungPage() {
                     Werten Sie Ihre Räumlichkeiten mit unserer präzisen Reinigung auf höchstem Niveau auf. Wir erreichen Stellen, die herkömmliche Dienste übersehen, und stellen Klarheit sowie hygienische Frische in Ihren wertvollsten Umgebungen wieder her.
                 </p>
 <div className="flex flex-col sm:flex-row gap-4">
-<a className="cta-gradient text-on-primary px-8 py-4 rounded-xl font-bold text-center hover:shadow-lg transition-all" href="#appointment">
+<a className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-center hover:bg-emerald-800 hover:shadow-lg transition-all" href="#appointment">
                         Termin vereinbaren
                     </a>
 <a className="bg-surface-container-low text-primary px-8 py-4 rounded-xl font-bold text-center border border-outline-variant/20 hover:bg-surface-container-high transition-all" href="#included">Leistungen entdecken</a>
 </div>
 </div>
 <div className="lg:col-span-5 relative">
-<div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
+<div className="aspect-4/5 rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
 <img alt="Makellose moderne weiße Küche" className="w-full h-full object-cover" data-alt="Close up of a minimalist luxury kitchen with marble countertops and sunlight reflecting off pristine stainless steel appliances" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP8Us3akmYDdMb-w60oH17sUviYDQHQKKl_Ao6X4n6VdRHmZ5dnWtLbNYX0X6XYseX2Flz1ZOO0F5Emv8e3dQ0-n_XsqegZix_M-V9OKVO6QOAjMEc2bLDLv5EQ2r4dTAdmEUCcKz9HtFm_I7B3iMoDIV2FJiMr3a3O5rF2AvJUitEDej5GvD2rlRPKjDV60a4PVurLcehbelCFGAptagkxcXpKdh-Fe_HEV3TjKqOWZfxRUnFMAaCP44dsNJxzvwIzUrbhwyczuk"/>
 </div>
 <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-secondary-fixed-dim rounded-2xl -z-10 mix-blend-multiply opacity-50 blur-2xl"></div>
@@ -88,12 +88,12 @@ export default function GrundreinigungPage() {
 <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
 <img alt="Sauberes modernes Badezimmer" className="w-full h-full object-cover" data-alt="Ultra-clean bathroom with white tiles and minimalist fixtures under bright natural morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJTq1iLt6pKYXxoZi8rOcaeiKkNstqfeqna3AJIG1MANcSnCRlo9S-sLoKyHAkvsHGwHlz-_OtPbpNIa2f83Yk4Ue2J2lCJSqFAuX5zBatUFhO7CnSM87s4AhmqUECK3jv5WsN1rz2fR8K14h1l6hx_2D50gtT_O0fBy8yphu4nbhAkJCpMe9tcx6uCTd5l7geYiEm04-KQIu-T1GHGAWkRuNOLinspnbSY75vRYP_QES2sojgdC4KRbr8JSyoYEbGOV3FmiMIC6Y"/>
 </div>
-<div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
+<div className="aspect-3/4 rounded-2xl overflow-hidden shadow-lg">
 <img alt="Saubere Küchendetails" className="w-full h-full object-cover" data-alt="Macro shot of a sparkling clean kitchen faucet and marble sink with water droplets reflecting the light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRLeMyNRATGU0-ZrkFKF_bLd5LIeRVQheHCrnxMmmUTMCK04hx8inBdaThbXtTcAUnyEmDVvdBfNKspOv7I_BuUi1Ev7JPoFSWzmXBppx7OVU8oA6PEogwyjXWEqMDX3CKagSB1DJGhLXyrYwH2BXNSY-KPlIY99dOFPCuV8fH7asCbTIB9ks0FmE09DwEtMSvWvmMfN7kIYxkoJ4mNIPjRUBya1A0yd3Nx08r4WSc3JnwSes2BZJue_ZrrVmqmcIIupeK2u4thys"/>
 </div>
 </div>
 <div className="space-y-4 pt-8">
-<div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
+<div className="aspect-3/4 rounded-2xl overflow-hidden shadow-lg">
 <img alt="Organisierter moderner Wohnraum" className="w-full h-full object-cover" data-alt="Sunlit modern living room with perfectly arranged furniture and immaculate hardwood floors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6SbrTAAvIJwHUiyEtKE62WGB_WmIAicHHOPTSpP-K9tZmf_eW1fgtk6XldU4eYyF_crY8LK6cuxVrx9MMB3tc3x_1ycraw40uCG1ZKdQJI2miFCKmFCEBS9aWdfsrHb2nBAq5UTwkGTnbyAMry84p9mYfU21HTgnWJ3wBvuEv-USdiWnrvPC6HdKrtyL5un-sTLuygdU3KQhFhjsRgwuecNEnCbOe0o9lSyzSMPrN-YKNTL8EoWLVkhPqynYlW53FKqEVDKBdRKU"/>
 </div>
 <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
@@ -106,7 +106,7 @@ export default function GrundreinigungPage() {
 <h2 className="font-headline text-4xl lg:text-5xl font-bold tracking-tight text-on-surface mb-12">Warum Sie uns wählen sollten</h2>
 <div className="space-y-10">
 <div className="flex gap-6">
-<div className="flex-shrink-0 w-12 h-12 text-secondary">
+<div className="shrink-0 w-12 h-12 text-secondary">
 <span className="material-symbols-outlined text-4xl" data-weight="fill">verified</span>
 </div>
 <div>
@@ -115,7 +115,7 @@ export default function GrundreinigungPage() {
 </div>
 </div>
 <div className="flex gap-6">
-<div className="flex-shrink-0 w-12 h-12 text-secondary">
+<div className="shrink-0 w-12 h-12 text-secondary">
 <span className="material-symbols-outlined text-4xl" data-weight="fill">precision_manufacturing</span>
 </div>
 <div>
@@ -124,7 +124,7 @@ export default function GrundreinigungPage() {
 </div>
 </div>
 <div className="flex gap-6">
-<div className="flex-shrink-0 w-12 h-12 text-secondary">
+<div className="shrink-0 w-12 h-12 text-secondary">
 <span className="material-symbols-outlined text-4xl" data-weight="fill">energy_savings_leaf</span>
 </div>
 <div>
@@ -133,7 +133,7 @@ export default function GrundreinigungPage() {
 </div>
 </div>
 <div className="flex gap-6">
-<div className="flex-shrink-0 w-12 h-12 text-secondary">
+<div className="shrink-0 w-12 h-12 text-secondary">
 <span className="material-symbols-outlined text-4xl" data-weight="fill">schedule</span>
 </div>
 <div>
@@ -183,7 +183,7 @@ export default function GrundreinigungPage() {
 <input className="w-full bg-surface-container-high border-none rounded-xl p-4 focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="+49 (0) 000 000000" type="tel"/>
 </div>
 <div className="md:col-span-2 mt-4">
-<button className="cta-gradient w-full text-on-primary font-bold py-4 rounded-xl shadow-lg hover:opacity-95 transition-opacity" type="submit">
+<button className="bg-primary hover:bg-emerald-800 w-full text-white font-bold py-4 rounded-xl shadow-lg transition-colors" type="submit">
                                 Termin vereinbaren
                             </button>
 </div>
@@ -191,7 +191,7 @@ export default function GrundreinigungPage() {
 </div>
 <div className="lg:w-1/2 bg-surface-container-highest relative min-h-[400px]">
 <img alt="Luxuriöses Wohninterieur" className="absolute inset-0 w-full h-full object-cover" data-alt="Wide angle shot of a luxury modern penthouse living room with expansive windows and pristine furniture layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqdfp7H0lMAZBQxPPIeG4n0heLmXyNY3KVpUKt9EArj3jPyFG44pauJW8P8WZalucis3AtbaXpnf513iPAEU-iF9F_Jeon1KM8OrC4BFAnWI86tqNBD0z31lZoQr2k7bvO31We1Mc_XPPM3cWDxHT-2ypys7iSiKkBjd7TVrBlIdjWhT0CJJphRszmMlynZa7KpFqPR-hB5jW7K_kEtCxjH1SK0hrPuw1rW7PsFr4JHUNFcEuhAzcfYZHKePnnPJ-b7ejZRuYIyJk"/>
-<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-12">
+<div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent flex items-end p-12">
 <div className="text-white">
 <div className="flex gap-1 mb-2">
 <span className="material-symbols-outlined text-yellow-400" >star</span>

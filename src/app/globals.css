@@ -166,3 +166,12 @@
   --color-tertiary: #9e3e43;
   --color-surface-variant: #e1e3e3;
 }
+
+@layer components {
+  .editorial-grid {
+    @apply grid grid-cols-1 md:grid-cols-12 gap-8;
+  }
+  .cta-gradient {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #008855 100%);
+  }
+}

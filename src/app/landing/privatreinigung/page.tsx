@@ -19,14 +19,14 @@ export default function PrivatreinigungPage() {
 <Link className="font-manrope tracking-tight text-sm font-semibold text-stone-600 dark:text-stone-400 hover:text-emerald-700 transition-colors duration-300" href="/landing/spezialreinigung" >Institutionell</Link>
 <Link className="font-manrope tracking-tight text-sm font-semibold text-stone-600 dark:text-stone-400 hover:text-emerald-700 transition-colors duration-300" href="/landing/saisonale-pflege" >Saisonal</Link>
 </div>
-<Link href="/kontakt" className="hidden md:inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-emerald-700 hover:bg-emerald-800 transition-colors duration-300">Jetzt buchen</Link>
+<Link href="#contact" className="hidden md:inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-emerald-700 hover:bg-emerald-800 transition-colors duration-300">Jetzt buchen</Link>
 </div>
 </nav>
 {/*  Hero Section  */}
 <section className="relative min-h-[921px] flex items-center overflow-hidden">
 <div className="absolute inset-0 z-0">
-<img className="w-full h-full object-cover grayscale-[20%] brightness-90" data-alt="Luxurious modern minimalist living room with floor-to-ceiling windows, natural wood accents, and pristine white surfaces in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIrQyfr4B6vnQ97uepnUgFiA1jXL10Ydu9ARmZm6xpyaGDQm59YTkjEEW_RICkx1oLuqR_TqwZA8VCjk7VJAYvyUSTsQpYU26afhCBGaZyQF4iLfN1vahJ8RoXtYGjGbVsqaM1EUuXMkIxpisdRzw4-F9HNiQSFCOGaFbBfAkRzTMRqRNt3gXzF3TnXpsc4QNzBIswXEVfTQsjeJmCJkhLii1pYfp-V5Kx_67JVM6AHy71bWGJ_V-NKTOKotHgQ1LtIC3_KEkYBsI"  />
-<div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent"></div>
+<img className="w-full h-full object-cover grayscale-20 brightness-90" data-alt="Luxurious modern minimalist living room with floor-to-ceiling windows, natural wood accents, and pristine white surfaces in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIrQyfr4B6vnQ97uepnUgFiA1jXL10Ydu9ARmZm6xpyaGDQm59YTkjEEW_RICkx1oLuqR_TqwZA8VCjk7VJAYvyUSTsQpYU26afhCBGaZyQF4iLfN1vahJ8RoXtYGjGbVsqaM1EUuXMkIxpisdRzw4-F9HNiQSFCOGaFbBfAkRzTMRqRNt3gXzF3TnXpsc4QNzBIswXEVfTQsjeJmCJkhLii1pYfp-V5Kx_67JVM6AHy71bWGJ_V-NKTOKotHgQ1LtIC3_KEkYBsI"  />
+<div className="absolute inset-0 bg-linear-to-r from-surface via-surface/40 to-transparent"></div>
 </div>
 <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
 <div className="max-w-2xl">
@@ -38,7 +38,7 @@ export default function PrivatreinigungPage() {
                     Wir heben die Wohnraumreinigung auf ein exzellentes Niveau. Wir behandeln Ihren Rückzugsort mit der Präzision, die er verdient, und sorgen dafür, dass jede Oberfläche Perfektion widerspiegelt.
                 </p>
 <div className="flex flex-col sm:flex-row gap-4">
-<button className="cta-gradient text-on-primary px-8 py-4 rounded-lg font-headline font-bold text-lg tracking-tight shadow-xl hover:shadow-2xl transition-all" >
+<button className="bg-primary text-white px-8 py-4 rounded-lg font-headline font-bold text-lg tracking-tight shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:bg-emerald-800 transition-all" >
                         Termin vereinbaren
                     </button>
 <button className="bg-surface-container-lowest text-primary border border-outline-variant/20 px-8 py-4 rounded-lg font-headline font-bold text-lg tracking-tight hover:bg-surface transition-colors" >
@@ -91,7 +91,7 @@ export default function PrivatreinigungPage() {
 {/*  Why Choose Us  */}
 <section className="py-24 overflow-hidden">
 <div className="max-w-7xl mx-auto px-8">
-<div className="editorial-grid">
+<div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
 <div className="col-span-12 md:col-span-5 relative">
 <div className="sticky top-32">
 <h2 className="font-headline text-5xl font-extrabold tracking-tighter mb-8 leading-tight" >Der R&amp;K-Gaggenau <br /><span className="text-secondary italic" >Standard</span></h2>
@@ -168,50 +168,78 @@ export default function PrivatreinigungPage() {
 </div>
 </section>
 {/*  Contact Form & Booking  */}
-<section className="py-24 bg-surface">
-<div className="max-w-7xl mx-auto px-8">
-<div className="editorial-grid items-center">
-<div className="col-span-12 md:col-span-6">
-<h2 className="font-headline text-5xl font-extrabold tracking-tighter mb-6" >Erleben Sie den <br />Gaggenau Unterschied</h2>
-<p className="text-on-surface-variant mb-12 text-lg" >Geben Sie Ihre Daten an und unser Concierge wird Sie kontaktieren, um einen maßgeschneiderten Reinigungsplan für Ihre Residenz zu besprechen.</p>
-<form className="space-y-6">
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div>
-<label className="font-label text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant block mb-2" >Vorname</label>
-<input className="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" type="text" />
-</div>
-<div>
-<label className="font-label text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant block mb-2" >Nachname</label>
-<input className="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" type="text" />
-</div>
-</div>
-<div>
-<label className="font-label text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant block mb-2" >E-Mail Adresse</label>
-<input className="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" type="email" />
-</div>
-<div>
-<label className="font-label text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant block mb-2" >Telefonnummer</label>
-<input className="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" type="tel" />
-</div>
-<button className="w-full cta-gradient text-on-primary py-5 rounded-lg font-headline font-bold text-xl tracking-tight shadow-xl hover:shadow-2xl transition-all mt-4"  type="submit">
-                            Termin vereinbaren
-                        </button>
-</form>
-</div>
-<div className="hidden md:block col-span-12 md:col-span-5 md:col-start-8">
-<div className="relative">
-<div className="absolute -top-12 -left-12 w-64 h-64 bg-primary-fixed rounded-full -z-10 blur-3xl opacity-40"></div>
-<div className="rounded-2xl overflow-hidden shadow-2xl rotate-3 translate-x-4">
-<img className="w-full h-[600px] object-cover" data-alt="Interior shot of a pristine hallway with polished stone floors reflecting soft natural light from a window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWQhHCerv4vsaveG2ev5-VphwwDwGwyLYHqMw8EshvKr7J-bDsX_gwXDIk9RoBK_9I9Zio470zKU_tOQeTKa2fnYCdQD0XTrg-uHmmv2UUteNu7iwz8Ajl4Cvw_oS_eD8gDBOLNmriY2QC5RjB6MKOti9pX8z2onQEBEJ2mpJLpOrFhKnaST8lGNnVmGeRwusiQKpKOTMEE1_AjhI7LdR73rwcR_hZ7-dldpU1rSa64FduDfhEhQ5Y0wHiGTA6XZup8PcOd-T7V-I"  />
-</div>
-</div>
-</div>
-</div>
-</div>
+<section className="py-24 bg-surface" id="contact">
+  <div className="max-w-7xl mx-auto px-4 md:px-8">
+    <div className="bg-surface-container-lowest rounded-[2rem] shadow-2xl overflow-hidden flex flex-col md:flex-row w-full border border-outline-variant/20">
+      
+      {/* Left Column - Form */}
+      <div className="w-full md:w-1/2 p-10 md:p-14 flex flex-col justify-center">
+        <h2 className="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6 text-on-surface">
+          Erleben Sie den <span className="text-primary">Gaggenau Unterschied</span>
+        </h2>
+        <p className="text-on-surface-variant mb-12 text-lg leading-relaxed">
+          Geben Sie Ihre Daten an und unser Concierge wird Sie kontaktieren, um einen maßgeschneiderten Reinigungsplan für Ihre Residenz zu besprechen.
+        </p>
+        
+        <form className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label className="font-label text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant block mb-2">Vorname</label>
+              <input placeholder="Vorname eingeben" className="w-full bg-surface-container-high border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" type="text" />
+            </div>
+            <div>
+              <label className="font-label text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant block mb-2">Nachname</label>
+              <input placeholder="Nachname eingeben" className="w-full bg-surface-container-high border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" type="text" />
+            </div>
+          </div>
+          <div>
+            <label className="font-label text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant block mb-2">E-Mail Adresse</label>
+            <input placeholder="email@firma.de" className="w-full bg-surface-container-high border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" type="email" />
+          </div>
+          <div>
+            <label className="font-label text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant block mb-2">Telefonnummer</label>
+            <input placeholder="+49 (0) 000 000000" className="w-full bg-surface-container-high border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" type="tel" />
+          </div>
+          <button className="w-full bg-primary text-white hover:bg-emerald-800 font-headline font-bold text-base py-5 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all mt-4" type="submit">
+            Termin vereinbaren
+          </button>
+        </form>
+      </div>
+
+      {/* Right Column - Image */}
+      <div className="w-full md:w-1/2 relative min-h-[500px] md:min-h-0 hidden md:block">
+        <img 
+          className="absolute inset-0 w-full h-full object-cover" 
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWQhHCerv4vsaveG2ev5-VphwwDwGwyLYHqMw8EshvKr7J-bDsX_gwXDIk9RoBK_9I9Zio470zKU_tOQeTKa2fnYCdQD0XTrg-uHmmv2UUteNu7iwz8Ajl4Cvw_oS_eD8gDBOLNmriY2QC5RjB6MKOti9pX8z2onQEBEJ2mpJLpOrFhKnaST8lGNnVmGeRwusiQKpKOTMEE1_AjhI7LdR73rwcR_hZ7-dldpU1rSa64FduDfhEhQ5Y0wHiGTA6XZup8PcOd-T7V-I" 
+          alt="Interior clean hallway" 
+        />
+        {/* Gradient Overlay for text readability */}
+        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
+        
+        {/* Quote Overlay */}
+        <div className="absolute bottom-0 left-0 right-0 p-12 text-white">
+          <div className="flex gap-1 mb-6 text-amber-500">
+            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: '"FILL" 1' }}>star</span>
+            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: '"FILL" 1' }}>star</span>
+            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: '"FILL" 1' }}>star</span>
+            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: '"FILL" 1' }}>star</span>
+            <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: '"FILL" 1' }}>star</span>
+          </div>
+          <p className="font-headline font-bold text-xl md:text-2xl leading-tight mb-4">
+            &quot;Die Liebe zum Detail ist unübertroffen. Das Haus ist nicht nur sauber; es fühlt sich kuratiert an.&quot;
+          </p>
+          <p className="text-white/60 text-sm">
+            — Eleanor Vance, Privatbesitzerin
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 {/*  Final CTA  */}
 <section className="py-32 bg-primary-container relative overflow-hidden">
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 to-transparent"></div>
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-white/10 to-transparent"></div>
 <div className="max-w-4xl mx-auto px-8 text-center relative z-10">
 <h2 className="font-headline text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter" >Bereit für Perfektion?</h2>
 <p className="text-white/80 text-xl mb-12 font-light" >Werden Sie Teil der Gemeinschaft von Hausbesitzern, die mehr als nur ein sauberes Haus verlangen.</p>

@@ -19,7 +19,7 @@ export default function SaisonalePflegePage() {
 <Link className="text-zinc-600 dark:text-zinc-400 font-manrope tracking-tight text-sm font-medium hover:text-emerald-600 transition-colors duration-300" href="/landing/spezialreinigung" >Institutionell</Link>
 <Link className="text-emerald-700 dark:text-emerald-400 font-manrope tracking-tight text-sm font-bold border-b-2 border-emerald-700 dark:border-emerald-400 pb-1" href="/landing/saisonale-pflege" >Saisonal</Link>
 </div>
-<Link href="/kontakt" className="hidden md:inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-emerald-700 hover:bg-emerald-800 transition-colors duration-300">Jetzt buchen</Link>
+<Link href="#contact" className="hidden md:inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-emerald-700 hover:bg-emerald-800 transition-colors duration-300">Jetzt buchen</Link>
 </nav>
 </header>
 <main>
@@ -160,7 +160,7 @@ export default function SaisonalePflegePage() {
 </div>
 </section>
 {/*  Contact Form Section  */}
-<section className="py-24 bg-surface-container-low relative">
+<section className="py-24 bg-surface-container-low relative" id="contact">
 <div className="max-w-4xl mx-auto px-8 relative z-10">
 <div className="bg-surface-container-lowest rounded-3xl editorial-shadow overflow-hidden flex flex-col md:flex-row">
 <div className="md:w-2/5 primary-gradient p-12 text-on-primary flex flex-col justify-between">
@@ -199,7 +199,7 @@ export default function SaisonalePflegePage() {
 <label className="block text-xs font-bold text-on-surface-variant uppercase mb-2" >Telefonnummer</label>
 <input className="w-full bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all p-3 text-on-surface placeholder:text-on-surface-variant/50" placeholder="+49 000 0000000" type="tel" />
 </div>
-<button className="w-full primary-gradient text-on-primary py-4 rounded-lg font-bold text-lg hover:brightness-110 transition-all editorial-shadow mt-4"  type="submit">
+<button className="w-full bg-primary text-white py-4 rounded-lg font-bold text-lg hover:bg-emerald-800 transition-all editorial-shadow mt-4"  type="submit">
                                 Termin vereinbaren
                             </button>
 </form>
@@ -214,7 +214,7 @@ export default function SaisonalePflegePage() {
                     Lassen Sie das Wetter nicht über Ihren <span className="text-secondary italic" >Betriebsablauf</span> entscheiden.
 </h2>
 <div className="flex justify-center">
-<button className="primary-gradient text-on-primary px-12 py-5 rounded-lg font-bold text-xl editorial-shadow hover:scale-105 transition-all" >
+<button className="bg-primary text-white px-12 py-5 rounded-lg font-bold text-xl editorial-shadow hover:bg-emerald-800 hover:scale-105 transition-all" >
                         Jetzt loslegen
                     </button>
 </div>

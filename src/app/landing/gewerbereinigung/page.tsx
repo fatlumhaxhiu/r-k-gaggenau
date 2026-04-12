@@ -19,7 +19,7 @@ export default function GewerbereinigungPage() {
 <Link className="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-600 transition-colors font-manrope tracking-tight text-sm duration-300" href="/landing/spezialreinigung" >Institutionell</Link>
 <Link className="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-600 transition-colors font-manrope tracking-tight text-sm duration-300" href="/landing/saisonale-pflege" >Saisonal</Link>
 </div>
-<Link href="/kontakt" className="hidden md:inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-emerald-700 hover:bg-emerald-800 transition-colors duration-300">Jetzt buchen</Link>
+<Link href="#contact" className="hidden md:inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-emerald-700 hover:bg-emerald-800 transition-colors duration-300">Jetzt buchen</Link>
 </div>
 </nav>
 <main>
@@ -51,7 +51,7 @@ export default function GewerbereinigungPage() {
 <div className="lg:col-span-5 hidden lg:block">
 <div className="relative">
 <div className="absolute -top-12 -left-12 w-64 h-64 bg-primary-fixed/30 rounded-full blur-3xl"></div>
-<img className="rounded-2xl shadow-2xl relative z-10 border-[12px] border-surface-container-lowest" data-alt="a professional cleaning expert in premium uniform standing in a brightly lit modern corporate lobby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9GGMr3Hxn03yWIkD5coPVPags4uRtAgCKCu3JUPFhOVzRxkQglHcMeVL5yFMWkQgYyXveldCeqe5yUAzCYxhvjefw-NCOgglsDijEXlmg6qT-WgTBc2TxegwMO0UNaCChlHTMI6PrVgVB-li-JPX1txWsdf3C-UNzVyf_sTh3qne-Ykm5VUA-RteTVWtJHTBeLeCUpVEyRC8z09oQB12jfKuO4ypBcIbepkAwmZx9BIHaduWfBoHkI2lcDEqwTE_A66fqH9nUVOA"  />
+<img className="rounded-2xl shadow-2xl relative z-10 border-12 border-surface-container-lowest" data-alt="a professional cleaning expert in premium uniform standing in a brightly lit modern corporate lobby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9GGMr3Hxn03yWIkD5coPVPags4uRtAgCKCu3JUPFhOVzRxkQglHcMeVL5yFMWkQgYyXveldCeqe5yUAzCYxhvjefw-NCOgglsDijEXlmg6qT-WgTBc2TxegwMO0UNaCChlHTMI6PrVgVB-li-JPX1txWsdf3C-UNzVyf_sTh3qne-Ykm5VUA-RteTVWtJHTBeLeCUpVEyRC8z09oQB12jfKuO4ypBcIbepkAwmZx9BIHaduWfBoHkI2lcDEqwTE_A66fqH9nUVOA"  />
 </div>
 </div>
 </div>
@@ -68,7 +68,7 @@ export default function GewerbereinigungPage() {
 <div className="group bg-surface-container-lowest p-1 shadow-sm hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden">
 <div className="relative h-64 overflow-hidden rounded-t-xl">
 <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="organized modern coworking space with clean desks and large windows highlighting dust-free surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2B_xFWx2-uCJKXooBNgmUHgbqJfVw_3y5UGRbEN7aSnnoKD3NF1uMZJyba1uGh0a6KJfgRj4RUV2wET6tUZ8iL1WguO8fBQe0Lt8nqurak-OYtTRnwZWoDW7lISWXCWdx6j1jF-WHS_ch6v7k_USSU5BIveQWcmshp7lVmKzXhnNB5dJvH0fDiH_RxaDVRX8G0dLcr-18YnTisrW1AyZi55_keT4XDpp_9UBKD9hDB28uGOQxQnmV8FxVe9LJkVJzxS6p1wjP3Kg"  />
-<div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
 <div className="absolute bottom-6 left-6">
 <h3 className="text-2xl font-bold text-white font-headline" >Büroreinigung</h3>
 </div>
@@ -89,7 +89,7 @@ export default function GewerbereinigungPage() {
 <div className="group bg-surface-container-lowest p-1 shadow-sm hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden md:mt-12">
 <div className="relative h-64 overflow-hidden rounded-t-xl">
 <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="exterior of a high-rise glass building during sunset with clean reflective windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJwFOmraKWNj6-xvwUEiq4f_Onu0LKyoRamb-uGbkAKsX56BcIAieAxRqxqd9VpQHRGg11xSsZIEE3ki22Ny55MMScj66aRl4mVrYVpnrdY9WzdFevN_X0iNDS55A0j5QCDNC3tTiUP7_GX9QQawFJrbZNhjmQ9RrgqX5dK2tukd1MgqK_uNmLZsMQI1CCcAy5v-Lw_OBeEzOpUrcz4DqzFUcV9nxEMvvj0TvemPuc2yINP7Q9WYP7GpIuJ208nW0HH8O_6sJonPo"  />
-<div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
 <div className="absolute bottom-6 left-6">
 <h3 className="text-2xl font-bold text-white font-headline" >Gebäudeunterhalt</h3>
 </div>
@@ -110,7 +110,7 @@ export default function GewerbereinigungPage() {
 <div className="group bg-surface-container-lowest p-1 shadow-sm hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden">
 <div className="relative h-64 overflow-hidden rounded-t-xl">
 <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="wide shot of a clean modern architectural staircase with wooden steps and glass railings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBum2oN4VoV4txFPs_QByMzYGVVgsEag4sOwvkOcIFueoKTc0hiWZ24iVkLXtHlNThUlTZlOs-1uHRuUFkNYVI0gmQlW5Q5fvgYPcZjmaz7yMJEPHRms3c8x0xC09G2Y7UB1zJG-euWosVQYXgWP0MLStRTSevpg_ivpVG7DNIpGxXMcbPzTKQwW2R5yHIzTVbAREtw_AntAzmvNlU-xLguhRVMECekN3yJnVtQauzeI4-jF__Iv9U8Cxp06x37huPUiZ6MVorkJ-k"  />
-<div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
 <div className="absolute bottom-6 left-6">
 <h3 className="text-2xl font-bold text-white font-headline" >Treppenhausreinigung</h3>
 </div>
@@ -172,7 +172,7 @@ export default function GewerbereinigungPage() {
 <p className="text-blue-100 text-lg leading-relaxed" >Über Nacht, am Wochenende oder täglich – wir passen uns Ihren Geschäftsrhythmen an, ohne einen Takt zu verpassen. Ihre Produktivität ist unsere oberste Priorität.</p>
 </div>
 <div className="hidden lg:block w-px h-32 bg-white/20"></div>
-<div className="flex-shrink-0">
+<div className="shrink-0">
 <button className="bg-surface-container-lowest text-secondary px-12 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-colors" >
                                 Verfügbarkeit prüfen
                             </button>
@@ -265,7 +265,7 @@ export default function GewerbereinigungPage() {
 <input className="w-full px-4 py-3 bg-surface-container-high rounded-xl border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="+1 (555) 000-0000" type="tel" />
 </div>
 <div className="pt-4">
-<button className="w-full bg-primary-gradient text-on-primary py-5 rounded-xl font-bold text-lg shadow-lg shadow-primary/30 hover:scale-[1.02] transition-transform" type="submit" >
+<button className="w-full bg-primary text-white py-5 rounded-xl font-bold text-lg shadow-lg shadow-primary/30 hover:scale-[1.02] transition-transform" type="submit" >
                                     Termin vereinbaren
                                 </button>
 </div>
@@ -279,7 +279,7 @@ export default function GewerbereinigungPage() {
 <section className="py-24 text-center">
 <div className="container mx-auto px-8 max-w-3xl">
 <h2 className="text-4xl lg:text-6xl font-black font-headline text-on-surface mb-8" >Bereit für eine saubere Perspektive?</h2>
-<button className="bg-primary-gradient text-on-primary px-12 py-6 rounded-2xl text-xl font-extrabold shadow-2xl shadow-primary/20 hover:scale-110 transition-all" >
+<button className="bg-primary text-white px-12 py-6 rounded-2xl text-xl font-extrabold shadow-2xl shadow-primary/20 hover:scale-110 transition-all" >
                     Holen Sie sich jetzt Ihr kostenloses Angebot
                 </button>
 </div>
