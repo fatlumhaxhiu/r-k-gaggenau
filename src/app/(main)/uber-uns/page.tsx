@@ -13,14 +13,14 @@ export default function UberUns() {
             
             {/* Typography Left */}
             <div className="max-w-xl pr-8">
-              <h5 className="text-xs font-bold tracking-widest text-[#008855] uppercase mb-4">
+              <h5 className="text-xs font-bold tracking-widest text-primary-container uppercase mb-4">
                 ETABLIERTE EXZELLENZ
               </h5>
               <h1 className="font-heading text-5xl sm:text-6xl lg:text-[5.5rem] font-black tracking-tight text-foreground leading-none mb-8">
-                Atmosphärische <span className="text-[#008855] italic">Präzision</span> bis ins kleinste Detail.
+                Atmosphärische <span className="text-primary-container italic">Präzision</span> bis ins kleinste Detail.
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Seit über 15 Jahren definiert R&K-GAGGENAU die Standards der professionellen Reinigung neu — durch eine Fusion aus deutscher Präzision und engagierter Sorgfalt.
+                Seit über 5 Jahren definiert R&K-GAGGENAU die Standards der professionellen Reinigung neu — durch eine Fusion aus deutscher Präzision und engagierter Sorgfalt.
               </p>
             </div>
 
@@ -38,9 +38,9 @@ export default function UberUns() {
               </div>
               
               {/* Floating Expertise Badge */}
-              <div className="absolute -bottom-8 -left-8 bg-[#008855] p-8 lg:p-10 rounded-xl shadow-2xl z-20">
+              <div className="absolute -bottom-8 -left-8 bg-primary-container p-8 lg:p-10 rounded-xl shadow-2xl z-20">
                 <h3 className="font-heading text-4xl lg:text-5xl font-black text-white leading-none mb-2">
-                  15+ JAHRE
+                  5 JAHRE
                 </h3>
                 <p className="text-sm text-white/90 font-bold tracking-widest uppercase">
                   Expertise
@@ -91,7 +91,7 @@ export default function UberUns() {
                 </p>
               </div>
               <div className="mt-10">
-                <Button variant="link" className="text-[#008855] text-base font-bold p-0 hover:no-underline hover:opacity-80">
+                <Button variant="link" className="text-primary-container text-base font-bold p-0 hover:no-underline hover:opacity-80">
                   Unsere Methodik <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
@@ -105,7 +105,7 @@ export default function UberUns() {
       <section className="py-32 bg-background">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
-            <h5 className="text-xs font-bold tracking-widest text-[#008855] uppercase mb-4">
+            <h5 className="text-xs font-bold tracking-widest text-primary-container uppercase mb-4">
               UNSER FUNDAMENT
             </h5>
             <h2 className="font-heading text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
@@ -131,10 +131,10 @@ export default function UberUns() {
             </div>
 
             {/* Card 2: Nachhaltigkeit (Highlighted) */}
-            <div className="relative bg-[#a5f0c5]/40 border border-[#a5f0c5] p-10 rounded-2xl shadow-lg shadow-[#008855]/5 overflow-hidden flex flex-col group transform md:-translate-y-6">
-              <Leaf className="absolute -bottom-4 -right-4 h-40 w-40 text-[#008855]/10 group-hover:text-[#008855]/20 transition-colors" strokeWidth={1} />
+            <div className="relative bg-[#a5f0c5]/40 border border-[#a5f0c5] p-10 rounded-2xl shadow-lg shadow-primary-container/5 overflow-hidden flex flex-col group transform md:-translate-y-6">
+              <Leaf className="absolute -bottom-4 -right-4 h-40 w-40 text-primary-container/10 group-hover:text-primary-container/20 transition-colors" strokeWidth={1} />
               
-              <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-[#008855] text-white mb-6 z-10 shadow-md">
+              <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-primary-container text-white mb-6 z-10 shadow-md">
                 <Leaf className="h-6 w-6" />
               </div>
               <h3 className="text-2xl font-bold font-heading text-foreground mb-4 z-10">
@@ -185,10 +185,10 @@ export default function UberUns() {
               Schließen Sie sich über 1.000 zufriedenen Kunden an, die R&K-GAGGENAU ihre wichtigsten Räume anvertrauen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full">
-              <Button size="lg" className="w-full sm:w-auto h-14 px-8 bg-[#008855] text-white hover:bg-[#008855]/90 rounded-md shrink-0">
+              <Button size="lg" className="w-full sm:w-auto h-14 px-8 bg-primary-container text-white hover:bg-primary-container/90 rounded-md shrink-0">
                 Angebot anfordern
               </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 border-white/30 text-white hover:bg-white hover:text-black rounded-md shrink-0 transition-colors">
+              <Button size="lg" variant="outline" className="bg-transparent w-full sm:w-auto h-14 px-8 border-white/30 text-white hover:bg-white hover:text-black rounded-md shrink-0 transition-colors">
                 Services ansehen
               </Button>
             </div>
