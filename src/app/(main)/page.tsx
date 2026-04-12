@@ -235,26 +235,26 @@ export default function Startseite() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {siteData.homeInsights.map((insight) => (
-              <Link key={insight.id} href="/magazin" className="group flex flex-col">
+            {siteData.blogArticles.map((article) => (
+              <Link key={article.id} href={`/magazin/${article.slug}`} className="group flex flex-col">
                 <div className="relative h-64 w-full rounded-2xl overflow-hidden mb-6">
                   <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors z-10" />
                   <Image
-                    src={insight.image}
-                    alt={insight.title}
+                    src={article.image}
+                    alt={article.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Circular cutout approximation via pseudo-elements or just simple badge for now */}
                   <div className="absolute bottom-4 left-4 bg-background px-3 py-1 text-[10px] font-bold tracking-widest text-primary uppercase rounded z-20">
-                    {insight.tag}
+                    {article.tag}
                   </div>
                 </div>
                 <h3 className="text-lg font-bold font-heading text-foreground mb-3 leading-tight group-hover:text-primary transition-colors">
-                  {insight.title}
+                  {article.title}
                 </h3>
                 <p className="text-sm text-muted-foreground line-clamp-3 mb-4">
-                  {insight.desc}
+                  {article.desc}
                 </p>
                 <span className="text-xs font-bold text-primary tracking-widest uppercase flex items-center gap-2 mt-auto">
                   Mehr lesen <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
@@ -278,7 +278,7 @@ export default function Startseite() {
             <Button size="lg" className="bg-background text-foreground hover:bg-muted h-14 px-8 text-base">
               Kontaktieren Sie uns
             </Button>
-            <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 h-14 px-8 text-base">
+            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-white h-14 px-8 text-base">
               Ablauf entdecken
             </Button>
           </div>
