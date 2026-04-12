@@ -34,7 +34,7 @@ export default function Kontakt() {
 
       {/* 2. Overlapping Contact Details Box */}
       <section className="relative -mt-24 lg:-mt-32 z-20 pb-24">
-        <div className="container mx-auto px-6 lg:px-12">
+        <div className="container mx-auto px-6 lg:px-12 max-w-[1100px]">
           <div className="bg-background rounded-2xl shadow-2xl overflow-hidden border border-border/50 flex flex-col lg:flex-row">
             
             {/* Form Column */}
@@ -46,22 +46,22 @@ export default function Kontakt() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs font-bold tracking-wider text-muted-foreground uppercase">Vollständiger Name</label>
-                    <Input placeholder="Max Mustermann" className="h-14 bg-muted/40 border-transparent focus-visible:ring-primary/20 hover:bg-muted/60 transition-colors rounded-none" />
+                    <Input placeholder="Max Mustermann" className="h-14 bg-background border border-input focus-visible:ring-primary/20 hover:border-primary/50 transition-colors rounded-md shadow-sm" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-bold tracking-wider text-muted-foreground uppercase">E-Mail-Adresse</label>
-                    <Input placeholder="max@beispiel.de" type="email" className="h-14 bg-muted/40 border-transparent focus-visible:ring-primary/20 hover:bg-muted/60 transition-colors rounded-none" />
+                    <Input placeholder="max@beispiel.de" type="email" className="h-14 bg-background border border-input focus-visible:ring-primary/20 hover:border-primary/50 transition-colors rounded-md shadow-sm" />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold tracking-wider text-muted-foreground uppercase">Telefonnummer</label>
-                  <Input placeholder="+49 (0) 000 0000000" className="h-14 bg-muted/40 border-transparent focus-visible:ring-primary/20 hover:bg-muted/60 transition-colors rounded-none" />
+                  <Input placeholder="+49 (0) 000 0000000" className="h-14 bg-background border border-input focus-visible:ring-primary/20 hover:border-primary/50 transition-colors rounded-md shadow-sm" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold tracking-wider text-muted-foreground uppercase">Nachricht</label>
                   <textarea 
                     placeholder="Erzählen Sie uns von Ihren Räumlichkeiten..." 
-                    className="flex min-h-[140px] w-full bg-muted/40 px-3 py-4 text-sm outline-none placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-primary/20 hover:bg-muted/60 transition-colors rounded-none resize-none"
+                    className="flex min-h-[140px] w-full bg-background border border-input px-4 py-4 text-sm outline-none placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-primary/50 hover:border-primary/50 transition-colors rounded-md shadow-sm resize-none"
                   />
                 </div>
                 <Button className="w-full h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-base rounded-sm mt-4">
@@ -136,9 +136,9 @@ export default function Kontakt() {
                   fill
                   className="object-cover"
                 />
-              </div>
-              <div className="absolute -bottom-8 -right-8 bg-primary rounded-xl p-6 shadow-2xl hidden md:flex items-center justify-center">
-                <CheckCircle2 className="h-12 w-12 text-primary-foreground" />
+                <div className="absolute bottom-6 right-6 bg-primary rounded-xl p-5 shadow-2xl hidden md:flex items-center justify-center">
+                  <CheckCircle2 className="h-10 w-10 text-primary-foreground" />
+                </div>
               </div>
             </div>
 
