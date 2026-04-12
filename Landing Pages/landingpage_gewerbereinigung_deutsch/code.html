@@ -1,0 +1,381 @@
+<!DOCTYPE html><html class="light" lang="de"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#bd565a",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#8cf8bb",
+                    "secondary-fixed-dim": "#82cfff",
+                    "surface-container-highest": "#e1e3e3",
+                    "primary": "#006c43",
+                    "surface-container": "#eceeee",
+                    "primary-container": "#008855",
+                    "on-surface-variant": "#3e4a41",
+                    "primary-fixed-dim": "#70dba0",
+                    "surface-container-high": "#e6e8e9",
+                    "on-background": "#191c1d",
+                    "inverse-surface": "#2e3131",
+                    "surface-tint": "#006d43",
+                    "on-tertiary-fixed": "#400009",
+                    "surface-container-low": "#f2f4f4",
+                    "on-secondary-fixed-variant": "#004c6b",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#ffb3b3",
+                    "on-surface": "#191c1d",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#bdcabf",
+                    "on-primary-fixed-variant": "#005231",
+                    "on-error": "#ffffff",
+                    "secondary": "#00658d",
+                    "secondary-container": "#6cc8fd",
+                    "on-primary-fixed": "#002111",
+                    "inverse-primary": "#70dba0",
+                    "tertiary-fixed": "#ffdad9",
+                    "on-secondary-fixed": "#001e2d",
+                    "outline": "#6e7a70",
+                    "on-tertiary-container": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f8fafa",
+                    "on-tertiary-fixed-variant": "#80282e",
+                    "inverse-on-surface": "#eff1f1",
+                    "on-secondary-container": "#005374",
+                    "on-primary-container": "#ffffff",
+                    "background": "#f8fafa",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#f8fafa",
+                    "secondary-fixed": "#c6e7ff",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#d8dada",
+                    "tertiary": "#9e3e43",
+                    "surface-variant": "#e1e3e3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-primary-gradient {
+            background: linear-gradient(135deg, #006c43 0%, #008855 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="bg-emerald-50/80 dark:bg-stone-900/80 backdrop-blur-xl docked full-width top-0 sticky z-50 tonal-shift bg-stone-100/50">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-emerald-900 dark:text-emerald-50 font-headline" style="">R&amp;K-Gaggenau</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-emerald-700 dark:text-emerald-400 font-bold border-b-2 border-emerald-700 dark:border-emerald-400 pb-1 font-manrope tracking-tight text-sm transition-colors duration-300" href="#" style="">Gewerblich</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-600 transition-colors font-manrope tracking-tight text-sm duration-300" href="#" style="">Privat</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-600 transition-colors font-manrope tracking-tight text-sm duration-300" href="#" style="">Grundreinigung</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-600 transition-colors font-manrope tracking-tight text-sm duration-300" href="#" style="">Baugrundreinigung</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-600 transition-colors font-manrope tracking-tight text-sm duration-300" href="#" style="">Institutionell</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-600 transition-colors font-manrope tracking-tight text-sm duration-300" href="#" style="">Saisonal</a>
+</div>
+<button class="bg-primary-gradient text-on-primary px-6 py-2.5 rounded-lg font-semibold text-sm hover:scale-95 transition-transform duration-200" style="">
+                Jetzt buchen
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden bg-surface">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20 grayscale scale-105" data-alt="ultra-modern glass office interior with immaculate surfaces and bright natural morning light reflecting off polished floors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg0oriSjJ3b-d7s96eZ9Ql6C1ZJxaUfXakDOBwH1zDkcuCVFXVZUc6bVoUEnSwkDWXRJFbWIZ528mVjm4MM8Lq8EgWjciX85uCDAIg11myxLpGwSXgwVvN3AY-oez6X187bW6C2Df3-EYR4UyHpJ9iD69OoBUyhNRAonyXnEb5v84juKbp7yqQnv6BFzl1S7W0IzCyRQyAIdf0bJ0Y3NDI0jM6gopG5xF_XBZ8uN4pdnYn-ALvnWcFr_yQL3TPj8WnzTll7I0Rc4A" style="">
+</div>
+<div class="container mx-auto px-8 relative z-10 grid lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-xs font-bold tracking-widest uppercase font-label" style="">
+                        Präzise Lösungen für Gewerbe
+                    </span>
+<h1 class="text-5xl lg:text-7xl font-extrabold font-headline text-on-surface leading-[1.1] tracking-tight mb-8" style="">
+                        Professionelle Gewerbereinigung, <span class="text-primary" style="">der Sie vertrauen können</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-2xl mb-10 leading-relaxed" style="">
+                        Erleben Sie den Goldstandard architektonischer Hygiene. Wir bringen akribische deutsche Präzision in Ihren Arbeitsbereich und sorgen für ein makelloses Umfeld, das die Produktivität steigert.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary-gradient text-on-primary px-10 py-5 rounded-lg text-lg font-bold shadow-xl shadow-primary/20 hover:scale-105 transition-all duration-300" style="">
+                            Termin vereinbaren
+                        </button>
+<button class="px-10 py-5 rounded-lg text-lg font-bold text-primary border-2 border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-300" style="">
+                            Leistungen entdecken
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 hidden lg:block">
+<div class="relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary-fixed/30 rounded-full blur-3xl"></div>
+<img class="rounded-2xl shadow-2xl relative z-10 border-[12px] border-surface-container-lowest" data-alt="a professional cleaning expert in premium uniform standing in a brightly lit modern corporate lobby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9GGMr3Hxn03yWIkD5coPVPags4uRtAgCKCu3JUPFhOVzRxkQglHcMeVL5yFMWkQgYyXveldCeqe5yUAzCYxhvjefw-NCOgglsDijEXlmg6qT-WgTBc2TxegwMO0UNaCChlHTMI6PrVgVB-li-JPX1txWsdf3C-UNzVyf_sTh3qne-Ykm5VUA-RteTVWtJHTBeLeCUpVEyRC8z09oQB12jfKuO4ypBcIbepkAwmZx9BIHaduWfBoHkI2lcDEqwTE_A66fqH9nUVOA" style="">
+</div>
+</div>
+</div>
+</section>
+<!-- What's Included (Editorial Grid) -->
+<section class="py-24 bg-surface-container-low">
+<div class="container mx-auto px-8">
+<div class="max-w-4xl mb-16">
+<h2 class="text-4xl lg:text-5xl font-black font-headline text-on-surface mb-4" style="">Was enthalten ist</h2>
+<p class="text-on-surface-variant text-lg" style="">Umfassende Desinfektion der Arbeitsbereiche, abgestimmt auf Ihre baulichen Anforderungen.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Office Cleaning -->
+<div class="group bg-surface-container-lowest p-1 shadow-sm hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden">
+<div class="relative h-64 overflow-hidden rounded-t-xl">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="organized modern coworking space with clean desks and large windows highlighting dust-free surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2B_xFWx2-uCJKXooBNgmUHgbqJfVw_3y5UGRbEN7aSnnoKD3NF1uMZJyba1uGh0a6KJfgRj4RUV2wET6tUZ8iL1WguO8fBQe0Lt8nqurak-OYtTRnwZWoDW7lISWXCWdx6j1jF-WHS_ch6v7k_USSU5BIveQWcmshp7lVmKzXhnNB5dJvH0fDiH_RxaDVRX8G0dLcr-18YnTisrW1AyZi55_keT4XDpp_9UBKD9hDB28uGOQxQnmV8FxVe9LJkVJzxS6p1wjP3Kg" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h3 class="text-2xl font-bold text-white font-headline" style="">Büroreinigung</h3>
+</div>
+</div>
+<div class="p-8">
+<p class="text-on-surface-variant mb-6 leading-relaxed" style="">Systematische Reinigung von Arbeitsplätzen, Gemeinschaftsbereichen und Privatbüros mit Desinfektionsmitteln in Krankenhausqualität.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-on-surface font-medium" style="">
+<span class="material-symbols-outlined text-primary text-lg" style="">check_circle</span> Oberflächendesinfektion
+                                </li>
+<li class="flex items-center gap-3 text-sm text-on-surface font-medium" style="">
+<span class="material-symbols-outlined text-primary text-lg" style="">check_circle</span> Pflege der IT-Ausstattung
+                                </li>
+</ul>
+</div>
+</div>
+<!-- Building Maintenance -->
+<div class="group bg-surface-container-lowest p-1 shadow-sm hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden md:mt-12">
+<div class="relative h-64 overflow-hidden rounded-t-xl">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="exterior of a high-rise glass building during sunset with clean reflective windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJwFOmraKWNj6-xvwUEiq4f_Onu0LKyoRamb-uGbkAKsX56BcIAieAxRqxqd9VpQHRGg11xSsZIEE3ki22Ny55MMScj66aRl4mVrYVpnrdY9WzdFevN_X0iNDS55A0j5QCDNC3tTiUP7_GX9QQawFJrbZNhjmQ9RrgqX5dK2tukd1MgqK_uNmLZsMQI1CCcAy5v-Lw_OBeEzOpUrcz4DqzFUcV9nxEMvvj0TvemPuc2yINP7Q9WYP7GpIuJ208nW0HH8O_6sJonPo" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h3 class="text-2xl font-bold text-white font-headline" style="">Gebäudeunterhalt</h3>
+</div>
+</div>
+<div class="p-8">
+<p class="text-on-surface-variant mb-6 leading-relaxed" style="">Umfassendes Facility Management inklusive Fassadenpflege, Lobby-Instandhaltung und Abfallmanagement.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-on-surface font-medium" style="">
+<span class="material-symbols-outlined text-primary text-lg" style="">check_circle</span> Lobby-Management
+                                </li>
+<li class="flex items-center gap-3 text-sm text-on-surface font-medium" style="">
+<span class="material-symbols-outlined text-primary text-lg" style="">check_circle</span> Fenster- &amp; Glaspflege
+                                </li>
+</ul>
+</div>
+</div>
+<!-- Staircase Cleaning -->
+<div class="group bg-surface-container-lowest p-1 shadow-sm hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden">
+<div class="relative h-64 overflow-hidden rounded-t-xl">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="wide shot of a clean modern architectural staircase with wooden steps and glass railings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBum2oN4VoV4txFPs_QByMzYGVVgsEag4sOwvkOcIFueoKTc0hiWZ24iVkLXtHlNThUlTZlOs-1uHRuUFkNYVI0gmQlW5Q5fvgYPcZjmaz7yMJEPHRms3c8x0xC09G2Y7UB1zJG-euWosVQYXgWP0MLStRTSevpg_ivpVG7DNIpGxXMcbPzTKQwW2R5yHIzTVbAREtw_AntAzmvNlU-xLguhRVMECekN3yJnVtQauzeI4-jF__Iv9U8Cxp06x37huPUiZ6MVorkJ-k" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h3 class="text-2xl font-bold text-white font-headline" style="">Treppenhausreinigung</h3>
+</div>
+</div>
+<div class="p-8">
+<p class="text-on-surface-variant mb-6 leading-relaxed" style="">Spezialisierte Tiefenreinigung für hochfrequentierte Durchgangsbereiche, die Sicherheit und Ästhetik auf jeder Stufe garantiert.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-on-surface font-medium" style="">
+<span class="material-symbols-outlined text-primary text-lg" style="">check_circle</span> Textil-Tiefenpflege
+                                </li>
+<li class="flex items-center gap-3 text-sm text-on-surface font-medium" style="">
+<span class="material-symbols-outlined text-primary text-lg" style="">check_circle</span> Antirutsch-Behandlung
+                                </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us (Bento Grid) -->
+<section class="py-24 bg-surface">
+<div class="container mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-4xl lg:text-5xl font-black font-headline text-on-surface mb-6" style="">Warum Sie uns wählen sollten</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed" style="">Wir setzen den Branchenmaßstab für gewerbliche Instandhaltung durch vier Säulen der Exzellenz.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="md:col-span-2 bg-surface-container-high p-10 rounded-3xl flex flex-col justify-between group hover:bg-primary-container transition-colors duration-500">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-white mb-6" style="">timer</span>
+<h3 class="text-3xl font-bold font-headline mb-4 group-hover:text-white" style="">Zuverlässig &amp; Pünktlich</h3>
+<p class="text-on-surface-variant group-hover:text-emerald-50/80 leading-relaxed" style="">Unsere präzise Zeitplanung stellt sicher, dass Ihre Abläufe nie unterbrochen werden. Wir erscheinen genau dann, wenn wir es versprechen.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-primary text-on-primary p-10 rounded-3xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl mb-6" data-weight="fill" style="">verified</span>
+<h3 class="text-2xl font-bold font-headline mb-4" style="">Deutsche Qualitätsstandards</h3>
+<p class="text-emerald-50/80 leading-relaxed" style="">Unerbittliche Präzision in jeder Ecke. Wir befolgen strikte europäische Hygieneprotokolle.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low p-10 rounded-3xl flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+<div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" style="">workspace_premium</span>
+<h3 class="text-2xl font-bold font-headline mb-4" style="">Geschulte Profis</h3>
+<p class="text-on-surface-variant leading-relaxed" style="">Jeder Techniker ist hintergrundgeprüft und in professioneller Unternehmenshygiene zertifiziert.</p>
+</div>
+</div>
+<!-- Card 4 (Full Width Bottom) -->
+<div class="md:col-span-4 bg-secondary text-on-secondary p-12 rounded-3xl flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1">
+<span class="material-symbols-outlined text-5xl mb-6" style="">event_available</span>
+<h3 class="text-4xl font-bold font-headline mb-4" style="">Flexible Zeitplanung</h3>
+<p class="text-blue-100 text-lg leading-relaxed" style="">Über Nacht, am Wochenende oder täglich – wir passen uns Ihren Geschäftsrhythmen an, ohne einen Takt zu verpassen. Ihre Produktivität ist unsere oberste Priorität.</p>
+</div>
+<div class="hidden lg:block w-px h-32 bg-white/20"></div>
+<div class="flex-shrink-0">
+<button class="bg-surface-container-lowest text-secondary px-12 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-colors" style="">
+                                Verfügbarkeit prüfen
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="py-24 bg-inverse-surface text-inverse-on-surface overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="team of professionals collaborating in a clean modern office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4ChyfU3ZIi1SfcFhh5H7QzcjzpRgnxq3VR9UnQIB0dJt5E_TXc25uZ3P4JaAB_WPqN7F16q5DtdQtyN-j2gZB470MpDTnCtSSZVVi4M7i2BJ0kVI8vD1QeLCFlYCzmjMxLDVw2UeL9cjCcqEUaN_7ssalRv1H94rfNJHuGlHNKB84PqMX3gIRlztCIGP8OTABgSwqIfbZD7EhTFzN6CrLA12issB5F0OG7ja5kZ1b2KTCh3fdbcOlf4W2ak6QyL9-3Z6KqONLyPM" style="">
+</div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+<div>
+<span class="text-primary-fixed font-bold tracking-widest uppercase text-xs mb-6 block" style="">Unsere Tradition</span>
+<h2 class="text-4xl lg:text-5xl font-black font-headline mb-8 leading-tight" style="">Jahrzehnte der Präzision, <br>gebaut auf Vertrauen.</h2>
+<div class="space-y-6 text-xl text-surface-dim leading-relaxed">
+<p class="" style="">R&amp;K-Gaggenau wurde auf dem Prinzip gegründet, dass Sauberkeit der stille Motor des unternehmerischen Erfolgs ist. Seit über 15 Jahren betreuen wir die anspruchsvollsten architektonischen Räume der Region, von Tech-Hubs bis hin zu medizinischen Einrichtungen.</p>
+<p class="" style="">Unser Engagement geht über die einfache Ästhetik hinaus; wir schaffen Umgebungen, die Ihr wertvollstes Kapital schützen – Ihre Mitarbeiter. Durch kontinuierliche Innovation in nachhaltiger Chemie und mechanischer Präzision bleiben wir die erste Wahl für Unternehmen, die bei der Qualität keine Kompromisse eingehen.</p>
+</div>
+<div class="mt-12 flex gap-12">
+<div>
+<div class="text-4xl font-bold text-primary-fixed font-headline" style="">500+</div>
+<div class="text-sm uppercase tracking-widest text-outline-variant mt-1" style="">Betreute Kunden</div>
+</div>
+<div>
+<div class="text-4xl font-bold text-primary-fixed font-headline" style="">98%</div>
+<div class="text-sm uppercase tracking-widest text-outline-variant mt-1" style="">Kundenbindung</div>
+</div>
+</div>
+</div>
+<div class="bg-white/5 backdrop-blur-md p-10 rounded-3xl border border-white/10">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-16 h-16 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a confident business executive in a high-end office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDa_D1lUw5EXfZLAkiKlTBvdkYd--pemhTKLZZRRM63d9rl4BVv0ylcGDaJ4bt5kZvfDn-zFYzBIJyVUJYUnBdEBr5HrWVf_QHWwxl3W2em2uM-UisQmINityLa_KfKNrT2inGOZTVHu32__qN022coc5W0KavKYS48hH8HNu4v7ZCj7HQQf4MgFI7MxmibSunOZKejiNUfGrRqZxVW79qMSWN5-wd7Jp4UjBjyWbeBZENQS29IhqHxR5yy6GHJajbBNMOIRg7Vp4" style="">
+</div>
+<div>
+<h4 class="font-bold text-lg" style="">Marcus Thornton</h4>
+<p class="text-sm text-outline-variant" style="">COO, Global Tech Hub</p>
+</div>
+</div>
+<p class="italic text-2xl font-light leading-relaxed" style="">"Der Wechsel zu R&amp;K-Gaggenau verlief nahtlos. Sie reinigen nicht nur; sie pflegen die physische Präsenz unserer Marke. Ihre Liebe zum Detail in den Vorstandsetagen ist unerreicht."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-24 bg-surface" id="contact">
+<div class="container mx-auto px-8">
+<div class="max-w-6xl mx-auto bg-surface-container-low rounded-[2rem] overflow-hidden grid lg:grid-cols-5 shadow-2xl">
+<div class="lg:col-span-2 bg-primary-container p-12 text-on-primary-container flex flex-col justify-between">
+<div>
+<h2 class="text-4xl font-black font-headline mb-6" style="">Werten wir Ihren Arbeitsplatz auf.</h2>
+<p class="text-emerald-100/80 mb-8 leading-relaxed" style="">Füllen Sie das Formular aus für eine maßgeschneiderte Objektbewertung und ein Angebot innerhalb von 24 Stunden.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined p-2 bg-white/10 rounded-lg" style="">call</span>
+<span class="" style="">+1 (555) 012-3456</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined p-2 bg-white/10 rounded-lg" style="">mail</span>
+<span class="" style="">commercial@rk-gaggenau.com</span>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-12 border-t border-white/10">
+<p class="text-sm font-medium" style="">Hauptsitz: Gaggenau Precision Plaza, Suite 400</p>
+</div>
+</div>
+<div class="lg:col-span-3 p-12 bg-surface-container-lowest">
+<form class="space-y-6">
+<div class="grid sm:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-bold font-label text-on-surface-variant uppercase tracking-wider" style="">Vorname</label>
+<input class="w-full px-4 py-3 bg-surface-container-high rounded-xl border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="Jane" type="text">
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold font-label text-on-surface-variant uppercase tracking-wider" style="">Nachname</label>
+<input class="w-full px-4 py-3 bg-surface-container-high rounded-xl border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="Smith" type="text">
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold font-label text-on-surface-variant uppercase tracking-wider" style="">E-Mail-Adresse</label>
+<input class="w-full px-4 py-3 bg-surface-container-high rounded-xl border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="jane@company.com" type="email">
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold font-label text-on-surface-variant uppercase tracking-wider" style="">Telefonnummer</label>
+<input class="w-full px-4 py-3 bg-surface-container-high rounded-xl border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="+1 (555) 000-0000" type="tel">
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary-gradient text-on-primary py-5 rounded-xl font-bold text-lg shadow-lg shadow-primary/30 hover:scale-[1.02] transition-transform" type="submit" style="">
+                                    Termin vereinbaren
+                                </button>
+</div>
+<p class="text-center text-xs text-on-surface-variant mt-4" style="">Mit dem Klick auf "Termin vereinbaren" stimmen Sie unseren Nutzungsbedingungen zu.</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 text-center">
+<div class="container mx-auto px-8 max-w-3xl">
+<h2 class="text-4xl lg:text-6xl font-black font-headline text-on-surface mb-8" style="">Bereit für eine saubere Perspektive?</h2>
+<button class="bg-primary-gradient text-on-primary px-12 py-6 rounded-2xl text-xl font-extrabold shadow-2xl shadow-primary/20 hover:scale-110 transition-all" style="">
+                    Holen Sie sich jetzt Ihr kostenloses Angebot
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 full-width py-12 tonal-shift from surface to surface-container-low">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto">
+<div class="text-lg font-black text-stone-900 dark:text-stone-100 font-headline mb-6 md:mb-0" style="">R&amp;K-Gaggenau</div>
+<div class="flex gap-8 mb-6 md:mb-0">
+<a class="font-inter text-xs tracking-wide uppercase text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#" style="">Datenschutz</a>
+<a class="font-inter text-xs tracking-wide uppercase text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#" style="">Impressum</a>
+<a class="font-inter text-xs tracking-wide uppercase text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#" style="">Servicebereiche</a>
+<a class="font-inter text-xs tracking-wide uppercase text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#" style="">Karriere</a>
+</div>
+<div class="font-inter text-xs tracking-wide uppercase text-stone-500" style="">
+                © 2024 R&amp;K-Gaggenau Präzisionsreinigung. Alle Rechte vorbehalten.
+            </div>
+</div>
+</footer>
+</body></html>

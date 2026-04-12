@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>R&amp;K-Gaggenau Dashboard - Blog Manager</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "on-surface": "#191c1d",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#d8dada",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#9e3e43",
+                        "on-secondary-fixed-variant": "#004c6b",
+                        "inverse-surface": "#2e3131",
+                        "secondary-fixed-dim": "#82cfff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3b3",
+                        "surface-tint": "#006d43",
+                        "primary-container": "#008855",
+                        "primary": "#006c43",
+                        "outline-variant": "#bdcabf",
+                        "surface-container": "#eceeee",
+                        "on-secondary-fixed": "#001e2d",
+                        "on-tertiary-container": "#ffffff",
+                        "on-primary-container": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#70dba0",
+                        "on-background": "#191c1d",
+                        "tertiary-fixed": "#ffdad9",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e1e3e3",
+                        "surface-bright": "#f8fafa",
+                        "surface": "#f8fafa",
+                        "primary-fixed-dim": "#70dba0",
+                        "on-tertiary-fixed": "#400009",
+                        "outline": "#6e7a70",
+                        "on-tertiary-fixed-variant": "#80282e",
+                        "tertiary-container": "#bd565a",
+                        "inverse-on-surface": "#eff1f1",
+                        "secondary-container": "#6cc8fd",
+                        "on-surface-variant": "#3e4a41",
+                        "secondary": "#00658d",
+                        "surface-variant": "#e1e3e3",
+                        "on-primary-fixed": "#002111",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#8cf8bb",
+                        "secondary-fixed": "#c6e7ff",
+                        "on-secondary-container": "#005374",
+                        "surface-container-low": "#f2f4f4",
+                        "surface-container-high": "#e6e8e9",
+                        "on-primary-fixed-variant": "#005231",
+                        "background": "#f8fafa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- SideNavBar (Authority Source: JSON) -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 flex flex-col py-6 z-50">
+<div class="px-6 mb-8">
+<h1 class="font-headline font-extrabold text-emerald-800 dark:text-emerald-200 text-xl tracking-tighter">R&amp;K-Gaggenau</h1>
+<div class="mt-4">
+<p class="font-inter font-medium text-sm text-emerald-600 dark:text-emerald-400">Management</p>
+<p class="text-xs text-zinc-500">R&amp;K Admin Portal</p>
+</div>
+</div>
+<nav class="flex-grow space-y-1">
+<a class="flex items-center px-4 py-2 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 mx-2 my-1 rounded-lg transition-transform hover:translate-x-1 font-inter font-medium text-sm" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<!-- ACTIVE: Blog -->
+<a class="flex items-center px-4 py-2 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 mx-2 my-1 rounded-lg transition-transform hover:translate-x-1 font-inter font-medium text-sm" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="edit_note">edit_note</span>
+<span>Blog</span>
+</a>
+<a class="flex items-center px-4 py-2 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 mx-2 my-1 rounded-lg transition-transform hover:translate-x-1 font-inter font-medium text-sm" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="group">group</span>
+<span>CRM</span>
+</a>
+</nav>
+<div class="px-4 mt-auto">
+<div class="flex items-center p-3 bg-white/50 dark:bg-zinc-800/50 rounded-xl">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="professional portrait of a high-end property manager in a well-lit modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClSOS7gRnLYpnQle_-L32mKQEmkxGFv-nON1Gkcs-_N-3GW9heHNDftSJKkR8mMavfw1L9i1ROWph_kROTPUR1OV_Lo7-qoMt3h5-mAYxSnDnHugdDhTAno4nFOFg1ndvpO3jp5hk6XN1_TgX-TEGyawqPF2r7vQ3WxeyHBtspye8VfuAijy-Wy-eX9V_kSsOFIEB8yeDVGBmLEWmS51MJ6EJ-SjRHk9tkClrtFKg4y6s4T34H0BaHVQecY55sD2FsQQD_72xVtc8"/>
+<div class="ml-3 overflow-hidden">
+<p class="text-xs font-bold truncate">Admin User</p>
+<p class="text-[10px] text-zinc-500">Sign Out</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<main class="pl-64 min-h-screen bg-surface">
+<!-- TopNavBar (Authority Source: JSON) -->
+<header class="sticky top-0 z-40 w-full bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md shadow-sm border-b border-zinc-100 dark:border-zinc-800 flex justify-between items-center px-6 h-16">
+<div class="flex items-center space-x-4">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-1.5 bg-zinc-100 dark:bg-zinc-800 border-none rounded-full text-sm w-64 focus:ring-2 focus:ring-emerald-500 transition-all" placeholder="Search blog posts..." type="text"/>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full p-2 transition-all scale-90 active:scale-75">
+<span class="material-symbols-outlined text-zinc-600" data-icon="notifications">notifications</span>
+</button>
+<button class="hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full p-2 transition-all scale-90 active:scale-75">
+<span class="material-symbols-outlined text-zinc-600" data-icon="visibility">visibility</span>
+</button>
+<div class="h-8 w-[1px] bg-zinc-200 mx-2"></div>
+<p class="font-headline font-bold text-emerald-600 text-sm tracking-tight">Dashboard</p>
+</div>
+</header>
+<!-- Canvas -->
+<section class="p-8 max-w-7xl mx-auto">
+<!-- Page Header -->
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="font-label text-xs uppercase tracking-widest text-emerald-600 font-bold mb-2 block">Content Studio</span>
+<h2 class="font-headline text-4xl font-extrabold tracking-tighter text-on-surface">Blog Manager</h2>
+</div>
+<button class="flex items-center px-6 py-3 bg-gradient-to-br from-primary to-primary-container text-white rounded-lg shadow-md hover:shadow-xl transition-all font-inter font-semibold group">
+<span class="material-symbols-outlined mr-2 group-hover:rotate-90 transition-transform" data-icon="add">add</span>
+                    Create New Post
+                </button>
+</div>
+<!-- Dashboard Stats Tonal Layering -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div class="bg-surface-container-low p-6 rounded-xl">
+<p class="font-label text-[10px] text-on-surface-variant font-bold uppercase tracking-widest mb-1">Published</p>
+<p class="font-headline text-3xl font-bold text-emerald-800">42</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border-l-4 border-emerald-500">
+<p class="font-label text-[10px] text-on-surface-variant font-bold uppercase tracking-widest mb-1">Drafts</p>
+<p class="font-headline text-3xl font-bold text-zinc-700">12</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl">
+<p class="font-label text-[10px] text-on-surface-variant font-bold uppercase tracking-widest mb-1">Views (30d)</p>
+<p class="font-headline text-3xl font-bold text-secondary">8.4k</p>
+</div>
+</div>
+<!-- Main Content Layout (Split Screen Editor/Table Pattern) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Blog Table (Left 7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-2xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline font-bold text-xl">Recent Articles</h3>
+<div class="flex space-x-2">
+<span class="material-symbols-outlined text-zinc-400 cursor-pointer" data-icon="filter_list">filter_list</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-xs font-label uppercase tracking-widest text-zinc-400 border-b border-zinc-50">
+<th class="pb-4 font-semibold">Post</th>
+<th class="pb-4 font-semibold">Status</th>
+<th class="pb-4 font-semibold">Date</th>
+<th class="pb-4 font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<!-- Table Row 1 -->
+<tr class="group hover:bg-zinc-50/50 transition-colors">
+<td class="py-5">
+<div class="flex items-center">
+<img class="w-12 h-12 rounded-lg object-cover mr-4" data-alt="sparkling clean modern kitchen with marble countertops and minimalist lighting after a deep cleaning service" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrgKXOoZrBlt_67kpQpjiMB38ncaX3FF4qBCc9jGiawQ_5HNmCDaucMxcj4tFL3flXXGwfkCsoavhzR9qseZ22KUFVRyToT00pVnPu3S0PRM8J9zrOW8Fx5GLCKIBDZLlGnsVXKxBPXcP-Cff5_6aMRHcsNVWRxbYyk4Uj1MfCoJ2eL5PgV5KbG6JEY-655lPqKewHONMBS8ctICx1bBr_js-ouNubN2IzJQCTzqZEnAuiNohfa-nyC2w16W0qOwHKtKO-5WIp2eU"/>
+<div>
+<p class="font-bold text-on-surface group-hover:text-emerald-700 transition-colors">The Art of Minimalist Living</p>
+<p class="text-[10px] text-zinc-500">Service Highlights</p>
+</div>
+</div>
+</td>
+<td class="py-5">
+<span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase tracking-wider">Published</span>
+</td>
+<td class="py-5 text-zinc-500">Oct 24, 2024</td>
+<td class="py-5 text-right">
+<div class="flex justify-end space-x-3 opacity-40 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:scale-110" data-icon="edit">edit</span>
+<span class="material-symbols-outlined text-error cursor-pointer hover:scale-110" data-icon="delete">delete</span>
+</div>
+</td>
+</tr>
+<!-- Table Row 2 -->
+<tr class="group hover:bg-zinc-50/50 transition-colors">
+<td class="py-5">
+<div class="flex items-center">
+<img class="w-12 h-12 rounded-lg object-cover mr-4" data-alt="professional cleaning equipment arranged neatly on a designer wooden floor in a luxury apartment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCszeMJPPLog_mjJUGL7TTB1ZjSBo1oQ-dwci4swdR-yGBxuAQ-4Z_bHkLJctfciLG8xfw5dAVb0HTDMVQ8gWuOf59DoV-xhZe4diCWGO9KH_2RAxf60jPKIERQU6DWA8uqPHtIRPjkc-ZwYHnA0QUFaDHd5Mkiwj17ExMfaXP1vfnw2x9rSpwxZwbhJ8g66dmQImrR_z-7dSah1ywliriFO3RKSx2Dz-R_90KnteA4sOHwYjcp6cg2aOSFEPdnxShaALVgbH9jVxo"/>
+<div>
+<p class="font-bold text-on-surface group-hover:text-emerald-700 transition-colors">Deep Cleaning vs Surface Tidy</p>
+<p class="text-[10px] text-zinc-500">Guides</p>
+</div>
+</div>
+</td>
+<td class="py-5">
+<span class="px-2.5 py-0.5 rounded-full bg-zinc-200 text-zinc-600 text-[10px] font-bold uppercase tracking-wider">Draft</span>
+</td>
+<td class="py-5 text-zinc-500">Oct 21, 2024</td>
+<td class="py-5 text-right">
+<div class="flex justify-end space-x-3 opacity-40 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:scale-110" data-icon="edit">edit</span>
+<span class="material-symbols-outlined text-error cursor-pointer hover:scale-110" data-icon="delete">delete</span>
+</div>
+</td>
+</tr>
+<!-- Table Row 3 -->
+<tr class="group hover:bg-zinc-50/50 transition-colors">
+<td class="py-5">
+<div class="flex items-center">
+<img class="w-12 h-12 rounded-lg object-cover mr-4" data-alt="close-up of a perfectly clean glass window reflecting a serene garden view with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJHH0TPDotMZDL5gFFCvw6mkH9EXC1DMdjnmzlUWbcosZTBuXAzIn9eGCIGGT9y47Pt-xbXDpaBG7_pMjxLFNyamHhPfIiyiUlXGO6FpMsVGrzBUb4DdhnGiOaSo8eKn9Hm-FgX0o_utbl3ZuZ1sgU3WqNwFY_C_ilLBLpQeGKJGskdQb4coJyn7CONxJ7T-S1DYKQyk54qQcaLmeQ7uoVCr1oa2PdjhQZSZq8GWQBOQdgmtw9WvsVFE1MCLwPPlatPFXZ3-cfGcU"/>
+<div>
+<p class="font-bold text-on-surface group-hover:text-emerald-700 transition-colors">Clarity in Every Pane</p>
+<p class="text-[10px] text-zinc-500">Commercial</p>
+</div>
+</div>
+</td>
+<td class="py-5">
+<span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase tracking-wider">Published</span>
+</td>
+<td class="py-5 text-zinc-500">Oct 18, 2024</td>
+<td class="py-5 text-right">
+<div class="flex justify-end space-x-3 opacity-40 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:scale-110" data-icon="edit">edit</span>
+<span class="material-symbols-outlined text-error cursor-pointer hover:scale-110" data-icon="delete">delete</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Comprehensive Editor (Right 5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-high rounded-2xl overflow-hidden shadow-lg">
+<div class="bg-primary px-6 py-4 flex justify-between items-center">
+<h3 class="font-headline font-bold text-white tracking-tight">Editor: New Post</h3>
+<span class="material-symbols-outlined text-white/70" data-icon="more_vert">more_vert</span>
+</div>
+<div class="p-6 space-y-6">
+<!-- Image Upload Area -->
+<div class="group relative w-full h-48 rounded-xl bg-zinc-200 dark:bg-zinc-800 flex flex-col items-center justify-center border-2 border-dashed border-zinc-300 hover:border-emerald-500 transition-all cursor-pointer overflow-hidden">
+<span class="material-symbols-outlined text-zinc-400 text-3xl group-hover:text-emerald-500 transition-colors" data-icon="add_a_photo">add_a_photo</span>
+<p class="text-xs font-label font-bold text-zinc-500 mt-2">Upload Cover Image</p>
+<!-- Placeholder Overlay for Hover -->
+<div class="absolute inset-0 bg-emerald-900/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<!-- Title Input -->
+<div class="space-y-1">
+<label class="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Article Title</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg py-3 px-4 text-sm focus:ring-2 focus:ring-emerald-500 transition-all shadow-sm" placeholder="Enter post title..." type="text"/>
+</div>
+<!-- Date & Status Row -->
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Publish Date</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg py-3 px-4 text-sm focus:ring-2 focus:ring-emerald-500 transition-all shadow-sm" type="date"/>
+</div>
+<div class="space-y-1">
+<label class="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Visibility</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-lg py-3 px-4 text-sm focus:ring-2 focus:ring-emerald-500 transition-all shadow-sm">
+<option>Draft</option>
+<option>Published</option>
+<option>Private</option>
+</select>
+</div>
+</div>
+<!-- Description -->
+<div class="space-y-1">
+<label class="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Short Description</label>
+<textarea class="w-full bg-surface-container-lowest border-none rounded-lg py-3 px-4 text-sm focus:ring-2 focus:ring-emerald-500 transition-all shadow-sm" placeholder="Brief summary for list view..." rows="2"></textarea>
+</div>
+<!-- Rich Text Editor Placeholder -->
+<div class="space-y-1">
+<label class="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Content Body</label>
+<div class="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
+<div class="bg-zinc-50 border-b border-zinc-100 p-2 flex space-x-2">
+<span class="material-symbols-outlined text-xs p-1 hover:bg-zinc-200 rounded cursor-pointer" data-icon="format_bold">format_bold</span>
+<span class="material-symbols-outlined text-xs p-1 hover:bg-zinc-200 rounded cursor-pointer" data-icon="format_italic">format_italic</span>
+<span class="material-symbols-outlined text-xs p-1 hover:bg-zinc-200 rounded cursor-pointer" data-icon="format_list_bulleted">format_list_bulleted</span>
+<span class="material-symbols-outlined text-xs p-1 hover:bg-zinc-200 rounded cursor-pointer" data-icon="link">link</span>
+</div>
+<textarea class="w-full border-none p-4 text-sm focus:ring-0 resize-none" placeholder="Start writing the meticulous story..." rows="6"></textarea>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex space-x-3 pt-4">
+<button class="flex-1 px-6 py-3 bg-zinc-200 text-zinc-700 rounded-lg font-inter font-bold text-sm hover:bg-zinc-300 transition-colors">
+                                Save Draft
+                            </button>
+<button class="flex-1 px-6 py-3 bg-gradient-to-br from-emerald-600 to-emerald-700 text-white rounded-lg font-inter font-bold text-sm shadow-md hover:brightness-110 transition-all">
+                                Publish Now
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer (Authority Source: JSON) -->
+<footer class="w-full py-12 mt-20 bg-zinc-100 dark:bg-zinc-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
+<div class="col-span-1 md:col-span-1">
+<p class="font-manrope font-bold text-xl text-emerald-900 dark:text-emerald-100 mb-4">R&amp;K-Gaggenau</p>
+<p class="font-inter text-sm tracking-wide text-zinc-500 leading-relaxed">Atmospheric Precision in Cleaning. Elevating standards across the Gaggenau region.</p>
+</div>
+<div>
+<h4 class="font-headline font-bold text-sm mb-4 text-zinc-800 dark:text-zinc-200">Management</h4>
+<ul class="space-y-2">
+<li><a class="font-inter text-sm tracking-wide text-zinc-500 hover:text-emerald-500 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-inter text-sm tracking-wide text-zinc-500 hover:text-emerald-500 transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-bold text-sm mb-4 text-zinc-800 dark:text-zinc-200">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-inter text-sm tracking-wide text-zinc-500 hover:text-emerald-500 transition-colors" href="#">Cookie Settings</a></li>
+<li><a class="font-inter text-sm tracking-wide text-zinc-500 hover:text-emerald-500 transition-colors" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-bold text-sm mb-4 text-zinc-800 dark:text-zinc-200">Connect</h4>
+<div class="flex space-x-4">
+<span class="material-symbols-outlined text-zinc-400 hover:text-emerald-600 cursor-pointer" data-icon="language">language</span>
+<span class="material-symbols-outlined text-zinc-400 hover:text-emerald-600 cursor-pointer" data-icon="alternate_email">alternate_email</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row justify-between items-center opacity-80">
+<p class="font-inter text-sm tracking-wide text-zinc-500">© 2024 R&amp;K-Gaggenau. Atmospheric Precision in Cleaning.</p>
+<div class="mt-4 md:mt-0 flex space-x-4">
+<span class="text-emerald-600 underline text-xs cursor-pointer">System Status: Optimal</span>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

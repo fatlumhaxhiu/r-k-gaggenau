@@ -1,0 +1,330 @@
+<!DOCTYPE html><html class="light" lang="de"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#bd565a",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#8cf8bb",
+                        "secondary-fixed-dim": "#82cfff",
+                        "surface-container-highest": "#e1e3e3",
+                        "primary": "#006c43",
+                        "surface-container": "#eceeee",
+                        "primary-container": "#008855",
+                        "on-surface-variant": "#3e4a41",
+                        "primary-fixed-dim": "#70dba0",
+                        "surface-container-high": "#e6e8e9",
+                        "on-background": "#191c1d",
+                        "inverse-surface": "#2e3131",
+                        "surface-tint": "#006d43",
+                        "on-tertiary-fixed": "#400009",
+                        "surface-container-low": "#f2f4f4",
+                        "on-secondary-fixed-variant": "#004c6b",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb3b3",
+                        "on-surface": "#191c1d",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#bdcabf",
+                        "on-primary-fixed-variant": "#005231",
+                        "on-error": "#ffffff",
+                        "secondary": "#00658d",
+                        "secondary-container": "#6cc8fd",
+                        "on-primary-fixed": "#002111",
+                        "inverse-primary": "#70dba0",
+                        "tertiary-fixed": "#ffdad9",
+                        "on-secondary-fixed": "#001e2d",
+                        "outline": "#6e7a70",
+                        "on-tertiary-container": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f8fafa",
+                        "on-tertiary-fixed-variant": "#80282e",
+                        "inverse-on-surface": "#eff1f1",
+                        "on-secondary-container": "#005374",
+                        "on-primary-container": "#ffffff",
+                        "background": "#f8fafa",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f8fafa",
+                        "secondary-fixed": "#c6e7ff",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d8dada",
+                        "tertiary": "#9e3e43",
+                        "surface-variant": "#e1e3e3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(25, 28, 29, 0.06);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #006c43 0%, #008855 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface/80 dark:bg-zinc-900/80 backdrop-blur-xl fixed top-0 left-0 w-full z-50 tonal-shift-bg-surface-container-low">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="font-manrope font-black text-2xl tracking-tighter text-emerald-800 dark:text-emerald-200" style="">
+                R&amp;K-Gaggenau
+            </div>
+<div class="hidden md:flex items-center space-x-10"><a class="text-zinc-600 dark:text-zinc-400 font-manrope tracking-tight text-lg font-medium hover:text-emerald-600 transition-colors duration-300" href="#" style="">Gewerblich</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-manrope tracking-tight text-lg font-medium hover:text-emerald-600 transition-colors duration-300" href="#" style="">Privat</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-manrope tracking-tight text-lg font-medium hover:text-emerald-600 transition-colors duration-300" href="#" style="">Grundreinigung</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-manrope tracking-tight text-lg font-medium hover:text-emerald-600 transition-colors duration-300" href="#" style="">Baugrundreinigung</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-manrope tracking-tight text-lg font-medium hover:text-emerald-600 transition-colors duration-300" href="#" style="">Institutionell</a>
+<a class="text-emerald-700 dark:text-emerald-400 font-manrope tracking-tight text-lg font-bold border-b-2 border-emerald-700 dark:border-emerald-400 pb-1" href="#" style="">Saisonal</a></div>
+<button class="primary-gradient text-on-primary px-6 py-2.5 rounded-lg font-bold tracking-tight text-sm scale-95 duration-200 ease-in-out hover:scale-100" style="">
+                Jetzt buchen
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden bg-surface">
+<div class="max-w-7xl mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<span class="font-label text-secondary uppercase tracking-[0.2em] text-xs font-bold mb-6 block" style="">Erstklassige Wartung im Winter</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface tracking-tighter leading-[1.05] mb-8" style="">
+                        Zuverlässige <span class="text-primary italic" style="">Saisonpflege</span> &amp; Winterdienst
+                    </h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl mb-10 leading-relaxed font-body" style="">
+                        Von der präzisen Schneeräumung bis zur fachgerechten saisonalen Außenpflege. Sorgen Sie dafür, dass Ihr Anwesen unabhängig von der Wettervorhersage sicher und gepflegt bleibt.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="primary-gradient text-on-primary px-8 py-4 rounded-lg font-bold text-lg editorial-shadow hover:brightness-110 transition-all" style="">
+                            Termin vereinbaren
+                        </button>
+<button class="bg-surface-container-lowest text-primary px-8 py-4 rounded-lg font-bold text-lg editorial-shadow border border-outline-variant/20 hover:bg-surface-container-low transition-all" style="">
+                            Leistungen entdecken</button>
+</div>
+</div>
+<div class="lg:col-span-5 relative h-full min-h-[500px]">
+<div class="absolute inset-0 bg-primary/5 rounded-3xl -rotate-3 transform scale-105"></div>
+<img class="w-full h-full object-cover rounded-3xl editorial-shadow relative z-10" data-alt="Modernes minimalistisches Hausäußeres im Winter mit geräumter Einfahrt und klarem Morgenlicht" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCatpfZ7Xzhq8iDIj4_TD0t5ruwBAsdBsRqwS43XUi8eWuTWGPTGGTh4AZosLB9tj6cp5cejt9ioT_K0bLXu2dC7DtP_B7sGNok-oJC_ZMB6SmwCN1r8San04AfHNsrvSD_oedpi89DirLPuzPAHjzHyALgeE5YT9bwLjwbbdqvM993PP-pblvBf0-GwAIrm1ZXEqWQ_xe06dGrMGheZl_YfRGzDYKt9Pva7xAmvCljIgH8_Nx6Ith53EAQ89yv5s-O7sQ02LCJjUE" style="">
+</div>
+</div>
+</section>
+<!-- What's Included: Asymmetric Bento-style Grid -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight text-on-surface" style="">Was enthalten ist</h2>
+<p class="text-on-surface-variant mt-4 font-body" style="">Präzise Pflege für die einzigartigen Herausforderungen jeder Jahreszeit.</p>
+</div>
+<div class="h-px flex-grow bg-outline-variant/30 mx-12 hidden lg:block"></div>
+<span class="font-label text-secondary font-black text-6xl opacity-10" style="">01—03</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="group bg-surface-container-lowest p-8 rounded-2xl editorial-shadow transition-transform hover:-translate-y-2">
+<div class="w-14 h-14 bg-secondary-fixed-dim/20 rounded-xl flex items-center justify-center text-secondary mb-8">
+<span class="material-symbols-outlined text-3xl" style="">ac_unit</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4" style="">Winterdienst</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6 font-body" style="">Komplettes Facility Management im Winter, das dafür sorgt, dass Wege und Eingänge frei sind, bevor Ihr Tag beginnt.</p>
+<ul class="space-y-3 text-sm font-semibold text-on-surface-variant">
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-primary text-lg" style="">check_circle</span> Vorsorgliches Streuen</li>
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-primary text-lg" style="">check_circle</span> Wegräumung</li>
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-primary text-lg" style="">check_circle</span> Streugutmanagement</li>
+</ul>
+</div>
+<!-- Service 2 -->
+<div class="group bg-surface-container-lowest p-8 rounded-2xl editorial-shadow transition-transform hover:-translate-y-2">
+<div class="w-14 h-14 bg-primary-fixed/20 rounded-xl flex items-center justify-center text-primary mb-8">
+<span class="material-symbols-outlined text-3xl" style="">snowing</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4" style="">Schnee- &amp; Eisbeseitigung</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6 font-body" style="">Schneller Einsatz bei starkem Schneefall. Wir priorisieren Sicherheit und Zugänglichkeit für Privat- und Gewerbekunden.</p>
+<ul class="space-y-3 text-sm font-semibold text-on-surface-variant">
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-primary text-lg" style="">check_circle</span> Notfall-Räumung</li>
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-primary text-lg" style="">check_circle</span> Gehweg-Salzung</li>
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-primary text-lg" style="">check_circle</span> Dachschnee-Sicherung</li>
+</ul>
+</div>
+<!-- Service 3 -->
+<div class="group bg-surface-container-lowest p-8 rounded-2xl editorial-shadow transition-transform hover:-translate-y-2">
+<div class="w-14 h-14 bg-tertiary-fixed/20 rounded-xl flex items-center justify-center text-tertiary mb-8">
+<span class="material-symbols-outlined text-3xl" style="">eco</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4" style="">Außen- &amp; Gartenpflege</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6 font-body" style="">Wir begleiten Ihre Außenanlagen durch die Jahreszeiten mit sorgfältiger Reinigung und Vorbereitung.</p>
+<ul class="space-y-3 text-sm font-semibold text-on-surface-variant">
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-primary text-lg" style="">check_circle</span> Laubentfernung</li>
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-primary text-lg" style="">check_circle</span> Dachrinnenreinigung</li>
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-primary text-lg" style="">check_circle</span> Garten-Winterfestmachung</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us: Icon Focused -->
+<section class="py-24 bg-surface overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1 grid grid-cols-2 gap-6">
+<div class="space-y-6">
+<div class="bg-surface-container-high p-8 rounded-2xl">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" style="">schedule</span>
+<h4 class="font-headline font-bold text-xl mb-2" style="">24/7 Verfügbarkeit</h4>
+<p class="text-on-surface-variant text-sm font-body" style="">Wir beobachten das Wetter, damit Sie es nicht tun müssen. Einsatz bei Tag und Nacht.</p>
+</div>
+<div class="bg-surface-container-high p-8 rounded-2xl">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" style="">health_and_safety</span>
+<h4 class="font-headline font-bold text-xl mb-2" style="">Sicherheit zuerst</h4>
+<p class="text-on-surface-variant text-sm font-body" style="">Haftungsreduzierung durch professionelle Enteisungsprotokolle.</p>
+</div>
+</div>
+<div class="space-y-6 pt-12">
+<div class="bg-primary-container p-8 rounded-2xl text-on-primary-container">
+<span class="material-symbols-outlined text-4xl mb-4" style="">bolt</span>
+<h4 class="font-headline font-bold text-xl mb-2" style="">Schnelle Reaktion</h4>
+<p class="text-on-primary-container/80 text-sm font-body" style="">Garantierte Ankunftszeiten innerhalb unserer Servicevereinbarungen.</p>
+</div>
+<div class="bg-surface-container-high p-8 rounded-2xl">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" style="">cloudy_snowing</span>
+<h4 class="font-headline font-bold text-xl mb-2" style="">Wetterbereit</h4>
+<p class="text-on-surface-variant text-sm font-body" style="">Spezialisierte Flotte, vorbereitet auf extreme regionale Bedingungen.</p>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight text-on-surface mb-6" style="">Bereit für die <span class="text-primary" style="">Elemente.</span></h2>
+<p class="text-on-surface-variant text-lg mb-8 leading-relaxed font-body" style="">Unser Team reagiert nicht nur, wir agieren vorausschauend. Mit fortschrittlicher meteorologischer Überwachung und industrietauglichem Equipment bietet R&amp;K-Gaggenau einen Schutzschirm für Ihr Eigentum.</p>
+<!-- Trust Record Section -->
+<div class="bg-surface-container-low p-8 rounded-2xl border-l-4 border-primary">
+<h5 class="font-label text-xs uppercase tracking-widest font-bold text-on-surface-variant mb-6" style="">Unsere Erfolgsbilanz</h5>
+<div class="flex items-center gap-8">
+<div>
+<span class="block text-4xl font-extrabold text-primary font-headline" style="">99.8%</span>
+<span class="text-xs font-semibold text-on-surface-variant uppercase" style="">Service-Verfügbarkeit</span>
+</div>
+<div class="w-px h-12 bg-outline-variant"></div>
+<div>
+<span class="block text-4xl font-extrabold text-primary font-headline" style="">15m</span>
+<span class="text-xs font-semibold text-on-surface-variant uppercase" style="">Ø Reaktionszeit</span>
+</div>
+<div class="w-px h-12 bg-outline-variant"></div>
+<div>
+<span class="block text-4xl font-extrabold text-primary font-headline" style="">1.2k+</span>
+<span class="text-xs font-semibold text-on-surface-variant uppercase" style="">Gepflegte Objekte</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-24 bg-surface-container-low relative">
+<div class="max-w-4xl mx-auto px-8 relative z-10">
+<div class="bg-surface-container-lowest rounded-3xl editorial-shadow overflow-hidden flex flex-col md:flex-row">
+<div class="md:w-2/5 primary-gradient p-12 text-on-primary flex flex-col justify-between">
+<div>
+<h2 class="font-headline text-3xl font-bold leading-tight mb-4" style="">Angebot für Saisonpflege anfordern</h2>
+<p class="text-on-primary/80 font-body" style="">Sichern Sie sich Ihren Platz in unserem Winterplan. Die Plätze für garantierten Priority-Service sind begrenzt.</p>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined" style="">call</span>
+<span class="font-semibold text-sm" style="">+49 (0) 7225 123 456</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined" style="">mail</span>
+<span class="font-semibold text-sm" style="">service@rk-gaggenau.de</span>
+</div>
+</div>
+</div>
+<div class="md:w-3/5 p-12">
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-bold text-on-surface-variant uppercase mb-2" style="">Vorname</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all p-3 text-on-surface placeholder:text-on-surface-variant/50" placeholder="John" type="text">
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface-variant uppercase mb-2" style="">Nachname</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all p-3 text-on-surface placeholder:text-on-surface-variant/50" placeholder="Doe" type="text">
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface-variant uppercase mb-2" style="">E-Mail-Adresse</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all p-3 text-on-surface placeholder:text-on-surface-variant/50" placeholder="john.doe@beispiel.de" type="email">
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface-variant uppercase mb-2" style="">Telefonnummer</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all p-3 text-on-surface placeholder:text-on-surface-variant/50" placeholder="+49 000 0000000" type="tel">
+</div>
+<button class="w-full primary-gradient text-on-primary py-4 rounded-lg font-bold text-lg hover:brightness-110 transition-all editorial-shadow mt-4" style="" type="submit">
+                                Termin vereinbaren
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 text-center">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="font-headline text-4xl md:text-6xl font-extrabold text-on-surface tracking-tighter mb-8 max-w-4xl mx-auto" style="">
+                    Lassen Sie das Wetter nicht über Ihren <span class="text-secondary italic" style="">Betriebsablauf</span> entscheiden.
+</h2>
+<div class="flex justify-center">
+<button class="primary-gradient text-on-primary px-12 py-5 rounded-lg font-bold text-xl editorial-shadow hover:scale-105 transition-all" style="">
+                        Jetzt loslegen
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 full-width py-12 tonal-shift from surface to surface-container-low">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-black text-stone-900 dark:text-stone-100 font-headline uppercase tracking-tighter mb-2" style="">
+                    R&amp;K-Gaggenau
+                </div>
+<p class="font-inter text-xs tracking-wide uppercase text-stone-500" style="">Präzisionsreinigung © 2024</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-inter text-xs tracking-wide uppercase text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#" style="">Datenschutz</a>
+<a class="font-inter text-xs tracking-wide uppercase text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#" style="">AGB</a>
+<a class="font-inter text-xs tracking-wide uppercase text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#" style="">Einsatzgebiete</a>
+<a class="font-inter text-xs tracking-wide uppercase text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#" style="">Karriere</a>
+</div>
+<div class="mt-8 md:mt-0 font-inter text-xs tracking-wide uppercase text-stone-500" style="">
+                © 2024 R&amp;K-Gaggenau Präzisionsreinigung. Alle Rechte vorbehalten.
+            </div>
+</div>
+</footer>
+</body></html>

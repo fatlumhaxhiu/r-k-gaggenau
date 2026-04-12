@@ -1,0 +1,362 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="de"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Baureinigung | R&amp;K-Gaggenau</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#bd565a",
+                      "error": "#ba1a1a",
+                      "primary-fixed": "#8cf8bb",
+                      "secondary-fixed-dim": "#82cfff",
+                      "surface-container-highest": "#e1e3e3",
+                      "primary": "#006c43",
+                      "surface-container": "#eceeee",
+                      "primary-container": "#008855",
+                      "on-surface-variant": "#3e4a41",
+                      "primary-fixed-dim": "#70dba0",
+                      "surface-container-high": "#e6e8e9",
+                      "on-background": "#191c1d",
+                      "inverse-surface": "#2e3131",
+                      "surface-tint": "#006d43",
+                      "on-tertiary-fixed": "#400009",
+                      "surface-container-low": "#f2f4f4",
+                      "on-secondary-fixed-variant": "#004c6b",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed-dim": "#ffb3b3",
+                      "on-surface": "#191c1d",
+                      "on-secondary": "#ffffff",
+                      "outline-variant": "#bdcabf",
+                      "on-primary-fixed-variant": "#005231",
+                      "on-error": "#ffffff",
+                      "secondary": "#00658d",
+                      "secondary-container": "#6cc8fd",
+                      "on-primary-fixed": "#002111",
+                      "inverse-primary": "#70dba0",
+                      "tertiary-fixed": "#ffdad9",
+                      "on-secondary-fixed": "#001e2d",
+                      "outline": "#6e7a70",
+                      "on-tertiary-container": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface-container-lowest": "#ffffff",
+                      "surface": "#f8fafa",
+                      "on-tertiary-fixed-variant": "#80282e",
+                      "inverse-on-surface": "#eff1f1",
+                      "on-secondary-container": "#005374",
+                      "on-primary-container": "#ffffff",
+                      "background": "#f8fafa",
+                      "on-tertiary": "#ffffff",
+                      "surface-bright": "#f8fafa",
+                      "secondary-fixed": "#c6e7ff",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#d8dada",
+                      "tertiary": "#9e3e43",
+                      "surface-variant": "#e1e3e3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #006c43 0%, #008855 100%);
+        }
+        .glass-panel {
+            background: rgba(248, 250, 250, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="bg-emerald-50/80 dark:bg-stone-900/80 backdrop-blur-xl docked full-width top-0 sticky z-50 tonal-shift bg-stone-100/50">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-emerald-900 dark:text-emerald-50 font-headline" style="">R&amp;K-Gaggenau</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-manrope tracking-tight text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="#" style="">Gewerblich</a>
+<a class="font-manrope tracking-tight text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="#" style="">Privat</a>
+<a class="font-manrope tracking-tight text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="#" style="">Grundreinigung</a>
+<a class="font-manrope tracking-tight text-sm font-bold text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700 dark:border-emerald-400 pb-1" href="#" style="">Baugrundreinigung</a>
+<a class="font-manrope tracking-tight text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="#" style="">Institutionell</a>
+<a class="font-manrope tracking-tight text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="#" style="">Saisonal</a>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary px-6 py-2 rounded-xl text-sm font-bold tracking-tight transition-all active:scale-95 duration-200" style="">
+            Jetzt anfragen
+        </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8 w-full asymmetric-grid relative z-10">
+<div class="col-span-12 md:col-span-7 flex flex-col justify-center py-20">
+<span class="font-label text-secondary font-bold tracking-[0.2em] mb-4 uppercase text-sm" style="">Industrielle Präzision</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface leading-none mb-8" style="">
+                    Experten für <span class="text-primary" style="">Baureinigung &amp; Übergabe</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl mb-10 leading-relaxed" style="">
+                    Nahtloser Übergang von der Baustelle zur schlüsselfertigen Übergabe. Unsere spezialisierten Teams entfernen feinsten Staub, Schutt und Rückstände, die Standardreiniger übersehen.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="hero-gradient text-on-primary px-8 py-4 rounded-xl font-bold text-center transition-all hover:shadow-xl hover:shadow-primary/20 flex items-center justify-center gap-2" href="#contact" style="">
+                        Termin vereinbaren
+                        <span class="material-symbols-outlined text-lg" style="">arrow_forward</span>
+</a>
+<a class="border border-outline-variant text-primary px-8 py-4 rounded-xl font-bold text-center transition-all hover:bg-surface-container-lowest" href="#included" style="">
+                        Leistungen entdecken
+                    </a>
+</div>
+</div>
+<div class="hidden md:block col-span-5 relative h-full min-h-[600px]">
+<div class="absolute inset-0 bg-primary/5 rounded-[2rem] -rotate-3 translate-x-4 translate-y-4"></div>
+<img alt="Pristine modern architectural space" class="absolute inset-0 w-full h-full object-cover rounded-[2rem] shadow-2xl z-10 grayscale hover:grayscale-0 transition-all duration-700" data-alt="Modern architectural interior with clean lines and large windows, reflecting sunlight on a perfectly polished concrete floor in a minimalist building." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFWug9_ZaFrLm9zUDJogRVW6sYx4y4GXbZ3P-K-8dbKj6wsOtsOSsoSojD2QpUUht_3Z6NrwGubgLPl9ZHNcJwEQ1TM_Mlco9WxjqAVjuZpQorSyB8Q_o1PoEc-bnhS482Te5C7Kpq3yHixqxdT7OqkxDgocdTJcNNz8LqVli4rTTFSAD4BMYz4XhUlmpSBl4z7eBAJhwIazhYGJdjDHPJqKropI-DLbTczEwAEl8OaybOYkcKyw-_i5GalzLwAdVNggr5eyvsTrc" style="">
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+</section>
+<!-- What's Included (Bento Style) -->
+<section class="py-32 bg-surface" id="included">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-20 text-left md:indent-20">
+<span class="font-label text-primary font-semibold tracking-widest uppercase" style="">Der Prozess</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold mt-2" style="">Was enthalten ist</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-auto">
+<!-- Major Card -->
+<div class="md:col-span-8 group bg-surface-container-low rounded-3xl p-10 flex flex-col justify-between relative overflow-hidden transition-all hover:bg-surface-container-lowest border border-transparent hover:border-outline-variant/30">
+<div class="relative z-10">
+<span class="text-6xl font-headline font-black text-primary/10 absolute -top-4 -left-2" style="">01</span>
+<h3 class="text-3xl font-headline font-bold mb-4 mt-8" style="">Baufeinreinigung</h3>
+<p class="text-on-surface-variant max-w-md leading-relaxed" style="">
+                            Detaillierte, phasenweise Desinfektion aller Oberflächen, einschließlich staubintensiver Bereiche, Lüftungen und Innenschränke. Wir garantieren staubfreie Räume, bereit für den Einzug.
+                        </p>
+</div>
+<div class="mt-12 flex items-center gap-6">
+<div class="flex flex-col">
+<span class="font-bold text-primary" style="">Innenpolitur</span>
+<span class="text-sm text-on-surface-variant" style="">Fenster, Beschläge &amp; Leisten</span>
+</div>
+<div class="h-10 w-px bg-outline-variant"></div>
+<div class="flex flex-col">
+<span class="font-bold text-primary" style="">HEPA-Luftreinigung</span>
+<span class="text-sm text-on-surface-variant" style="">Partikelentfernung</span>
+</div>
+</div>
+<div class="absolute bottom-[-10%] right-[-5%] w-1/2 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined !text-[200px]" data-icon="cleaning_services" style="">cleaning_services</span>
+</div>
+</div>
+<!-- Side Card 1 -->
+<div class="md:col-span-4 bg-secondary text-on-secondary rounded-3xl p-10 flex flex-col justify-center hover:scale-[1.02] transition-transform">
+<span class="text-5xl font-headline font-black opacity-30 mb-4" style="">02</span>
+<h3 class="text-2xl font-headline font-bold mb-4" style="">Baugrobreinigung</h3>
+<p class="text-secondary-fixed opacity-90" style="">
+                        Aufrechterhaltung einer sicheren, organisierten Arbeitsumgebung während der Bauphase, um Effizienz und Sicherheit für alle Gewerke zu maximieren.
+                    </p>
+</div>
+<!-- Bottom Card -->
+<div class="md:col-span-12 bg-surface-container-highest rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between gap-12 group">
+<div class="md:w-1/2">
+<span class="text-5xl font-headline font-black text-primary/20 mb-4 block" style="">03</span>
+<h3 class="text-3xl font-headline font-bold mb-4" style="">Schuttentsorgung</h3>
+<p class="text-on-surface-variant leading-relaxed" style="">
+                            Fachgerechte Entsorgung von Restmaterialien, Abfallmanagement und Geländebereinigung. Wir erledigen die grobe Arbeit, damit Ihr Design glänzen kann.
+                        </p>
+<ul class="mt-8 space-y-3">
+<li class="flex items-center gap-3 font-semibold text-primary" style="">
+<span class="material-symbols-outlined" style="">check_circle</span>
+                                Umweltfreundliche Entsorgungsstandards
+                            </li>
+<li class="flex items-center gap-3 font-semibold text-primary" style="">
+<span class="material-symbols-outlined" style="">check_circle</span>
+                                Sicherheitsorientierte Geräteführung
+                            </li>
+</ul>
+</div>
+<div class="md:w-1/2 w-full h-64 relative rounded-2xl overflow-hidden">
+<img alt="Construction site interior" class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0" data-alt="Interior of a large modern construction site with professional grade cleaning equipment and a clear, dust-free atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByKR5klSRWgLM8jki43aT-sIwsqi_jUkqPNq7PmLIiKwqv9uuM_-OtysVo3ldRfWNnUZ0JTH1t52B63RHd7RwdkYmwZHvwZ13fpAIo7utuRHrvx8T5p8lEiHiDriEbOGx4tOTjF_9yLc7p3xBtY1h_6U_mvUnIZy2UKyy8nRLYdT5VCpAsaLYGKxXsIQHQH1X96WyDqACORTT_QHspJhmDn0umpuZzTqdSmkNjPjmQN5EtqGLlW7iP7MNyuS3hvqnQSL_k893-4-I" style="">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-32 bg-surface-container-low overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative">
+<div class="text-center mb-24">
+<h2 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tight" style="">Auf Exzellenz programmiert</h2>
+<p class="mt-4 text-on-surface-variant max-w-2xl mx-auto italic" style="">"Präzision ist kein Zufall; sie ist unser Standard."</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Feature 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-primary">
+<div class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined !text-3xl" data-icon="speed" style="">speed</span>
+</div>
+<h4 class="font-headline font-bold text-xl mb-3" style="">Schnelle Abwicklung</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed" style="">Optimierte Arbeitsabläufe, um aggressive Deadlines ohne Qualitätsverlust einzuhalten.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-primary">
+<div class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined !text-3xl" data-icon="precision_manufacturing" style="">precision_manufacturing</span>
+</div>
+<h4 class="font-headline font-bold text-xl mb-3" style="">Industriestandards</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed" style="">Einsatz medizinischer Filtertechnik und schwerer Industriestaubsauger.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-primary">
+<div class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined !text-3xl" data-icon="verified_user" style="">verified_user</span>
+</div>
+<h4 class="font-headline font-bold text-xl mb-3" style="">Zertifizierte Sicherheit</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed" style="">Vollständig geschulte Teams für die Navigation auf risikoreichen Baustellen.</p>
+</div>
+<!-- Feature 4 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-primary">
+<div class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined !text-3xl" data-icon="award_star" style="">award_star</span>
+</div>
+<h4 class="font-headline font-bold text-xl mb-3" style="">Professionelle Ergebnisse</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed" style="">Akribische Liebe zum Detail, die Kundenzufriedenheit garantiert.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="py-24 bg-surface border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-1/3">
+<h3 class="font-headline text-3xl font-bold mb-4" style="">Vertraut von führenden Entwicklern</h3>
+<p class="text-on-surface-variant mb-6" style="">Über 50.000 Quadratmeter hochwertiger Gewerbe- und Wohnimmobilien perfekt poliert.</p>
+<div class="flex items-center gap-2">
+<div class="flex -space-x-4">
+<div class="w-12 h-12 rounded-full border-4 border-surface bg-primary/20 flex items-center justify-center font-bold" style="">RK</div>
+<div class="w-12 h-12 rounded-full border-4 border-surface bg-secondary/20 flex items-center justify-center font-bold" style="">GG</div>
+<div class="w-12 h-12 rounded-full border-4 border-surface bg-primary/10 flex items-center justify-center font-bold" style="">CP</div>
+</div>
+<span class="text-sm font-semibold ml-4" style="">+120 Lokale Projekte</span>
+</div>
+</div>
+<div class="md:w-2/3 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-40 grayscale hover:grayscale-0 transition-all">
+<div class="h-20 flex items-center justify-center font-black text-2xl" style="">ARCHITECTS INC</div>
+<div class="h-20 flex items-center justify-center font-black text-2xl" style="">BUILD-CO</div>
+<div class="h-20 flex items-center justify-center font-black text-2xl" style="">SKYLINE</div>
+<div class="h-20 flex items-center justify-center font-black text-2xl" style="">URBAN GRID</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-32 bg-surface" id="contact">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1">
+<div class="bg-surface-container-lowest p-10 rounded-[2rem] shadow-2xl shadow-primary/5">
+<h3 class="font-headline text-3xl font-bold mb-8" style="">Angebot anfordern</h3>
+<form class="space-y-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant" style="">Vorname</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="Max" type="text">
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant" style="">Nachname</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="Mustermann" type="text">
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant" style="">E-Mail Adresse</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="max@beispiel.de" type="email">
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant" style="">Telefonnummer</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="+49 (0) 000 000000" type="tel">
+</div>
+<button class="w-full hero-gradient text-on-primary py-4 rounded-xl font-bold text-lg hover:shadow-lg transition-all active:scale-[0.98]" type="submit" style="">
+                            Termin vereinbaren
+                        </button>
+</form>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<span class="font-label text-primary font-bold tracking-widest uppercase" style="">Heute starten</span>
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold mt-4 mb-8" style="">Machen wir Ihr Objekt bereit für die Übergabe.</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-12" style="">
+                    Unsere spezialisierten Baureinigungs-Teams sind kurzfristig einsatzbereit. Wir wissen um die hohe Bedeutung von Endabnahmen und feierlichen Eröffnungen.
+                </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-3 rounded-lg" style="">call</span>
+<div>
+<h5 class="font-bold" style="">Sofortige Rückmeldung</h5>
+<p class="text-sm text-on-surface-variant" style="">24/7 Support für dringende Standortanforderungen.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-3 rounded-lg" style="">location_on</span>
+<div>
+<h5 class="font-bold" style="">Einsatzgebiete</h5>
+<p class="text-sm text-on-surface-variant" style="">Einsatzbereit in der gesamten Metropolregion.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 bg-inverse-surface text-inverse-on-surface relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<span class="material-symbols-outlined !text-[500px]" data-icon="corporate_fare" style="">corporate_fare</span>
+</div>
+<div class="max-w-7xl mx-auto px-8 text-center relative z-10">
+<h2 class="font-headline text-4xl md:text-6xl font-bold mb-8" style="">Bereit für die Eröffnung?</h2>
+<p class="text-xl opacity-80 mb-12 max-w-2xl mx-auto" style="">Lassen Sie Baustaub nicht den Glanz Ihres Entwurfs trüben. Sichern Sie sich heute eine Präzisionsreinigung.</p>
+<a class="inline-flex bg-primary-fixed text-on-primary-fixed px-12 py-5 rounded-full font-black text-xl hover:scale-105 transition-transform" href="#contact" style="">
+                Kostenloses Angebot
+            </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 full-width py-12">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-black text-stone-900 dark:text-stone-100 mb-2" style="">R&amp;K-GAGGENAU</div>
+<p class="font-inter text-xs tracking-wide uppercase text-stone-500" style="">© 2024 R&amp;K-Gaggenau Präzisionsreinigung. Alle Rechte vorbehalten.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-inter text-xs tracking-wide uppercase">
+<a class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 opacity-80 hover:opacity-100 transition-opacity underline-offset-4 hover:underline" href="#" style="">Datenschutz</a>
+<a class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 opacity-80 hover:opacity-100 transition-opacity underline-offset-4 hover:underline" href="#" style="">AGB</a>
+<a class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 opacity-80 hover:opacity-100 transition-opacity underline-offset-4 hover:underline" href="#" style="">Servicegebiete</a>
+<a class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 opacity-80 hover:opacity-100 transition-opacity underline-offset-4 hover:underline" href="#" style="">Karriere</a>
+</div>
+</div>
+</footer>
+</body></html>

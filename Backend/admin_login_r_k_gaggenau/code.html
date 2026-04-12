@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | R&amp;K-Gaggenau Admin</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#bdcabf",
+                    "on-tertiary-fixed-variant": "#80282e",
+                    "surface-variant": "#e1e3e3",
+                    "surface-bright": "#f8fafa",
+                    "surface-container": "#eceeee",
+                    "secondary": "#00658d",
+                    "on-secondary-fixed-variant": "#004c6b",
+                    "on-secondary-container": "#005374",
+                    "on-primary-fixed": "#002111",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#9e3e43",
+                    "secondary-fixed-dim": "#82cfff",
+                    "secondary-container": "#6cc8fd",
+                    "surface-dim": "#d8dada",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f2f4f4",
+                    "on-background": "#191c1d",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eff1f1",
+                    "on-primary-container": "#ffffff",
+                    "on-secondary-fixed": "#001e2d",
+                    "background": "#f8fafa",
+                    "on-primary-fixed-variant": "#005231",
+                    "primary": "#006c43",
+                    "outline": "#6e7a70",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#ffffff",
+                    "surface": "#f8fafa",
+                    "on-surface": "#191c1d",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#70dba0",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#bd565a",
+                    "tertiary-fixed": "#ffdad9",
+                    "inverse-surface": "#2e3131",
+                    "surface-container-highest": "#e1e3e3",
+                    "surface-container-high": "#e6e8e9",
+                    "secondary-fixed": "#c6e7ff",
+                    "on-tertiary-fixed": "#400009",
+                    "tertiary-fixed-dim": "#ffb3b3",
+                    "surface-tint": "#006d43",
+                    "inverse-primary": "#70dba0",
+                    "primary-fixed": "#8cf8bb",
+                    "on-surface-variant": "#3e4a41",
+                    "primary-container": "#008855",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #006c43 0%, #008855 100%);
+        }
+        .glass-panel {
+            background: rgba(248, 250, 250, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center relative overflow-hidden px-6 py-12">
+<!-- Background Imagery (Asymmetric Layout) -->
+<div class="absolute inset-0 z-0 flex pointer-events-none">
+<div class="hidden lg:block w-1/2 h-full opacity-10">
+<img alt="Minimalist corporate lobby" class="w-full h-full object-cover" data-alt="Ultra-clean minimalist corporate lobby with white marble floors, floor-to-ceiling windows, and architectural lighting in a bright morning atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwvsabc9wd4BHJoJLZq52qtWPo2yCQTIst1-VBMqj9ttH88r1HD_SWqejnBP7HwGpadIYF0534QFOBM9PaM2Y5y-iopxZnqz-pjtkf1PKT7VMXzPJ9kWfx2KZVoguikH3IpYWDot0bBuAXkD1CnaD_3zVr3kw7awTHuI7pFrrhG93goss9Do9ZXpBMZ31b02aRjUiIXm0rpv8hgaNfePSFWoARHevmRHb6naklhsp5_uF0UNDUBQiX4FDAVXVqnDBECXrfx5IXBxI"/>
+</div>
+<div class="w-full lg:w-1/2 h-full bg-surface"></div>
+</div>
+<!-- Login Container -->
+<div class="relative z-10 w-full max-w-[1100px] grid lg:grid-cols-2 bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(25,28,29,0.06)]">
+<!-- Branding/Image Side -->
+<div class="hidden lg:flex relative flex-col justify-end p-12 overflow-hidden">
+<div class="absolute inset-0">
+<img alt="Glass boardroom" class="w-full h-full object-cover" data-alt="A pristine modern glass-walled conference room with reflecting surfaces and sophisticated architectural geometry, bright and airy lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJBPif2HIu9ZxrUAOPDb6K7JsSjavLWge8EOUPcC4oyGO3elZ8qJfE8e6nCXd_YMbnPUCA1qmBTv4vuNFNz7YGoTJic70ppoCAt__Z_qTvp8RKDuukgnECVZHvxzNHLxVng-IUElJwdnaRWW81SWzDSZVy_VQQ25lZeVN9nn2Qp1JNzBbB3CKEV18ectju6OPI8elvXnAhjCFi9u0lGm1G6fhdRwGGmD7Wgbw3TnUbELeSRrMahjfoB5rGOTuuwSEvCQunWxQ0IWk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+</div>
+<div class="relative z-20 text-on-primary">
+<span class="font-label text-xs tracking-[0.1em] uppercase opacity-80 mb-2 block">Atmospheric Precision</span>
+<h1 class="font-headline text-4xl font-extrabold tracking-tight mb-4 leading-tight">Elevating Facility Management.</h1>
+<p class="text-body-lg opacity-90 max-w-sm">Access the administrative core of R&amp;K-Gaggenau's precision systems.</p>
+</div>
+</div>
+<!-- Form Side -->
+<div class="p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-surface-container-lowest">
+<!-- Brand Anchor -->
+<div class="mb-10">
+<div class="text-emerald-800 dark:text-emerald-400 text-2xl font-headline font-bold tracking-tight mb-2">R&amp;K-Gaggenau Admin</div>
+<p class="text-on-surface-variant font-medium">Management Portal Login</p>
+</div>
+<form class="space-y-6">
+<!-- Email Field -->
+<div class="space-y-1.5">
+<label class="font-label text-xs font-semibold tracking-wider text-on-surface-variant uppercase" for="email">Email Address</label>
+<div class="relative group">
+<input class="w-full px-4 py-4 bg-surface-container-high rounded-lg border-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all text-on-surface placeholder:text-outline" id="email" name="email" placeholder="admin@rk-gaggenau.com" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label text-xs font-semibold tracking-wider text-on-surface-variant uppercase" for="password">Password</label>
+<a class="text-xs font-semibold text-secondary hover:underline transition-all" href="#">Forgot Password?</a>
+</div>
+<div class="relative group">
+<input class="w-full px-4 py-4 bg-surface-container-high rounded-lg border-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all text-on-surface placeholder:text-outline" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<!-- Action Button -->
+<div class="pt-4">
+<button class="editorial-gradient w-full py-4 rounded-lg text-on-primary font-semibold text-lg shadow-lg hover:shadow-primary/20 active:scale-95 transition-all duration-150" type="submit">
+                            Sign In
+                        </button>
+</div>
+<!-- Security Indicator -->
+<div class="flex items-center justify-center space-x-2 pt-6 text-outline">
+<span class="material-symbols-outlined text-sm" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span class="font-label text-[10px] uppercase tracking-[0.08em] font-medium">AES-256 Secure Connection Active</span>
+</div>
+</form>
+<!-- Help Link -->
+<div class="mt-12 text-center">
+<p class="text-sm text-on-surface-variant">
+                        Need technical assistance? 
+                        <a class="text-primary font-semibold hover:underline" href="#">Contact Support</a>
+</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Shared Footer -->
+<footer class="bg-zinc-50 dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 py-8">
+<div class="max-w-7xl mx-auto px-12 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-sm font-semibold text-zinc-400">
+                © 2024 R&amp;K-Gaggenau Facility Management. Atmospheric Precision Systems.
+            </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-zinc-400 font-medium hover:text-zinc-900 dark:hover:text-white transition-all text-sm" href="#">Security Policy</a>
+<a class="text-zinc-400 font-medium hover:text-zinc-900 dark:hover:text-white transition-all text-sm" href="#">Terms of Service</a>
+<a class="text-zinc-400 font-medium hover:text-zinc-900 dark:hover:text-white transition-all text-sm" href="#">Privacy</a>
+<a class="text-zinc-400 font-medium hover:text-zinc-900 dark:hover:text-white transition-all text-sm" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+</body></html>
