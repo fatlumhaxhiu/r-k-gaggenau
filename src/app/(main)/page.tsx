@@ -91,9 +91,11 @@ export default function Startseite() {
               <p className="text-muted-foreground max-w-2xl leading-relaxed">
                 Relevanz ist Verpflichtung, kein Portfolio zu verkaufen. Wir verbinden wissenschaftliche Präzision mit legendärer deutscher Qualität, um Ihren Raum neu zu definieren.
               </p>
-              <Button className="bg-primary text-primary-foreground">
-                Alle Leistungen ansehen <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link href="/leistungen">
+                <Button className="bg-primary text-primary-foreground hover:bg-emerald-800">
+                  Alle Leistungen ansehen <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
           
