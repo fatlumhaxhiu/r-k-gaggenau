@@ -8,7 +8,7 @@ export default function Kontakt() {
     <div className="flex flex-col min-h-screen bg-muted/20">
       
       {/* 1. Cinematic Hero Section */}
-      <section className="relative h-[450px] lg:h-[550px] w-full flex items-center justify-center">
+      <section className="relative h-[380px] lg:h-[550px] w-full flex items-center justify-center">
         <Image 
           src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1920&auto=format&fit=crop"
           alt="Modern corporate building interior"
@@ -25,7 +25,7 @@ export default function Kontakt() {
               <span className="w-6 h-px bg-primary"></span>
               PRÄZISIONSVERBINDUNG
             </h5>
-            <h1 className="font-heading text-6xl lg:text-[6rem] font-black tracking-tight text-foreground leading-none">
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-[6rem] font-black tracking-tight text-foreground leading-none">
               Atmosphärische <br/><span className="text-primary">Klarheit.</span>
             </h1>
           </div>
@@ -129,7 +129,7 @@ export default function Kontakt() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
             <div className="relative">
-              <div className="relative h-[650px] w-full max-w-md rounded-[1.5rem] overflow-hidden shadow-xl">
+              <div className="relative h-[400px] lg:h-[650px] w-full max-w-md rounded-[1.5rem] overflow-hidden shadow-xl">
                 <Image
                   src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800&auto=format&fit=crop"
                   alt="Cleaning professional focused on work"
@@ -142,7 +142,7 @@ export default function Kontakt() {
               </div>
             </div>
 
-            <div className="flex flex-col items-start pr-12 lg:pl-10">
+            <div className="flex flex-col items-start lg:pl-10">
               <h2 className="font-heading text-4xl lg:text-5xl font-black tracking-tight text-foreground mb-8">
                 Kompromisslose<br/>Standards.
               </h2>

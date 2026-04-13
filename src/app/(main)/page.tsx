@@ -27,7 +27,7 @@ export default function Startseite() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
             
             {/* Text Content */}
-            <div className="flex flex-col items-start max-w-xl pr-8">
+            <div className="flex flex-col items-start max-w-xl">
               <div className="inline-flex items-center rounded-sm bg-primary/10 px-3 py-1 mb-6">
                 <span className="text-xs font-bold tracking-widest text-primary uppercase">
                   {siteData.hero.badge}
@@ -51,7 +51,7 @@ export default function Startseite() {
             </div>
 
             {/* Image Content with overlapping Trust Badge */}
-            <div className="relative h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-[420px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=1200&auto=format&fit=crop"
                 alt="Professional cleaner working"

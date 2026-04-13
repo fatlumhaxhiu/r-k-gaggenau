@@ -175,3 +175,9 @@
     background: linear-gradient(135deg, var(--color-primary) 0%, #008855 100%);
   }
 }
+
+/* Landing mobile drawer — forced solid white to fix backdrop-filter stacking context */
+.landing-drawer {
+  background-color: #ffffff !important;
+  isolation: isolate;
+}

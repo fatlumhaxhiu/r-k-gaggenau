@@ -12,7 +12,7 @@ export default function UberUns() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
             
             {/* Typography Left */}
-            <div className="max-w-xl pr-8">
+            <div className="max-w-xl">
               <h5 className="text-xs font-bold tracking-widest text-primary-container uppercase mb-4">
                 ETABLIERTE EXZELLENZ
               </h5>
@@ -26,7 +26,7 @@ export default function UberUns() {
 
             {/* Image Right with Badge */}
             <div className="relative w-full max-w-lg mx-auto lg:ml-auto">
-              <div className="relative h-[650px] w-full rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative h-[450px] lg:h-[650px] w-full rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=800&auto=format&fit=crop"
                   alt="High-end corporate building interior"
@@ -38,7 +38,7 @@ export default function UberUns() {
               </div>
               
               {/* Floating Expertise Badge */}
-              <div className="absolute -bottom-8 -left-8 bg-primary-container p-8 lg:p-10 rounded-xl shadow-2xl z-20">
+              <div className="absolute -bottom-8 left-0 lg:-left-8 bg-primary-container p-6 lg:p-10 rounded-xl shadow-2xl z-20">
                 <h3 className="font-heading text-4xl lg:text-5xl font-black text-white leading-none mb-2">
                   5 JAHRE
                 </h3>
@@ -58,7 +58,7 @@ export default function UberUns() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             
             {/* Asymmetrical 4-Image Grid Left */}
-            <div className="grid grid-cols-2 gap-4 h-[600px] w-full max-w-xl mx-auto">
+            <div className="grid grid-cols-2 gap-4 min-h-[400px] lg:h-[600px] w-full max-w-xl mx-auto">
               <div className="space-y-4 h-full flex flex-col">
                 <div className="relative h-[45%] w-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
                   <Image src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" alt="Team meeting" fill className="object-cover" />
@@ -131,7 +131,7 @@ export default function UberUns() {
             </div>
 
             {/* Card 2: Nachhaltigkeit (Highlighted) */}
-            <div className="relative bg-[#a5f0c5]/40 border border-[#a5f0c5] p-10 rounded-2xl shadow-lg shadow-primary-container/5 overflow-hidden flex flex-col group transform md:-translate-y-6">
+            <div className="relative bg-[#a5f0c5]/40 border border-[#a5f0c5] p-10 rounded-2xl shadow-lg shadow-primary-container/5 overflow-hidden flex flex-col group md:-translate-y-6">
               <Leaf className="absolute -bottom-4 -right-4 h-40 w-40 text-primary-container/10 group-hover:text-primary-container/20 transition-colors" strokeWidth={1} />
               
               <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-primary-container text-white mb-6 z-10 shadow-md">

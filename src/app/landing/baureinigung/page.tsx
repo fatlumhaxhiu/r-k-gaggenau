@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import LandingMobileNav from "@/components/layout/LandingMobileNav";
 export default function BaureinigungPage() {
   return (
     <>
@@ -22,6 +23,7 @@ export default function BaureinigungPage() {
 <Link href="#contact" className="hidden md:inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-emerald-700 hover:bg-emerald-800 transition-colors duration-300">
             Jetzt buchen
         </Link>
+<LandingMobileNav activePath="/landing/baureinigung" />
 </div>
 </nav>
 <main>

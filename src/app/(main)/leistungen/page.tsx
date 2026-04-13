@@ -88,7 +88,7 @@ export default function Leistungen() {
               <h5 className="text-xs font-bold tracking-widest text-primary uppercase mb-4">
                 EXZELLENZ IN DER INSTANDHALTUNG
               </h5>
-              <h1 className="font-heading text-6xl lg:text-[5.5rem] font-black tracking-tight text-foreground leading-none mb-8">
+              <h1 className="font-heading text-4xl sm:text-5xl lg:text-[5.5rem] font-black tracking-tight text-foreground leading-none mb-8">
                 Unsere <span className="text-primary">Leistungen</span>
               </h1>
               <div className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-primary/40">
@@ -98,7 +98,7 @@ export default function Leistungen() {
               </div>
             </div>
 
-            <div className="relative h-[500px] w-full rounded-[2rem] overflow-hidden lg:-mr-20 shadow-2xl">
+            <div className="relative h-[320px] lg:h-[500px] w-full rounded-[2rem] overflow-hidden lg:-mr-20 shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1200&auto=format&fit=crop"
                 alt="Professional cleaner wiping glass"
@@ -149,7 +149,7 @@ export default function Leistungen() {
       <section className="py-24 bg-muted/40 relative overflow-hidden">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative h-[450px] w-full rounded-[2rem] overflow-hidden shadow-2xl">
+            <div className="relative h-[320px] lg:h-[450px] w-full rounded-[2rem] overflow-hidden shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=1200&auto=format&fit=crop"
                 alt="Cleaner wiping floor"
@@ -158,7 +158,7 @@ export default function Leistungen() {
               />
             </div>
             
-            <div className="flex flex-col items-start pr-12">
+            <div className="flex flex-col items-start">
               <h2 className="font-heading text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
                 Bereit für einen makellosen Raum?
               </h2>

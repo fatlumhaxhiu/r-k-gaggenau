@@ -21,7 +21,7 @@ export default function Magazin() {
               <h5 className="text-xs font-bold tracking-widest text-primary-container uppercase mb-4">
                 EINBLICKE & EXPERTISE
               </h5>
-              <h1 className="font-heading text-6xl lg:text-7xl font-black tracking-tight text-foreground leading-[1.05]">
+              <h1 className="font-heading text-4xl sm:text-5xl lg:text-7xl font-black tracking-tight text-foreground leading-[1.05]">
                 Atmosphärische <br/><span className="text-primary-container italic">Präzision.</span>
               </h1>
             </div>
@@ -40,7 +40,7 @@ export default function Magazin() {
           <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
             
             {/* Massive Highlight Image Card */}
-            <Link href={`/magazin/${highlightArticle.slug}`} className="relative h-[550px] rounded-2xl overflow-hidden shadow-xl group cursor-pointer group block">
+            <Link href={`/magazin/${highlightArticle.slug}`} className="relative h-[380px] lg:h-[550px] rounded-2xl overflow-hidden shadow-xl group cursor-pointer group block">
               <Image 
                 src={highlightArticle.image}
                 alt="Highlight Article"

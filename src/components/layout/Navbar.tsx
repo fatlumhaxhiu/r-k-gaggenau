@@ -70,7 +70,7 @@ export default function Navbar() {
               <span className="sr-only">Menü umschalten</span>
             </SheetTrigger>
             <SheetContent side="right" className="bg-background/95 backdrop-blur-[20px]">
-              <nav className="flex flex-col gap-6 mt-12">
+              <nav className="flex flex-col items-center gap-8 mt-16 text-center">
                 {links.map((link) => {
                   const isActive = link.href === "/" 
                     ? pathname === "/" 
@@ -80,9 +80,9 @@ export default function Navbar() {
                     <Link
                       key={link.name}
                       href={link.href}
-                      className={`text-lg font-medium transition-colors hover:text-primary ${
+                      className={`text-xl font-medium transition-colors hover:text-primary ${
                         isActive 
-                          ? "text-primary border-b-2 border-primary pb-1 w-fit font-bold" 
+                          ? "text-primary border-b-2 border-primary pb-1 font-bold" 
                           : "text-muted-foreground"
                       }`}
                     >
@@ -90,7 +90,7 @@ export default function Navbar() {
                     </Link>
                   );
                 })}
-                <Link href="/kontakt" className={cn(buttonVariants({ variant: "default" }), "mt-4 bg-linear-to-br from-primary/90 to-primary text-primary-foreground w-fit px-8")}>
+                <Link href="/kontakt" className={cn(buttonVariants({ variant: "default" }), "mt-6 bg-linear-to-br from-primary/90 to-primary text-primary-foreground px-10 rounded-full")}>
                   Angebot anfordern
                 </Link>
               </nav>

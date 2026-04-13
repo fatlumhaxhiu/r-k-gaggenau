@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import LandingMobileNav from "@/components/layout/LandingMobileNav";
 export default function PrivatreinigungPage() {
   return (
     <>
@@ -20,6 +21,7 @@ export default function PrivatreinigungPage() {
 <Link className="font-manrope tracking-tight text-sm font-semibold text-stone-600 dark:text-stone-400 hover:text-emerald-700 transition-colors duration-300" href="/landing/saisonale-pflege" >Saisonal</Link>
 </div>
 <Link href="#contact" className="hidden md:inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-emerald-700 hover:bg-emerald-800 transition-colors duration-300">Jetzt buchen</Link>
+<LandingMobileNav activePath="/landing/privatreinigung" />
 </div>
 </nav>
 {/*  Hero Section  */}

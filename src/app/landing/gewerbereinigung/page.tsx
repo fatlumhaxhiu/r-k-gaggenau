@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import LandingMobileNav from "@/components/layout/LandingMobileNav";
 export default function GewerbereinigungPage() {
   return (
     <>
@@ -20,6 +21,7 @@ export default function GewerbereinigungPage() {
 <Link className="text-zinc-600 dark:text-zinc-400 font-medium hover:text-emerald-600 transition-colors font-manrope tracking-tight text-sm duration-300" href="/landing/saisonale-pflege" >Saisonal</Link>
 </div>
 <Link href="#contact" className="hidden md:inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-emerald-700 hover:bg-emerald-800 transition-colors duration-300">Jetzt buchen</Link>
+<LandingMobileNav activePath="/landing/gewerbereinigung" />
 </div>
 </nav>
 <main>

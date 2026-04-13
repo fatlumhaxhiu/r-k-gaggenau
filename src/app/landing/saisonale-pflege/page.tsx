@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import LandingMobileNav from "@/components/layout/LandingMobileNav";
 export default function SaisonalePflegePage() {
   return (
     <>
@@ -20,6 +21,7 @@ export default function SaisonalePflegePage() {
 <Link className="text-emerald-700 dark:text-emerald-400 font-manrope tracking-tight text-sm font-bold border-b-2 border-emerald-700 dark:border-emerald-400 pb-1" href="/landing/saisonale-pflege" >Saisonal</Link>
 </div>
 <Link href="#contact" className="hidden md:inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-emerald-700 hover:bg-emerald-800 transition-colors duration-300">Jetzt buchen</Link>
+<LandingMobileNav activePath="/landing/saisonale-pflege" />
 </nav>
 </header>
 <main>
@@ -138,7 +140,7 @@ export default function SaisonalePflegePage() {
 {/*  Trust Record Section  */}
 <div className="bg-surface-container-low p-8 rounded-2xl border-l-4 border-primary">
 <h5 className="font-label text-xs uppercase tracking-widest font-bold text-on-surface-variant mb-6" >Unsere Erfolgsbilanz</h5>
-<div className="flex items-center gap-8">
+<div className="flex flex-wrap items-center gap-6">
 <div>
 <span className="block text-4xl font-extrabold text-primary font-headline" >99.8%</span>
 <span className="text-xs font-semibold text-on-surface-variant uppercase" >Service-Verfügbarkeit</span>
@@ -181,7 +183,7 @@ export default function SaisonalePflegePage() {
 </div>
 <div className="md:w-3/5 p-12">
 <form className="space-y-6">
-<div className="grid grid-cols-2 gap-4">
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div>
 <label className="block text-xs font-bold text-on-surface-variant uppercase mb-2" >Vorname</label>
 <input className="w-full bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all p-3 text-on-surface placeholder:text-on-surface-variant/50" placeholder="John" type="text" />

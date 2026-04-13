@@ -1,8 +1,8 @@
 export const siteData = {
   hero: {
     badge: "Premium Facility Management",
-    headline: "Atmospheric Precision in Every Detail",
-    subheadline: "We elevate commercial boundaries and luxury residences through meticulous, standard-setting cleaning solutions entirely tailored to you.",
+    headline: "Atmosphärische Präzision in jedem Detail",
+    subheadline: "Wir definieren gewerbliche Räume und Luxusresidenzen neu – durch akribische, maßgeschneiderte Reinigungslösungen auf höchstem Niveau.",
     ctaPrimary: "Angebot anfordern",
     ctaSecondary: "Unsere Leistungen",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop"
