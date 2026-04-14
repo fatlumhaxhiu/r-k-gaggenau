@@ -3,6 +3,7 @@ import { ArrowRight, Building2, Sparkles, Home, Hammer, Droplets, Snowflake, Shi
 import { Button } from "@/components/ui/button";
 import { siteData } from "@/data/mockData";
 import Link from "next/link";
+import { prisma } from "@/lib/prisma";
 
 // Icon mapping helper
 const getIcon = (name: string) => {
@@ -17,7 +18,13 @@ const getIcon = (name: string) => {
   }
 };
 
-export default function Startseite() {
+export default async function Startseite() {
+  const latestPosts = await prisma.blogPost.findMany({
+    where: { status: "published" },
+    orderBy: { created_at: "desc" },
+    take: 4,
+  });
+
   return (
     <div className="flex flex-col min-h-screen">
       
@@ -165,7 +172,7 @@ export default function Startseite() {
                   <div>
                     <h4 className="text-lg font-bold text-foreground mb-2">Flexible Zeitplanung</h4>
                     <p className="text-muted-foreground leading-relaxed">
-                      Service rund um die Uhr, abgestimmt auf Ihren Geschäftszyklus oder Leerezeit – ohne Störungen.
+                      Service rund um die Uhr, abgestimmt auf Ihren Geschäftszyklus ose Leerezeit – ohne Störungen.
                     </p>
                   </div>
                 </div>
@@ -237,32 +244,40 @@ export default function Startseite() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {siteData.blogArticles.map((article) => (
+            {latestPosts.map((article) => (
               <Link key={article.id} href={`/magazin/${article.slug}`} className="group flex flex-col">
                 <div className="relative h-64 w-full rounded-2xl overflow-hidden mb-6">
                   <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors z-10" />
-                  <Image
-                    src={article.image}
-                    alt={article.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  {/* Circular cutout approximation via pseudo-elements or just simple badge for now */}
+                  {article.cover_image_url ? (
+                    <Image
+                      src={article.cover_image_url}
+                      alt={article.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-zinc-100 flex items-center justify-center">
+                      <span className="material-symbols-outlined text-zinc-300">image</span>
+                    </div>
+                  )}
                   <div className="absolute bottom-4 left-4 bg-background px-3 py-1 text-[10px] font-bold tracking-widest text-primary uppercase rounded z-20">
-                    {article.tag}
+                    {article.category}
                   </div>
                 </div>
-                <h3 className="text-lg font-bold font-heading text-foreground mb-3 leading-tight group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-bold font-heading text-foreground mb-3 leading-tight group-hover:text-primary transition-colors line-clamp-2">
                   {article.title}
                 </h3>
                 <p className="text-sm text-muted-foreground line-clamp-3 mb-4">
-                  {article.desc}
+                  {article.excerpt || article.content?.substring(0, 100) + "..."}
                 </p>
                 <span className="text-xs font-bold text-primary tracking-widest uppercase flex items-center gap-2 mt-auto">
                   Mehr lesen <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
             ))}
+            {latestPosts.length === 0 && (
+              <p className="text-muted-foreground col-span-full py-10 italic">Keine Artikel gefunden.</p>
+            )}
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
@@ -9,7 +10,7 @@ export default async function CrmSystemPage() {
   const session = await auth()
 
   if (!session) {
-    redirect("/admin/admin-login text-sm")
+    redirect("/admin/admin-login")
   }
 
   // Fetch all leads from database

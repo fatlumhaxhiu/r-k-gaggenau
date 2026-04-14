@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import { prisma } from "@/lib/prisma"
 import { auth } from "@/auth"
+import { revalidatePath } from "next/cache"
 
 // Përditëso statusin ose shënimet e një lead
 export async function PATCH(req: Request, { params }: { params: Promise<{ id: string }> }) {
@@ -33,6 +34,10 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
       data: allowedUpdates,
     })
 
+    // Revalidate paths to clear cache
+    revalidatePath("/admin/crm-system")
+    revalidatePath("/admin/dashboard")
+
     return NextResponse.json({ success: true, lead: updatedLead })
   } catch (error) {
     console.error("Gabim gjatë përditësimit të lead:", error)
@@ -52,6 +57,10 @@ export async function DELETE(req: Request, { params }: { params: Promise<{ id: s
     await prisma.lead.delete({
       where: { id: leadId }
     })
+
+    // Revalidate paths to clear cache
+    revalidatePath("/admin/crm-system")
+    revalidatePath("/admin/dashboard")
 
     return NextResponse.json({ success: true })
   } catch (error) {

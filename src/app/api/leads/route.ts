@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import { prisma } from "@/lib/prisma"
+import { revalidatePath } from "next/cache"
 import { auth } from "@/auth"
 
 // Krijimi i një Lead-i të ri (publik, pa kërkuar auth)
@@ -28,6 +29,10 @@ export async function POST(req: Request) {
         status: "new",
       }
     })
+
+    // Revalidate for immediate update
+    revalidatePath("/admin/crm-system")
+    revalidatePath("/admin/dashboard")
 
     // Kthejmë një përgjigje minimale për të shmangur çdo gabim serializimi
     return NextResponse.json({ ok: true }, { status: 201 })

@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma"
+export const dynamic = "force-dynamic";
 import { auth } from "@/auth"
 import { redirect } from "next/navigation"
 import AdminSidebar from "@/components/admin/AdminSidebar"
