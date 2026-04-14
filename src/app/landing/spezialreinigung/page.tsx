@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import LandingMobileNav from "@/components/layout/LandingMobileNav";
+import LeadForm from "@/components/LeadForm";
 export default function SpezialreinigungPage() {
   return (
     <>
@@ -214,30 +215,7 @@ export default function SpezialreinigungPage() {
 </div>
 </div>
 <div className="lg:w-3/5 p-12 lg:p-16 bg-white">
-<form className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div className="space-y-2">
-<label className="text-xs font-bold uppercase tracking-widest text-on-surface-variant font-label" >Vorname</label>
-<input className="w-full px-6 py-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all text-on-surface" placeholder="Max" type="text" />
-</div>
-<div className="space-y-2">
-<label className="text-xs font-bold uppercase tracking-widest text-on-surface-variant font-label" >Nachname</label>
-<input className="w-full px-6 py-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all text-on-surface" placeholder="Mustermann" type="text" />
-</div>
-<div className="space-y-2 md:col-span-2">
-<label className="text-xs font-bold uppercase tracking-widest text-on-surface-variant font-label" >E-Mail-Adresse</label>
-<input className="w-full px-6 py-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all text-on-surface" placeholder="max@institution.de" type="email" />
-</div>
-<div className="space-y-2 md:col-span-2">
-<label className="text-xs font-bold uppercase tracking-widest text-on-surface-variant font-label" >Telefonnummer</label>
-<input className="w-full px-6 py-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all text-on-surface" placeholder="+49 000 000000" type="tel" />
-</div>
-<div className="md:col-span-2 pt-4">
-<button className="w-full bg-primary text-white py-5 rounded-lg font-bold text-lg shadow-lg hover:bg-emerald-800 transition-all flex items-center justify-center gap-2" >
-<span className="" >Termin vereinbaren</span>
-<span className="material-symbols-outlined" >arrow_forward</span>
-</button>
-</div>
-</form>
+<LeadForm serviceName="Spezialreinigung" />
 </div>
 </div>
 </div>

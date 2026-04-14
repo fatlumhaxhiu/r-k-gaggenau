@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import LandingMobileNav from "@/components/layout/LandingMobileNav";
+import LeadForm from "@/components/LeadForm";
 export default function BaureinigungPage() {
   return (
     <>
@@ -195,29 +196,7 @@ export default function BaureinigungPage() {
 <div className="order-2 lg:order-1">
 <div className="bg-surface-container-lowest p-10 rounded-[2rem] shadow-2xl shadow-primary/5">
 <h3 className="font-headline text-3xl font-bold mb-8" >Angebot anfordern</h3>
-<form className="space-y-6">
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-<div className="space-y-2">
-<label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant" >Vorname</label>
-<input className="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="Max" type="text" />
-</div>
-<div className="space-y-2">
-<label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant" >Nachname</label>
-<input className="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="Mustermann" type="text" />
-</div>
-</div>
-<div className="space-y-2">
-<label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant" >E-Mail Adresse</label>
-<input className="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="max@beispiel.de" type="email" />
-</div>
-<div className="space-y-2">
-<label className="text-xs font-bold uppercase tracking-wider text-on-surface-variant" >Telefonnummer</label>
-<input className="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="+49 (0) 000 000000" type="tel" />
-</div>
-<button className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:bg-emerald-800 transition-all active:scale-[0.98]" type="submit" >
-                            Termin vereinbaren
-                        </button>
-</form>
+<LeadForm serviceName="Baureinigung" />
 </div>
 </div>
 <div className="order-1 lg:order-2">

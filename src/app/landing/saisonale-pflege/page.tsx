@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import LandingMobileNav from "@/components/layout/LandingMobileNav";
+import LeadForm from "@/components/LeadForm";
 export default function SaisonalePflegePage() {
   return (
     <>
@@ -182,29 +183,7 @@ export default function SaisonalePflegePage() {
 </div>
 </div>
 <div className="md:w-3/5 p-12">
-<form className="space-y-6">
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div>
-<label className="block text-xs font-bold text-on-surface-variant uppercase mb-2" >Vorname</label>
-<input className="w-full bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all p-3 text-on-surface placeholder:text-on-surface-variant/50" placeholder="John" type="text" />
-</div>
-<div>
-<label className="block text-xs font-bold text-on-surface-variant uppercase mb-2" >Nachname</label>
-<input className="w-full bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all p-3 text-on-surface placeholder:text-on-surface-variant/50" placeholder="Doe" type="text" />
-</div>
-</div>
-<div>
-<label className="block text-xs font-bold text-on-surface-variant uppercase mb-2" >E-Mail-Adresse</label>
-<input className="w-full bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all p-3 text-on-surface placeholder:text-on-surface-variant/50" placeholder="john.doe@beispiel.de" type="email" />
-</div>
-<div>
-<label className="block text-xs font-bold text-on-surface-variant uppercase mb-2" >Telefonnummer</label>
-<input className="w-full bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all p-3 text-on-surface placeholder:text-on-surface-variant/50" placeholder="+49 000 0000000" type="tel" />
-</div>
-<button className="w-full bg-primary text-white py-4 rounded-lg font-bold text-lg hover:bg-emerald-800 transition-all editorial-shadow mt-4"  type="submit">
-                                Termin vereinbaren
-                            </button>
-</form>
+<LeadForm serviceName="Saisonale Pflege" />
 </div>
 </div>
 </div>

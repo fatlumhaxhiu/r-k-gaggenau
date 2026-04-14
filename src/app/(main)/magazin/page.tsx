@@ -3,12 +3,26 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
+import { prisma } from "@/lib/prisma";
 
-import { siteData } from "@/data/mockData";
+export default async function Magazin() {
+  const publishedPosts = await prisma.blogPost.findMany({
+    where: { status: "published" },
+    orderBy: { created_at: "desc" },
+  });
 
-export default function Magazin() {
-  const highlightArticle = siteData.blogArticles.find(a => a.isHighlight) || siteData.blogArticles[0];
-  const regularArticles = siteData.blogArticles.filter(a => !a.isHighlight);
+  if (publishedPosts.length === 0) {
+    return (
+      <div className="flex flex-col min-h-screen bg-muted/10 items-center justify-center py-40">
+        <h1 className="font-heading text-4xl font-black mb-4">Magazini vjen së shpejti</h1>
+        <p className="text-muted-foreground">Jemi duke përgatitur artikujt tanë të parë.</p>
+        <Link href="/" className="mt-8 text-primary font-bold hover:underline">Kthehu në fillim</Link>
+      </div>
+    );
+  }
+
+  const highlightArticle = publishedPosts[0];
+  const regularArticles = publishedPosts.slice(1);
 
   return (
     <div className="flex flex-col min-h-screen bg-muted/10">
@@ -40,24 +54,30 @@ export default function Magazin() {
           <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
             
             {/* Massive Highlight Image Card */}
-            <Link href={`/magazin/${highlightArticle.slug}`} className="relative h-[380px] lg:h-[550px] rounded-2xl overflow-hidden shadow-xl group cursor-pointer group block">
-              <Image 
-                src={highlightArticle.image}
-                alt="Highlight Article"
-                fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-105"
-              />
+            <Link href={`/magazin/${highlightArticle.slug}`} className="relative h-[380px] lg:h-[550px] rounded-2xl overflow-hidden shadow-xl group cursor-pointer block">
+              {highlightArticle.cover_image_url ? (
+                <Image 
+                  src={highlightArticle.cover_image_url}
+                  alt={highlightArticle.title}
+                  fill
+                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                />
+              ) : (
+                <div className="absolute inset-0 bg-zinc-200 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-zinc-400 text-6xl">image</span>
+                </div>
+              )}
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-black/10" />
               
               <div className="absolute bottom-0 left-0 p-10 lg:p-14 w-full md:w-4/5 text-white">
                 <span className="inline-block bg-primary-container px-3 py-1 text-[10px] font-bold tracking-widest text-white uppercase rounded-sm mb-6">
-                  {highlightArticle.tag}
+                  {highlightArticle.category}
                 </span>
                 <h2 className="text-3xl lg:text-4xl font-heading font-black mb-4 leading-tight">
                   {highlightArticle.title}
                 </h2>
-                <p className="text-white/80 font-medium leading-relaxed">
-                  {highlightArticle.desc}
+                <p className="text-white/80 font-medium leading-relaxed line-clamp-2">
+                  {highlightArticle.excerpt || highlightArticle.content?.substring(0, 150) + "..."}
                 </p>
               </div>
             </Link>
@@ -65,7 +85,8 @@ export default function Magazin() {
             {/* Side Information Box */}
             <div className="bg-muted/40 rounded-2xl p-10 flex flex-col justify-center border border-border/50">
               <span className="text-xs font-bold tracking-widest text-primary-container uppercase mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-primary-container"></span> {highlightArticle.date}
+                <span className="w-2 h-2 rounded-full bg-primary-container"></span> 
+                {highlightArticle.created_at ? new Date(highlightArticle.created_at).toLocaleDateString("de-DE") : "Heute"}
               </span>
               <p className="text-foreground leading-relaxed mb-10 font-medium">
                 Wir bringen Ihnen exklusive Einblicke und tiefe redaktionelle Beiträge aus der Welt der hochprofessionellen Architekturerhaltung. Erfahren Sie heute mehr in unserem Monats-Fokus.
@@ -86,26 +107,33 @@ export default function Magazin() {
             {regularArticles.map((article) => (
               <Link key={article.id} href={`/magazin/${article.slug}`} className="group flex flex-col pt-4">
                 <div className="relative h-64 w-full rounded-2xl overflow-hidden mb-6 shadow-sm border border-border/20">
-                  <Image
-                    src={article.image}
-                    alt={article.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+                  {article.cover_image_url ? (
+                    <Image
+                      src={article.cover_image_url}
+                      alt={article.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-zinc-100 flex items-center justify-center">
+                      <span className="material-symbols-outlined text-zinc-300">image</span>
+                    </div>
+                  )}
                 </div>
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-[10px] font-bold tracking-widest text-primary-container uppercase">
-                    {article.tag}
+                    {article.category}
                   </span>
                   <span className="text-[10px] font-bold tracking-widest text-muted-foreground uppercase flex items-center gap-2">
-                    <span className="w-1 h-1 rounded-full bg-muted-foreground/50"></span> {article.date}
+                    <span className="w-1 h-1 rounded-full bg-muted-foreground/50"></span> 
+                    {article.created_at ? new Date(article.created_at).toLocaleDateString("de-DE") : "Zuletzt"}
                   </span>
                 </div>
-                <h3 className="text-xl font-black font-heading text-foreground mb-3 leading-tight group-hover:text-primary-container transition-colors">
+                <h3 className="text-xl font-black font-heading text-foreground mb-3 leading-tight group-hover:text-primary-container transition-colors line-clamp-2">
                   {article.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  {article.desc}
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-3">
+                  {article.excerpt || article.content?.substring(0, 100) + "..."}
                 </p>
               </Link>
             ))}
