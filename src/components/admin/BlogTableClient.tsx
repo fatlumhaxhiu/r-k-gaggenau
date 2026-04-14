@@ -27,7 +27,7 @@ export default function BlogTableClient({
     }
   }
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: string | null) => {
     switch (status) {
       case "published": return "bg-emerald-100 text-emerald-800"
       case "draft": return "bg-zinc-200 text-zinc-600"
