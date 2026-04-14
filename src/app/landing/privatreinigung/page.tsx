@@ -40,11 +40,11 @@ export default function PrivatreinigungPage() {
                     Wir heben die Wohnraumreinigung auf ein exzellentes Niveau. Wir behandeln Ihren Rückzugsort mit der Präzision, die er verdient, und sorgen dafür, dass jede Oberfläche Perfektion widerspiegelt.
                 </p>
 <div className="flex flex-col sm:flex-row gap-4">
-<button className="bg-primary text-white px-8 py-4 rounded-lg font-headline font-bold text-lg tracking-tight shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:bg-emerald-800 transition-all" >
+<Link className="bg-primary text-white px-8 py-4 rounded-lg font-headline font-bold text-lg tracking-tight shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:bg-emerald-800 transition-all block text-center" href="#contact">
                         Termin vereinbaren
-                    </button>
-<button className="bg-surface-container-lowest text-primary border border-outline-variant/20 px-8 py-4 rounded-lg font-headline font-bold text-lg tracking-tight hover:bg-surface transition-colors" >
-                        Leistungen entdecken</button>
+                    </Link>
+<Link className="bg-surface-container-lowest text-primary border border-primary px-8 py-4 rounded-lg font-headline font-bold text-lg tracking-tight hover:bg-surface transition-colors text-center block" href="/leistungen" >
+                        Leistungen entdecken</Link>
 </div>
 </div>
 </div>
@@ -170,7 +170,7 @@ export default function PrivatreinigungPage() {
 </div>
 </section>
 {/*  Contact Form & Booking  */}
-<section className="py-24 bg-surface" id="contact">
+<section className="py-24 bg-surface scroll-mt-24" id="contact">
   <div className="max-w-7xl mx-auto px-4 md:px-8">
     <div className="bg-surface-container-lowest rounded-[2rem] shadow-2xl overflow-hidden flex flex-col md:flex-row w-full border border-outline-variant/20">
       

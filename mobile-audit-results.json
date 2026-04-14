@@ -1,0 +1,110 @@
+[
+  {
+    "route": "home",
+    "url": "http://127.0.0.1:3000",
+    "title": "Create Next App",
+    "innerWidth": 390,
+    "docClientWidth": 390,
+    "docScrollWidth": 390,
+    "bodyClientWidth": 390,
+    "bodyScrollWidth": 390,
+    "horizontalOverflow": 0,
+    "text": "R&K-GAGGENAU\nMenü umschalten\nPREMIUM FACILITY MANAGEMENT\nProfessionelle Reinigung in Deutschland\n\nZuverlässig. Effizient. Hochwertige Reinigungsleistungen, maßgeschneidert für anspruchsvolle Geschäfts- und Privatkunden.\n\nAngebot anfordern\nUnsere Leistungen\nVertraute Qualität\n\nÜber 1000 standardisier"
+  },
+  {
+    "route": "leistungen",
+    "url": "http://127.0.0.1:3000/leistungen",
+    "title": "Create Next App",
+    "innerWidth": 390,
+    "docClientWidth": 390,
+    "docScrollWidth": 390,
+    "bodyClientWidth": 390,
+    "bodyScrollWidth": 390,
+    "horizontalOverflow": 0,
+    "text": "R&K-GAGGENAU\nMenü umschalten\nEXZELLENZ IN DER INSTANDHALTUNG\nUnsere Leistungen\n\nProfessionelle Reinigungslösungen für Unternehmen, Institutionen und Privatkunden in ganz Deutschland. Wir definieren Hygiene durch atmosphärische Präzision neu.\n\nGEWERBEREINIGUNG\n\nZuverlässige Reinigungslösungen für Bür"
+  },
+  {
+    "route": "kontakt",
+    "url": "http://127.0.0.1:3000/kontakt",
+    "title": "Create Next App",
+    "innerWidth": 390,
+    "docClientWidth": 390,
+    "docScrollWidth": 390,
+    "bodyClientWidth": 390,
+    "bodyScrollWidth": 390,
+    "horizontalOverflow": 0,
+    "text": "R&K-GAGGENAU\nMenü umschalten\nPRÄZISIONSVERBINDUNG\nAtmosphärische\nKlarheit.\nBeginnen Sie die Transformation\nVOLLSTÄNDIGER NAME\nE-MAIL-ADRESSE\nTELEFONNUMMER\nNACHRICHT\nNachricht senden\nDirekte Kanäle\n\nUNSER STUDIO\n\n742 Precision Ave.\nGaggenau Corporate Park,\nSte. 104\n\nKUNDENBEZIEHUNGEN\n\n+1 (800) GAGGEN"
+  },
+  {
+    "route": "uber-uns",
+    "url": "http://127.0.0.1:3000/uber-uns",
+    "title": "Create Next App",
+    "innerWidth": 410,
+    "docClientWidth": 390,
+    "docScrollWidth": 410,
+    "bodyClientWidth": 390,
+    "bodyScrollWidth": 410,
+    "horizontalOverflow": 20,
+    "text": "R&K-GAGGENAU\nMenü umschalten\nETABLIERTE EXZELLENZ\nAtmosphärische Präzision bis ins kleinste Detail.\n\nSeit über 5 Jahren definiert R&K-GAGGENAU die Standards der professionellen Reinigung neu — durch eine Fusion aus deutscher Präzision und engagierter Sorgfalt.\n\n5 JAHRE\n\nEXPERTISE\n\nEine Tradition des"
+  },
+  {
+    "route": "magazin",
+    "url": "http://127.0.0.1:3000/magazin",
+    "title": "Create Next App",
+    "innerWidth": 390,
+    "docClientWidth": 390,
+    "docScrollWidth": 390,
+    "bodyClientWidth": 390,
+    "bodyScrollWidth": 390,
+    "horizontalOverflow": 0,
+    "text": "R&K-GAGGENAU\nMenü umschalten\nEINBLICKE & EXPERTISE\nAtmosphärische\nPräzision.\n\nWir erkunden die Schnittstelle zwischen architektonischer Instandhaltung, Umweltgesundheit und der stillen Kunst akribischer Ordnung.\n\nHIGHLIGHT DES MONATS\nDie Psychologie der Sauberkeit: Warum minimalistische Räume die ko"
+  },
+  {
+    "route": "landing-privatreinigung",
+    "url": "http://127.0.0.1:3000/landing/privatreinigung",
+    "title": "Create Next App",
+    "innerWidth": 390,
+    "docClientWidth": 390,
+    "docScrollWidth": 390,
+    "bodyClientWidth": 390,
+    "bodyScrollWidth": 390,
+    "horizontalOverflow": 0,
+    "text": "R&K-GAGGENAU\nEXZELLENZ IM WOHNBEREICH\nMakellose Heime,\nVeredeltes Ambiente\n\nWir heben die Wohnraumreinigung auf ein exzellentes Niveau. Wir behandeln Ihren Rückzugsort mit der Präzision, die er verdient, und sorgen dafür, dass jede Oberfläche Perfektion widerspiegelt.\n\nTermin vereinbaren\nLeistungen "
+  },
+  {
+    "route": "landing-grundreinigung",
+    "url": "http://127.0.0.1:3000/landing/grundreinigung",
+    "title": "Create Next App",
+    "innerWidth": 390,
+    "docClientWidth": 390,
+    "docScrollWidth": 390,
+    "bodyClientWidth": 390,
+    "bodyScrollWidth": 390,
+    "horizontalOverflow": 0,
+    "text": "R&K-GAGGENAU\nPREMIUM-SERVICE-STUFE\nIntensive Grundreinigung für jede Oberfläche\n\nWerten Sie Ihre Räumlichkeiten mit unserer präzisen Reinigung auf höchstem Niveau auf. Wir erreichen Stellen, die herkömmliche Dienste übersehen, und stellen Klarheit sowie hygienische Frische in Ihren wertvollsten Umge"
+  },
+  {
+    "route": "landing-baureinigung",
+    "url": "http://127.0.0.1:3000/landing/baureinigung",
+    "title": "Create Next App",
+    "innerWidth": 390,
+    "docClientWidth": 390,
+    "docScrollWidth": 390,
+    "bodyClientWidth": 390,
+    "bodyScrollWidth": 390,
+    "horizontalOverflow": 0,
+    "text": "R&K-GAGGENAU\nINDUSTRIELLE PRÄZISION\nExperten für Baureinigung & Übergabe\n\nNahtloser Übergang von der Baustelle zur schlüsselfertigen Übergabe. Unsere spezialisierten Teams entfernen feinsten Staub, Schutt und Rückstände, die Standardreiniger übersehen.\n\nTermin vereinbaren\narrow_forward\nLeistungen en"
+  },
+  {
+    "route": "landing-spezialreinigung",
+    "url": "http://127.0.0.1:3000/landing/spezialreinigung",
+    "title": "Create Next App",
+    "innerWidth": 390,
+    "docClientWidth": 390,
+    "docScrollWidth": 390,
+    "bodyClientWidth": 390,
+    "bodyScrollWidth": 390,
+    "horizontalOverflow": 0,
+    "text": "R&K-GAGGENAU\nINSTITUTIONELLER STANDARD\nPräzisionshygiene für sensible Bereiche\n\nSpezialisierte Reinigung auf wissenschaftlichem Niveau. Wir bieten klinische Desinfektion für das Gesundheitswesen, Bildungseinrichtungen und anspruchsvolle Architektur.\n\nTermin vereinbaren\nLeistungen entdecken\nworkspace"
+  }
+]

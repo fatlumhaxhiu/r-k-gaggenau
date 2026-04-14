@@ -42,12 +42,12 @@ export default function GewerbereinigungPage() {
                         Erleben Sie den Goldstandard architektonischer Hygiene. Wir bringen akribische deutsche Präzision in Ihren Arbeitsbereich und sorgen für ein makelloses Umfeld, das die Produktivität steigert.
                     </p>
 <div className="flex flex-col sm:flex-row gap-4">
-<button className="bg-primary-gradient text-on-primary px-10 py-5 rounded-lg text-lg font-bold shadow-xl shadow-primary/20 hover:scale-105 transition-all duration-300" >
+<Link className="bg-primary text-white px-8 py-4 rounded-lg font-headline font-bold text-lg tracking-tight shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:bg-emerald-800 transition-all block text-center" href="#contact">
                             Termin vereinbaren
-                        </button>
-<button className="px-10 py-5 rounded-lg text-lg font-bold text-primary border-2 border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-300" >
+                        </Link>
+<Link className="bg-surface-container-low text-primary px-8 py-4 rounded-lg font-bold text-center border border-primary hover:bg-surface-container-high transition-all text-lg block" href="/leistungen" >
                             Leistungen entdecken
-                        </button>
+                        </Link>
 </div>
 </div>
 <div className="lg:col-span-5 hidden lg:block">
@@ -224,7 +224,7 @@ export default function GewerbereinigungPage() {
 </div>
 </section>
 {/*  Contact Form Section  */}
-<section className="py-24 bg-surface" id="contact">
+<section className="py-24 bg-surface scroll-mt-24" id="contact">
 <div className="container mx-auto px-8">
 <div className="max-w-6xl mx-auto bg-surface-container-low rounded-[2rem] overflow-hidden grid lg:grid-cols-5 shadow-2xl">
 <div className="lg:col-span-2 bg-primary-container p-12 text-on-primary-container flex flex-col justify-between">

@@ -37,11 +37,11 @@ export default function SaisonalePflegePage() {
                         Von der präzisen Schneeräumung bis zur fachgerechten saisonalen Außenpflege. Sorgen Sie dafür, dass Ihr Anwesen unabhängig von der Wettervorhersage sicher und gepflegt bleibt.
                     </p>
 <div className="flex flex-col sm:flex-row gap-4">
-<button className="primary-gradient text-on-primary px-8 py-4 rounded-lg font-bold text-lg editorial-shadow hover:brightness-110 transition-all" >
+<Link className="bg-primary text-white px-8 py-4 rounded-lg font-headline font-bold text-lg tracking-tight shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:bg-emerald-800 transition-all block text-center" href="#contact">
                             Termin vereinbaren
-                        </button>
-<button className="bg-surface-container-lowest text-primary px-8 py-4 rounded-lg font-bold text-lg editorial-shadow border border-outline-variant/20 hover:bg-surface-container-low transition-all" >
-                            Leistungen entdecken</button>
+                        </Link>
+<Link className="bg-surface-container-low text-primary px-8 py-4 rounded-xl font-bold text-center border border-primary hover:bg-surface-container-high transition-all inline-block text-lg" href="/leistungen" >
+                            Leistungen entdecken</Link>
 </div>
 </div>
 <div className="lg:col-span-5 relative h-full min-h-[500px]">
@@ -162,7 +162,7 @@ export default function SaisonalePflegePage() {
 </div>
 </section>
 {/*  Contact Form Section  */}
-<section className="py-24 bg-surface-container-low relative" id="contact">
+<section className="py-24 bg-surface-container-low relative scroll-mt-24" id="contact">
 <div className="max-w-4xl mx-auto px-8 relative z-10">
 <div className="bg-surface-container-lowest rounded-3xl editorial-shadow overflow-hidden flex flex-col md:flex-row">
 <div className="md:w-2/5 primary-gradient p-12 text-on-primary flex flex-col justify-between">

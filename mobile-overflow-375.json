@@ -1,0 +1,336 @@
+[
+  {
+    "route": "home",
+    "url": "http://127.0.0.1:3000",
+    "viewport": 375,
+    "docClientWidth": 375,
+    "docScrollWidth": 375,
+    "bodyScrollWidth": 375,
+    "horizontalOverflow": 0,
+    "offenders": []
+  },
+  {
+    "route": "leistungen",
+    "url": "http://127.0.0.1:3000/leistungen",
+    "viewport": 375,
+    "docClientWidth": 375,
+    "docScrollWidth": 375,
+    "bodyScrollWidth": 375,
+    "horizontalOverflow": 0,
+    "offenders": []
+  },
+  {
+    "route": "kontakt",
+    "url": "http://127.0.0.1:3000/kontakt",
+    "viewport": 375,
+    "docClientWidth": 375,
+    "docScrollWidth": 375,
+    "bodyScrollWidth": 375,
+    "horizontalOverflow": 0,
+    "offenders": []
+  },
+  {
+    "route": "uber-uns",
+    "url": "http://127.0.0.1:3000/uber-uns",
+    "viewport": 410,
+    "docClientWidth": 375,
+    "docScrollWidth": 410,
+    "bodyScrollWidth": 410,
+    "horizontalOverflow": 35,
+    "offenders": []
+  },
+  {
+    "route": "magazin",
+    "url": "http://127.0.0.1:3000/magazin",
+    "viewport": 375,
+    "docClientWidth": 375,
+    "docScrollWidth": 375,
+    "bodyScrollWidth": 375,
+    "horizontalOverflow": 0,
+    "offenders": []
+  },
+  {
+    "route": "landing-privatreinigung",
+    "url": "http://127.0.0.1:3000/landing/privatreinigung",
+    "viewport": 375,
+    "docClientWidth": 375,
+    "docScrollWidth": 375,
+    "bodyScrollWidth": 375,
+    "horizontalOverflow": 0,
+    "offenders": [
+      {
+        "tag": "DIV",
+        "className": "col-span-12 md:col-span-5 relative",
+        "text": "Der R&K-Gaggenau Standardverified_userGeprüfte FachkräfteHintergrundgeprüft und ",
+        "left": 32,
+        "right": 560,
+        "width": 528,
+        "rightOverflow": 185,
+        "leftOverflow": -32,
+        "overflowX": "visible",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "className": "sticky top-32",
+        "text": "Der R&K-Gaggenau Standardverified_userGeprüfte FachkräfteHintergrundgeprüft und ",
+        "left": 32,
+        "right": 560,
+        "width": 528,
+        "rightOverflow": 185,
+        "leftOverflow": -32,
+        "overflowX": "visible",
+        "position": "sticky"
+      },
+      {
+        "tag": "H2",
+        "className": "font-headline text-5xl font-extrabold tracking-tighter mb-8 leading-tight",
+        "text": "Der R&K-Gaggenau Standard",
+        "left": 32,
+        "right": 560,
+        "width": 528,
+        "rightOverflow": 185,
+        "leftOverflow": -32,
+        "overflowX": "visible",
+        "position": "static"
+      },
+      {
+        "tag": "DIV",
+        "className": "space-y-12 mt-12",
+        "text": "verified_userGeprüfte FachkräfteHintergrundgeprüft und in der Pflege hochwertige",
+        "left": 32,
+        "right": 560,
+        "width": 528,
+        "rightOverflow": 185,
+        "leftOverflow": -32,
+        "overflowX": "visible",
+        "position": "static"
+      },
+      {
+        "tag": "DIV",
+        "className": "flex gap-6",
+        "text": "verified_userGeprüfte FachkräfteHintergrundgeprüft und in der Pflege hochwertige",
+        "left": 32,
+        "right": 560,
+        "width": 528,
+        "rightOverflow": 185,
+        "leftOverflow": -32,
+        "overflowX": "visible",
+        "position": "static"
+      },
+      {
+        "tag": "DIV",
+        "className": "",
+        "text": "Geprüfte FachkräfteHintergrundgeprüft und in der Pflege hochwertiger Architektur",
+        "left": 104,
+        "right": 560,
+        "width": 456,
+        "rightOverflow": 185,
+        "leftOverflow": -104,
+        "overflowX": "visible",
+        "position": "static"
+      },
+      {
+        "tag": "H4",
+        "className": "font-headline font-bold text-xl mb-1",
+        "text": "Geprüfte Fachkräfte",
+        "left": 104,
+        "right": 560,
+        "width": 456,
+        "rightOverflow": 185,
+        "leftOverflow": -104,
+        "overflowX": "visible",
+        "position": "static"
+      },
+      {
+        "tag": "P",
+        "className": "text-on-surface-variant text-sm",
+        "text": "Hintergrundgeprüft und in der Pflege hochwertiger Architektur geschult.",
+        "left": 104,
+        "right": 560,
+        "width": 456,
+        "rightOverflow": 185,
+        "leftOverflow": -104,
+        "overflowX": "visible",
+        "position": "static"
+      }
+    ]
+  },
+  {
+    "route": "landing-grundreinigung",
+    "url": "http://127.0.0.1:3000/landing/grundreinigung",
+    "viewport": 375,
+    "docClientWidth": 375,
+    "docScrollWidth": 375,
+    "bodyScrollWidth": 375,
+    "horizontalOverflow": 0,
+    "offenders": [
+      {
+        "tag": "DIV",
+        "className": "aspect-4/5 rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700",
+        "text": "",
+        "left": 24,
+        "right": 396,
+        "width": 372,
+        "rightOverflow": 21,
+        "leftOverflow": -24,
+        "overflowX": "hidden",
+        "position": "static"
+      },
+      {
+        "tag": "IMG",
+        "className": "w-full h-full object-cover",
+        "text": "",
+        "left": 24,
+        "right": 396,
+        "width": 372,
+        "rightOverflow": 21,
+        "leftOverflow": -24,
+        "overflowX": "clip",
+        "position": "static"
+      },
+      {
+        "tag": "DIV",
+        "className": "lg:col-span-7 z-10",
+        "text": "Premium-Service-StufeIntensive Grundreinigung für jede OberflächeWerten Sie Ihre",
+        "left": 32,
+        "right": 389,
+        "width": 357,
+        "rightOverflow": 14,
+        "leftOverflow": -32,
+        "overflowX": "visible",
+        "position": "static"
+      },
+      {
+        "tag": "H1",
+        "className": "font-headline text-5xl lg:text-7xl font-extrabold tracking-tight text-on-surface mb-8 leading-[1.1]",
+        "text": "Intensive Grundreinigung für jede Oberfläche",
+        "left": 32,
+        "right": 389,
+        "width": 357,
+        "rightOverflow": 14,
+        "leftOverflow": -32,
+        "overflowX": "visible",
+        "position": "static"
+      },
+      {
+        "tag": "SPAN",
+        "className": "text-gradient-primary",
+        "text": "Grundreinigung",
+        "left": 32,
+        "right": 389,
+        "width": 357,
+        "rightOverflow": 14,
+        "leftOverflow": -32,
+        "overflowX": "visible",
+        "position": "static"
+      },
+      {
+        "tag": "P",
+        "className": "text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed",
+        "text": "Werten Sie Ihre Räumlichkeiten mit unserer präzisen Reinigung auf höchstem Nivea",
+        "left": 32,
+        "right": 389,
+        "width": 357,
+        "rightOverflow": 14,
+        "leftOverflow": -32,
+        "overflowX": "visible",
+        "position": "static"
+      },
+      {
+        "tag": "DIV",
+        "className": "flex flex-col sm:flex-row gap-4",
+        "text": "Termin vereinbarenLeistungen entdecken",
+        "left": 32,
+        "right": 389,
+        "width": 357,
+        "rightOverflow": 14,
+        "leftOverflow": -32,
+        "overflowX": "visible",
+        "position": "static"
+      },
+      {
+        "tag": "A",
+        "className": "bg-primary text-white px-8 py-4 rounded-xl font-bold text-center hover:bg-emerald-800 hover:shadow-lg transition-all",
+        "text": "Termin vereinbaren",
+        "left": 32,
+        "right": 389,
+        "width": 357,
+        "rightOverflow": 14,
+        "leftOverflow": -32,
+        "overflowX": "visible",
+        "position": "static"
+      }
+    ]
+  },
+  {
+    "route": "landing-baureinigung",
+    "url": "http://127.0.0.1:3000/landing/baureinigung",
+    "viewport": 375,
+    "docClientWidth": 375,
+    "docScrollWidth": 375,
+    "bodyScrollWidth": 375,
+    "horizontalOverflow": 0,
+    "offenders": [
+      {
+        "tag": "SPAN",
+        "className": "material-symbols-outlined text-[500px]!",
+        "text": "corporate_fare",
+        "left": 188,
+        "right": 688,
+        "width": 500,
+        "rightOverflow": 313,
+        "leftOverflow": -187,
+        "overflowX": "visible",
+        "position": "static"
+      },
+      {
+        "tag": "DIV",
+        "className": "absolute -bottom-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl",
+        "text": "",
+        "left": -96,
+        "right": 288,
+        "width": 384,
+        "rightOverflow": -87,
+        "leftOverflow": 96,
+        "overflowX": "visible",
+        "position": "absolute"
+      },
+      {
+        "tag": "SPAN",
+        "className": "material-symbols-outlined text-[200px]!",
+        "text": "cleaning_services",
+        "left": 203,
+        "right": 403,
+        "width": 200,
+        "rightOverflow": 28,
+        "leftOverflow": -203,
+        "overflowX": "visible",
+        "position": "static"
+      }
+    ]
+  },
+  {
+    "route": "landing-spezialreinigung",
+    "url": "http://127.0.0.1:3000/landing/spezialreinigung",
+    "viewport": 375,
+    "docClientWidth": 375,
+    "docScrollWidth": 375,
+    "bodyScrollWidth": 375,
+    "horizontalOverflow": 0,
+    "offenders": [
+      {
+        "tag": "DIV",
+        "className": "text-primary font-bold text-8xl opacity-10 font-headline select-none",
+        "text": "LEISTUNGEN",
+        "left": -258,
+        "right": 343,
+        "width": 601,
+        "rightOverflow": -32,
+        "leftOverflow": 258,
+        "overflowX": "visible",
+        "position": "static"
+      }
+    ]
+  }
+]

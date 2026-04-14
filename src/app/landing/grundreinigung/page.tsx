@@ -34,10 +34,10 @@ export default function GrundreinigungPage() {
                     Werten Sie Ihre Räumlichkeiten mit unserer präzisen Reinigung auf höchstem Niveau auf. Wir erreichen Stellen, die herkömmliche Dienste übersehen, und stellen Klarheit sowie hygienische Frische in Ihren wertvollsten Umgebungen wieder her.
                 </p>
 <div className="flex flex-col sm:flex-row gap-4">
-<a className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-center hover:bg-emerald-800 hover:shadow-lg transition-all" href="#appointment">
+<Link className="bg-primary text-white px-8 py-4 rounded-lg font-headline font-bold text-lg tracking-tight shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:bg-emerald-800 transition-all block text-center" href="#appointment">
                         Termin vereinbaren
-                    </a>
-<a className="bg-surface-container-low text-primary px-8 py-4 rounded-xl font-bold text-center border border-outline-variant/20 hover:bg-surface-container-high transition-all" href="#included">Leistungen entdecken</a>
+                    </Link>
+<Link className="bg-surface-container-low text-primary px-8 py-4 rounded-xl font-bold text-center border border-primary hover:bg-surface-container-high transition-all inline-block" href="/leistungen">Leistungen entdecken</Link>
 </div>
 </div>
 <div className="lg:col-span-5 relative">
@@ -161,7 +161,7 @@ export default function GrundreinigungPage() {
 </div>
 </div>
 </section>
-<section className="py-24 bg-surface-container-low" id="appointment">
+<section className="py-24 bg-surface-container-low scroll-mt-24" id="appointment">
 <div className="max-w-7xl mx-auto px-8">
 <div className="bg-surface-container-lowest rounded-[2rem] shadow-xl overflow-hidden flex flex-col lg:flex-row">
 <div className="lg:w-1/2 p-12 lg:p-20">

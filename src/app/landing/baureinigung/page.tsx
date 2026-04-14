@@ -39,13 +39,12 @@ export default function BaureinigungPage() {
                     Nahtloser Übergang von der Baustelle zur schlüsselfertigen Übergabe. Unsere spezialisierten Teams entfernen feinsten Staub, Schutt und Rückstände, die Standardreiniger übersehen.
                 </p>
 <div className="flex flex-col sm:flex-row gap-4">
-<a className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-center transition-all hover:bg-emerald-800 hover:shadow-xl hover:shadow-primary/20 flex items-center justify-center gap-2" href="#contact" >
+<Link className="bg-primary text-white px-8 py-4 rounded-lg font-headline font-bold text-lg tracking-tight shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:bg-emerald-800 transition-all block text-center" href="#contact">
                         Termin vereinbaren
-                        <span className="material-symbols-outlined text-lg" >arrow_forward</span>
-</a>
-<a className="border border-outline-variant text-primary px-8 py-4 rounded-xl font-bold text-center transition-all hover:bg-surface-container-lowest" href="#included" >
+                    </Link>
+<Link className="bg-surface-container-low text-primary px-8 py-4 rounded-lg font-bold text-center border border-primary hover:bg-surface-container-high transition-all text-lg block" href="/leistungen" >
                         Leistungen entdecken
-                    </a>
+                    </Link>
 </div>
 </div>
 <div className="hidden md:block col-span-5 relative h-full min-h-[600px]">
@@ -191,7 +190,7 @@ export default function BaureinigungPage() {
 </div>
 </section>
 {/*  Contact Form Section  */}
-<section className="py-32 bg-surface" id="contact">
+<section className="py-32 bg-surface scroll-mt-24" id="contact">
 <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div className="order-2 lg:order-1">
 <div className="bg-surface-container-lowest p-10 rounded-[2rem] shadow-2xl shadow-primary/5">

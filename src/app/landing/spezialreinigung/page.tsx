@@ -38,11 +38,11 @@ export default function SpezialreinigungPage() {
                     Spezialisierte Reinigung auf wissenschaftlichem Niveau. Wir bieten klinische Desinfektion für das Gesundheitswesen, Bildungseinrichtungen und anspruchsvolle Architektur.
                 </p>
 <div className="flex flex-col sm:flex-row gap-4">
-<button className="bg-primary text-white px-10 py-4 rounded-lg font-bold text-base shadow-xl hover:bg-emerald-800 transition-all" >
+<Link className="bg-primary text-white px-8 py-4 rounded-lg font-headline font-bold text-lg tracking-tight shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:bg-emerald-800 transition-all block text-center" href="#contact">
                         Termin vereinbaren
-                    </button>
-<button className="bg-surface-container-highest/50 backdrop-blur-md text-on-surface px-10 py-4 rounded-lg font-bold text-base hover:bg-surface-container-highest transition-all" >
-                        Leistungen entdecken</button>
+                    </Link>
+<Link className="bg-surface-container-low text-primary px-8 py-4 rounded-xl font-bold text-center border border-primary hover:bg-surface-container-high transition-all text-lg inline-block" href="/leistungen" >
+                        Leistungen entdecken</Link>
 </div>
 </div>
 </div>
@@ -192,7 +192,7 @@ export default function SpezialreinigungPage() {
 </div>
 </section>
 {/*  Contact Form Section  */}
-<section className="py-24 bg-surface" id="contact">
+<section className="py-24 bg-surface scroll-mt-24" id="contact">
 <div className="max-w-7xl mx-auto px-8">
 <div className="bg-surface-container-low rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
 <div className="lg:w-2/5 p-12 lg:p-16 bg-primary text-on-primary">
