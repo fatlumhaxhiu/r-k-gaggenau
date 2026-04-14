@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import { prisma } from "@/lib/prisma"
+import { revalidatePath } from "next/cache"
 import { auth } from "@/auth"
 
 // GET: Fetch all blog posts
@@ -36,12 +37,18 @@ export async function POST(req: Request) {
         slug,
         content,
         cover_image_url: cover_image_url || null,
-        category: category || "General",
+        category: category || "Tipps & Tricks",
         status: status || "draft",
         // Only set author_id if we have a valid UUID from session
         ...(session.user?.id ? { author: { connect: { id: session.user.id } } } : {}),
       },
     })
+
+    // Revalidate paths
+    revalidatePath("/admin/blog-manager")
+    revalidatePath("/admin/dashboard")
+    revalidatePath("/magazin")
+    revalidatePath("/")
 
     return NextResponse.json({ ok: true, post }, { status: 201 })
   } catch (error) {

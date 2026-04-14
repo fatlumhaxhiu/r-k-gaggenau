@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma"
 import { auth } from "@/auth"
 import { unlink } from "fs/promises"
 import { join } from "path"
+import { revalidatePath } from "next/cache"
 
 export async function PATCH(
   req: Request,
@@ -21,6 +22,13 @@ export async function PATCH(
       where: { id },
       data: body,
     })
+
+    // Update caches for all relevant pages
+    revalidatePath("/admin/blog-manager")
+    revalidatePath("/admin/dashboard")
+    revalidatePath("/magazin")
+    revalidatePath(`/magazin/${post.slug}`)
+    revalidatePath("/")
 
     return NextResponse.json({ ok: true, post })
   } catch (error) {
@@ -61,6 +69,12 @@ export async function DELETE(
     await prisma.blogPost.delete({
       where: { id },
     })
+
+    // Update caches
+    revalidatePath("/admin/blog-manager")
+    revalidatePath("/admin/dashboard")
+    revalidatePath("/magazin")
+    revalidatePath("/")
 
     return NextResponse.json({ ok: true })
   } catch (error) {

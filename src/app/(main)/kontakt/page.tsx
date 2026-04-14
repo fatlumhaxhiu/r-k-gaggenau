@@ -1,13 +1,13 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { CopySlash as MapPin, PhoneCall, Mail, Clock, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import { CopySlash as MapPin, PhoneCall, Mail, Clock, CheckCircle2 } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 export default function Kontakt() {
   return (
     <div className="flex flex-col min-h-screen bg-muted/20">
       
       {/* 1. Cinematic Hero Section */}
+      {/* ... keeping sections as they are ... */}
       <section className="relative h-[380px] lg:h-[550px] w-full flex items-center justify-center">
         <Image 
           src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1920&auto=format&fit=crop"
@@ -42,32 +42,7 @@ export default function Kontakt() {
               <h2 className="text-3xl font-heading font-bold text-foreground mb-10">
                 Beginnen Sie die Transformation
               </h2>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-xs font-bold tracking-wider text-muted-foreground uppercase">Vollständiger Name</label>
-                    <Input placeholder="Max Mustermann" className="h-14 bg-background border border-input focus-visible:ring-primary/20 hover:border-primary/50 transition-colors rounded-md shadow-sm" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-xs font-bold tracking-wider text-muted-foreground uppercase">E-Mail-Adresse</label>
-                    <Input placeholder="max@beispiel.de" type="email" className="h-14 bg-background border border-input focus-visible:ring-primary/20 hover:border-primary/50 transition-colors rounded-md shadow-sm" />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-bold tracking-wider text-muted-foreground uppercase">Telefonnummer</label>
-                  <Input placeholder="+49 (0) 000 0000000" className="h-14 bg-background border border-input focus-visible:ring-primary/20 hover:border-primary/50 transition-colors rounded-md shadow-sm" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-bold tracking-wider text-muted-foreground uppercase">Nachricht</label>
-                  <textarea 
-                    placeholder="Erzählen Sie uns von Ihren Räumlichkeiten..." 
-                    className="flex min-h-[140px] w-full bg-background border border-input px-4 py-4 text-sm outline-none placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-primary/50 hover:border-primary/50 transition-colors rounded-md shadow-sm resize-none"
-                  />
-                </div>
-                <Button className="w-full h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-base rounded-sm mt-4">
-                  Nachricht senden
-                </Button>
-              </form>
+              <ContactForm />
             </div>
 
             {/* Information Column (Grayscale Map + Details) */}
