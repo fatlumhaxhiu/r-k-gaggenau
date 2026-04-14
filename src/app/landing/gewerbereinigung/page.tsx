@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import LandingMobileNav from "@/components/layout/LandingMobileNav";
+import LeadForm from "@/components/LeadForm";
 export default function GewerbereinigungPage() {
   return (
     <>
@@ -247,32 +248,7 @@ export default function GewerbereinigungPage() {
 </div>
 </div>
 <div className="lg:col-span-3 p-12 bg-surface-container-lowest">
-<form className="space-y-6">
-<div className="grid sm:grid-cols-2 gap-6">
-<div className="space-y-2">
-<label className="text-sm font-bold font-label text-on-surface-variant uppercase tracking-wider" >Vorname</label>
-<input className="w-full px-4 py-3 bg-surface-container-high rounded-xl border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="Jane" type="text" />
-</div>
-<div className="space-y-2">
-<label className="text-sm font-bold font-label text-on-surface-variant uppercase tracking-wider" >Nachname</label>
-<input className="w-full px-4 py-3 bg-surface-container-high rounded-xl border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="Smith" type="text" />
-</div>
-</div>
-<div className="space-y-2">
-<label className="text-sm font-bold font-label text-on-surface-variant uppercase tracking-wider" >E-Mail-Adresse</label>
-<input className="w-full px-4 py-3 bg-surface-container-high rounded-xl border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="jane@company.com" type="email" />
-</div>
-<div className="space-y-2">
-<label className="text-sm font-bold font-label text-on-surface-variant uppercase tracking-wider" >Telefonnummer</label>
-<input className="w-full px-4 py-3 bg-surface-container-high rounded-xl border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="+1 (555) 000-0000" type="tel" />
-</div>
-<div className="pt-4">
-<button className="w-full bg-primary text-white py-5 rounded-xl font-bold text-lg shadow-lg shadow-primary/30 hover:scale-[1.02] transition-transform" type="submit" >
-                                    Termin vereinbaren
-                                </button>
-</div>
-<p className="text-center text-xs text-on-surface-variant mt-4" >Mit dem Klick auf "Termin vereinbaren" stimmen Sie unseren Nutzungsbedingungen zu.</p>
-</form>
+<LeadForm serviceName="Gewerbereinigung" />
 </div>
 </div>
 </div>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import LandingMobileNav from "@/components/layout/LandingMobileNav";
+import LeadForm from "@/components/LeadForm";
 export default function GrundreinigungPage() {
   return (
     <>
@@ -167,29 +168,7 @@ export default function GrundreinigungPage() {
 <div className="lg:w-1/2 p-12 lg:p-20">
 <h2 className="font-headline text-4xl font-bold mb-6">Bereit für eine <span className="text-primary">komplette Erneuerung?</span></h2>
 <p className="text-on-surface-variant mb-10 text-lg">Vereinbaren Sie noch heute Ihren Beratungstermin für die Grundreinigung. Unsere Spezialisten bewerten Ihre Anforderungen und erstellen einen maßgeschneiderten Plan.</p>
-<form className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div className="space-y-2">
-<label className="font-label text-xs font-bold uppercase tracking-wider text-on-surface-variant">Vorname</label>
-<input className="w-full bg-surface-container-high border-none rounded-xl p-4 focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="Vorname eingeben" type="text"/>
-</div>
-<div className="space-y-2">
-<label className="font-label text-xs font-bold uppercase tracking-wider text-on-surface-variant">Nachname</label>
-<input className="w-full bg-surface-container-high border-none rounded-xl p-4 focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="Nachname eingeben" type="text"/>
-</div>
-<div className="space-y-2 md:col-span-2">
-<label className="font-label text-xs font-bold uppercase tracking-wider text-on-surface-variant">E-Mail-Adresse</label>
-<input className="w-full bg-surface-container-high border-none rounded-xl p-4 focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="email@firma.de" type="email"/>
-</div>
-<div className="space-y-2 md:col-span-2">
-<label className="font-label text-xs font-bold uppercase tracking-wider text-on-surface-variant">Telefonnummer</label>
-<input className="w-full bg-surface-container-high border-none rounded-xl p-4 focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="+49 (0) 000 000000" type="tel"/>
-</div>
-<div className="md:col-span-2 mt-4">
-<button className="bg-primary hover:bg-emerald-800 w-full text-white font-bold py-4 rounded-xl shadow-lg transition-colors" type="submit">
-                                Termin vereinbaren
-                            </button>
-</div>
-</form>
+<LeadForm serviceName="Grundreinigung" />
 </div>
 <div className="lg:w-1/2 bg-surface-container-highest relative min-h-[400px]">
 <img alt="Luxuriöses Wohninterieur" className="absolute inset-0 w-full h-full object-cover" data-alt="Wide angle shot of a luxury modern penthouse living room with expansive windows and pristine furniture layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqdfp7H0lMAZBQxPPIeG4n0heLmXyNY3KVpUKt9EArj3jPyFG44pauJW8P8WZalucis3AtbaXpnf513iPAEU-iF9F_Jeon1KM8OrC4BFAnWI86tqNBD0z31lZoQr2k7bvO31We1Mc_XPPM3cWDxHT-2ypys7iSiKkBjd7TVrBlIdjWhT0CJJphRszmMlynZa7KpFqPR-hB5jW7K_kEtCxjH1SK0hrPuw1rW7PsFr4JHUNFcEuhAzcfYZHKePnnPJ-b7ejZRuYIyJk"/>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import LandingMobileNav from "@/components/layout/LandingMobileNav";
+import LeadForm from "@/components/LeadForm";
 export default function PrivatreinigungPage() {
   return (
     <>
@@ -183,29 +184,7 @@ export default function PrivatreinigungPage() {
           Geben Sie Ihre Daten an und unser Concierge wird Sie kontaktieren, um einen maßgeschneiderten Reinigungsplan für Ihre Residenz zu besprechen.
         </p>
         
-        <form className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="font-label text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant block mb-2">Vorname</label>
-              <input placeholder="Vorname eingeben" className="w-full bg-surface-container-high border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" type="text" />
-            </div>
-            <div>
-              <label className="font-label text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant block mb-2">Nachname</label>
-              <input placeholder="Nachname eingeben" className="w-full bg-surface-container-high border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" type="text" />
-            </div>
-          </div>
-          <div>
-            <label className="font-label text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant block mb-2">E-Mail Adresse</label>
-            <input placeholder="email@firma.de" className="w-full bg-surface-container-high border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" type="email" />
-          </div>
-          <div>
-            <label className="font-label text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant block mb-2">Telefonnummer</label>
-            <input placeholder="+49 (0) 000 000000" className="w-full bg-surface-container-high border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" type="tel" />
-          </div>
-          <button className="w-full bg-primary text-white hover:bg-emerald-800 font-headline font-bold text-base py-5 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all mt-4" type="submit">
-            Termin vereinbaren
-          </button>
-        </form>
+        <LeadForm serviceName="Privatreinigung" />
       </div>
 
       {/* Right Column - Image */}
