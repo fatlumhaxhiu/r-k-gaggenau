@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Magazin() {
   const publishedPosts = await prisma.blogPost.findMany({
     where: { status: "published" },

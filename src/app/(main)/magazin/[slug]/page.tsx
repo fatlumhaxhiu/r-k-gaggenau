@@ -6,16 +6,9 @@ import { ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 
-export async function generateStaticParams() {
-  const posts = await prisma.blogPost.findMany({
-    where: { status: "published" },
-    select: { slug: true }
-  });
-  
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
+
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
