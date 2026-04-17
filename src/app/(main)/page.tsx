@@ -6,6 +6,8 @@ import { siteData } from "@/data/mockData";
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 
+export const dynamic = 'force-dynamic';
+
 // Icon mapping helper
 const getIcon = (name: string) => {
   switch (name) {
