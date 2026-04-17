@@ -8,7 +8,7 @@ export default function GewerbereinigungPage() {
       
 {/*  TopNavBar  */}
 <nav className="bg-emerald-50/80 dark:bg-stone-900/80 backdrop-blur-xl docked full-width top-0 sticky z-50 tonal-shift">
-<div className="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div className="flex justify-between items-center w-full px-4 sm:px-8 py-4 max-w-7xl mx-auto">
 <Link href="/" className="flex items-center gap-3">
 <Image src="/RK-Logo-02.png" alt="R&K-Gaggenau Logo" width={200} height={50} className="h-10 w-auto object-contain" priority />
 <span className="font-heading text-lg font-bold tracking-tight text-foreground sm:text-xl">R&amp;K-GAGGENAU</span>
@@ -27,16 +27,16 @@ export default function GewerbereinigungPage() {
 </nav>
 <main>
 {/*  Hero Section  */}
-<section className="relative min-h-[870px] flex items-center overflow-hidden bg-surface">
+<section className="relative min-h-svh flex items-center overflow-hidden bg-surface">
 <div className="absolute inset-0 z-0">
 <img className="w-full h-full object-cover opacity-20 grayscale scale-105" data-alt="ultra-modern glass office interior with immaculate surfaces and bright natural morning light reflecting off polished floors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg0oriSjJ3b-d7s96eZ9Ql6C1ZJxaUfXakDOBwH1zDkcuCVFXVZUc6bVoUEnSwkDWXRJFbWIZ528mVjm4MM8Lq8EgWjciX85uCDAIg11myxLpGwSXgwVvN3AY-oez6X187bW6C2Df3-EYR4UyHpJ9iD69OoBUyhNRAonyXnEb5v84juKbp7yqQnv6BFzl1S7W0IzCyRQyAIdf0bJ0Y3NDI0jM6gopG5xF_XBZ8uN4pdnYn-ALvnWcFr_yQL3TPj8WnzTll7I0Rc4A"  />
 </div>
-<div className="container mx-auto px-8 relative z-10 grid lg:grid-cols-12 gap-12 items-center">
+<div className="container mx-auto px-8 relative z-10 flex flex-col lg:grid lg:grid-cols-12 gap-12 items-center w-full">
 <div className="lg:col-span-7">
 <span className="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-xs font-bold tracking-widest uppercase font-label" >
                         Präzise Lösungen für Gewerbe
                     </span>
-<h1 className="text-5xl lg:text-7xl font-extrabold font-headline text-on-surface leading-[1.1] tracking-tight mb-8" >
+<h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold font-headline text-on-surface leading-[1.1] tracking-tight mb-8" >
                         Professionelle Gewerbereinigung, <span className="text-primary" >der Sie vertrauen können</span>
 </h1>
 <p className="text-xl text-on-surface-variant max-w-2xl mb-10 leading-relaxed" >
@@ -63,10 +63,10 @@ export default function GewerbereinigungPage() {
 <section className="py-24 bg-surface-container-low">
 <div className="container mx-auto px-8">
 <div className="max-w-4xl mb-16">
-<h2 className="text-4xl lg:text-5xl font-black font-headline text-on-surface mb-4" >Was enthalten ist</h2>
+<h2 className="text-3xl lg:text-5xl font-black font-headline text-on-surface mb-4" >Was enthalten ist</h2>
 <p className="text-on-surface-variant text-lg" >Umfassende Desinfektion der Arbeitsbereiche, abgestimmt auf Ihre baulichen Anforderungen.</p>
 </div>
-<div className="grid md:grid-cols-3 gap-8">
+<div className="flex flex-col md:grid md:grid-cols-3 gap-8 w-full min-w-0">
 {/*  Office Cleaning  */}
 <div className="group bg-surface-container-lowest p-1 shadow-sm hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden">
 <div className="relative h-64 overflow-hidden rounded-t-xl">
@@ -138,21 +138,21 @@ export default function GewerbereinigungPage() {
 <div className="container mx-auto px-8">
 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
 <div className="max-w-2xl">
-<h2 className="text-4xl lg:text-5xl font-black font-headline text-on-surface mb-6" >Warum Sie uns wählen sollten</h2>
+<h2 className="text-3xl lg:text-5xl font-black font-headline text-on-surface mb-6" >Warum Sie uns wählen sollten</h2>
 <p className="text-on-surface-variant text-lg leading-relaxed" >Wir setzen den Branchenmaßstab für gewerbliche Instandhaltung durch vier Säulen der Exzellenz.</p>
 </div>
 </div>
-<div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div className="flex flex-col md:grid md:grid-cols-4 gap-6 w-full min-w-0">
 {/*  Card 1  */}
-<div className="md:col-span-2 bg-surface-container-high p-10 rounded-3xl flex flex-col justify-between group hover:bg-primary-container transition-colors duration-500">
+<div className="w-full md:col-span-2 bg-surface-container-high p-5 md:p-10 rounded-3xl flex flex-col justify-between group hover:bg-primary-container transition-colors duration-500 min-w-0">
 <div>
 <span className="material-symbols-outlined text-4xl text-primary group-hover:text-white mb-6" >timer</span>
-<h3 className="text-3xl font-bold font-headline mb-4 group-hover:text-white" >Zuverlässig &amp; Pünktlich</h3>
+<h3 className="text-2xl font-bold font-headline mb-4 group-hover:text-white" >Zuverlässig &amp; Pünktlich</h3>
 <p className="text-on-surface-variant group-hover:text-emerald-50/80 leading-relaxed" >Unsere präzise Zeitplanung stellt sicher, dass Ihre Abläufe nie unterbrochen werden. Wir erscheinen genau dann, wenn wir es versprechen.</p>
 </div>
 </div>
 {/*  Card 2  */}
-<div className="bg-primary text-on-primary p-10 rounded-3xl flex flex-col justify-between">
+<div className="bg-primary text-on-primary p-5 md:p-10 rounded-3xl flex flex-col justify-between">
 <div>
 <span className="material-symbols-outlined text-4xl mb-6" data-weight="fill" >verified</span>
 <h3 className="text-2xl font-bold font-headline mb-4" >Deutsche Qualitätsstandards</h3>
@@ -160,7 +160,7 @@ export default function GewerbereinigungPage() {
 </div>
 </div>
 {/*  Card 3  */}
-<div className="bg-surface-container-low p-10 rounded-3xl flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+<div className="bg-surface-container-low p-5 md:p-10 rounded-3xl flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
 <div>
 <span className="material-symbols-outlined text-4xl text-secondary mb-6" >workspace_premium</span>
 <h3 className="text-2xl font-bold font-headline mb-4" >Geschulte Profis</h3>
@@ -168,15 +168,15 @@ export default function GewerbereinigungPage() {
 </div>
 </div>
 {/*  Card 4 (Full Width Bottom)  */}
-<div className="md:col-span-4 bg-secondary text-on-secondary p-12 rounded-3xl flex flex-col md:flex-row items-center gap-12">
+<div className="w-full md:col-span-4 bg-secondary text-on-secondary p-5 md:p-12 rounded-3xl flex flex-col md:flex-row items-center gap-12 min-w-0">
 <div className="flex-1">
 <span className="material-symbols-outlined text-5xl mb-6" >event_available</span>
-<h3 className="text-4xl font-bold font-headline mb-4" >Flexible Zeitplanung</h3>
+<h3 className="text-3xl font-bold font-headline mb-4" >Flexible Zeitplanung</h3>
 <p className="text-blue-100 text-lg leading-relaxed" >Über Nacht, am Wochenende oder täglich – wir passen uns Ihren Geschäftsrhythmen an, ohne einen Takt zu verpassen. Ihre Produktivität ist unsere oberste Priorität.</p>
 </div>
 <div className="hidden lg:block w-px h-32 bg-white/20"></div>
 <div className="shrink-0">
-<button className="bg-surface-container-lowest text-secondary px-12 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-colors" >
+<button className="bg-surface-container-lowest text-secondary px-5 md:px-12 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-colors w-full md:w-auto" >
                                 Verfügbarkeit prüfen
                             </button>
 </div>
@@ -190,10 +190,10 @@ export default function GewerbereinigungPage() {
 <img className="w-full h-full object-cover" data-alt="team of professionals collaborating in a clean modern office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4ChyfU3ZIi1SfcFhh5H7QzcjzpRgnxq3VR9UnQIB0dJt5E_TXc25uZ3P4JaAB_WPqN7F16q5DtdQtyN-j2gZB470MpDTnCtSSZVVi4M7i2BJ0kVI8vD1QeLCFlYCzmjMxLDVw2UeL9cjCcqEUaN_7ssalRv1H94rfNJHuGlHNKB84PqMX3gIRlztCIGP8OTABgSwqIfbZD7EhTFzN6CrLA12issB5F0OG7ja5kZ1b2KTCh3fdbcOlf4W2ak6QyL9-3Z6KqONLyPM"  />
 </div>
 <div className="container mx-auto px-8 relative z-10">
-<div className="grid lg:grid-cols-2 gap-20 items-center">
+<div className="flex flex-col lg:grid lg:grid-cols-2 gap-20 items-center w-full min-w-0">
 <div>
 <span className="text-primary-fixed font-bold tracking-widest uppercase text-xs mb-6 block" >Unsere Tradition</span>
-<h2 className="text-4xl lg:text-5xl font-black font-headline mb-8 leading-tight" >Jahrzehnte der Präzision, <br />gebaut auf Vertrauen.</h2>
+<h2 className="text-3xl lg:text-5xl font-black font-headline mb-8 leading-tight" >Jahrzehnte der Präzision, <br />gebaut auf Vertrauen.</h2>
 <div className="space-y-6 text-xl text-surface-dim leading-relaxed">
 <p className="" >R&amp;K-Gaggenau wurde auf dem Prinzip gegründet, dass Sauberkeit der stille Motor des unternehmerischen Erfolgs ist. Seit über 15 Jahren betreuen wir die anspruchsvollsten architektonischen Räume der Region, von Tech-Hubs bis hin zu medizinischen Einrichtungen.</p>
 <p className="" >Unser Engagement geht über die einfache Ästhetik hinaus; wir schaffen Umgebungen, die Ihr wertvollstes Kapital schützen – Ihre Mitarbeiter. Durch kontinuierliche Innovation in nachhaltiger Chemie und mechanischer Präzision bleiben wir die erste Wahl für Unternehmen, die bei der Qualität keine Kompromisse eingehen.</p>
@@ -209,7 +209,7 @@ export default function GewerbereinigungPage() {
 </div>
 </div>
 </div>
-<div className="bg-white/5 backdrop-blur-md p-10 rounded-3xl border border-white/10">
+<div className="bg-white/5 backdrop-blur-md p-5 md:p-10 rounded-3xl border border-white/10">
 <div className="flex items-center gap-4 mb-8">
 <div className="w-16 h-16 rounded-full overflow-hidden">
 <img className="w-full h-full object-cover" data-alt="portrait of a confident business executive in a high-end office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDa_D1lUw5EXfZLAkiKlTBvdkYd--pemhTKLZZRRM63d9rl4BVv0ylcGDaJ4bt5kZvfDn-zFYzBIJyVUJYUnBdEBr5HrWVf_QHWwxl3W2em2uM-UisQmINityLa_KfKNrT2inGOZTVHu32__qN022coc5W0KavKYS48hH8HNu4v7ZCj7HQQf4MgFI7MxmibSunOZKejiNUfGrRqZxVW79qMSWN5-wd7Jp4UjBjyWbeBZENQS29IhqHxR5yy6GHJajbBNMOIRg7Vp4"  />
@@ -219,7 +219,7 @@ export default function GewerbereinigungPage() {
 <p className="text-sm text-outline-variant" >COO, Global Tech Hub</p>
 </div>
 </div>
-<p className="italic text-2xl font-light leading-relaxed" >"Der Wechsel zu R&amp;K-Gaggenau verlief nahtlos. Sie reinigen nicht nur; sie pflegen die physische Präsenz unserer Marke. Ihre Liebe zum Detail in den Vorstandsetagen ist unerreicht."</p>
+<p className="italic text-xl md:text-2xl font-light leading-relaxed" >"Der Wechsel zu R&amp;K-Gaggenau verlief nahtlos. Sie reinigen nicht nur; sie pflegen die physische Präsenz unserer Marke. Ihre Liebe zum Detail in den Vorstandsetagen ist unerreicht."</p>
 </div>
 </div>
 </div>
@@ -227,27 +227,27 @@ export default function GewerbereinigungPage() {
 {/*  Contact Form Section  */}
 <section className="py-24 bg-surface scroll-mt-24" id="contact">
 <div className="container mx-auto px-8">
-<div className="max-w-6xl mx-auto bg-surface-container-low rounded-[2rem] overflow-hidden grid lg:grid-cols-5 shadow-2xl">
-<div className="lg:col-span-2 bg-primary-container p-12 text-on-primary-container flex flex-col justify-between">
+<div className="max-w-6xl mx-auto bg-surface-container-low rounded-[2rem] overflow-hidden flex flex-col lg:grid lg:grid-cols-5 shadow-2xl w-full min-w-0">
+<div className="lg:col-span-2 bg-primary-container p-6 sm:p-12 text-on-primary-container flex flex-col justify-between">
 <div>
-<h2 className="text-4xl font-black font-headline mb-6" >Werten wir Ihren Arbeitsplatz auf.</h2>
+<h2 className="text-3xl md:text-4xl font-black font-headline mb-6" >Werten wir Ihren Arbeitsplatz auf.</h2>
 <p className="text-emerald-100/80 mb-8 leading-relaxed" >Füllen Sie das Formular aus für eine maßgeschneiderte Objektbewertung und ein Angebot innerhalb von 24 Stunden.</p>
 <div className="space-y-6">
 <div className="flex items-center gap-4">
 <span className="material-symbols-outlined p-2 bg-white/10 rounded-lg" >call</span>
-<span className="" >+1 (555) 012-3456</span>
+<a href="tel:+4915776790522" className="hover:text-emerald-200 transition-colors" >+49 1577 6790522</a>
 </div>
 <div className="flex items-center gap-4">
 <span className="material-symbols-outlined p-2 bg-white/10 rounded-lg" >mail</span>
-<span className="" >commercial@rk-gaggenau.com</span>
+<a href="mailto:info@rk-gaggenau.de" className="hover:text-emerald-200 transition-colors" >info@rk-gaggenau.de</a>
 </div>
 </div>
 </div>
 <div className="mt-12 pt-12 border-t border-white/10">
-<p className="text-sm font-medium" >Hauptsitz: Gaggenau Precision Plaza, Suite 400</p>
+<a href="https://maps.google.com/?q=Bäumbachallee+1,+76571+Gaggenau,+Germany" target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-emerald-200 transition-colors" >Bäumbachallee 1, 76571 Gaggenau, Germany</a>
 </div>
 </div>
-<div className="lg:col-span-3 p-12 bg-surface-container-lowest">
+<div className="lg:col-span-3 p-6 sm:p-12 bg-surface-container-lowest">
 <LeadForm serviceName="Gewerbereinigung" />
 </div>
 </div>
@@ -256,28 +256,14 @@ export default function GewerbereinigungPage() {
 {/*  Final CTA  */}
 <section className="py-24 text-center">
 <div className="container mx-auto px-8 max-w-3xl">
-<h2 className="text-4xl lg:text-6xl font-black font-headline text-on-surface mb-8" >Bereit für eine saubere Perspektive?</h2>
-<button className="bg-primary text-white px-12 py-6 rounded-2xl text-xl font-extrabold shadow-2xl shadow-primary/20 hover:scale-110 transition-all" >
+<h2 className="text-3xl lg:text-6xl font-black font-headline text-on-surface mb-8" >Bereit für eine saubere Perspektive?</h2>
+<button className="bg-primary w-full sm:w-auto text-white px-8 sm:px-12 py-6 rounded-2xl text-xl font-extrabold shadow-2xl shadow-primary/20 hover:scale-110 transition-all" >
                     Holen Sie sich jetzt Ihr kostenloses Angebot
                 </button>
 </div>
 </section>
 </main>
-{/*  Footer  */}
-<footer className="bg-stone-100 dark:bg-stone-950 full-width py-12 tonal-shift from surface to surface-container-low">
-<div className="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto">
-<div className="text-lg font-black text-stone-900 dark:text-stone-100 font-headline mb-6 md:mb-0" >R&amp;K-Gaggenau</div>
-<div className="flex gap-8 mb-6 md:mb-0">
-<a className="font-inter text-xs tracking-wide uppercase text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#" >Datenschutz</a>
-<a className="font-inter text-xs tracking-wide uppercase text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#" >Impressum</a>
-<a className="font-inter text-xs tracking-wide uppercase text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#" >Servicebereiche</a>
-<a className="font-inter text-xs tracking-wide uppercase text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#" >Karriere</a>
-</div>
-<div className="font-inter text-xs tracking-wide uppercase text-stone-500" >
-                © 2024 R&amp;K-Gaggenau Präzisionsreinigung. Alle Rechte vorbehalten.
-            </div>
-</div>
-</footer>
+
 
     </>
   );

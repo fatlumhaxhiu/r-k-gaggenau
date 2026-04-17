@@ -1,6 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, ShieldCheck, Leaf, Award } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export default function UberUns() {
   return (
@@ -16,7 +18,7 @@ export default function UberUns() {
               <h5 className="text-xs font-bold tracking-widest text-primary-container uppercase mb-4">
                 ETABLIERTE EXZELLENZ
               </h5>
-              <h1 className="font-heading text-5xl sm:text-6xl lg:text-[5.5rem] font-black tracking-tight text-foreground leading-none mb-8">
+              <h1 className="font-heading text-3xl sm:text-4xl lg:text-[5.5rem] font-black tracking-tight text-foreground leading-none mb-8">
                 Atmosphärische <span className="text-primary-container italic">Präzision</span> bis ins kleinste Detail.
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
@@ -38,8 +40,8 @@ export default function UberUns() {
               </div>
               
               {/* Floating Expertise Badge */}
-              <div className="absolute -bottom-8 left-0 lg:-left-8 bg-primary-container p-6 lg:p-10 rounded-xl shadow-2xl z-20">
-                <h3 className="font-heading text-4xl lg:text-5xl font-black text-white leading-none mb-2">
+              <div className="relative mt-6 lg:absolute lg:-bottom-8 lg:-left-8 bg-primary-container p-6 lg:p-10 rounded-xl shadow-2xl z-20">
+                <h3 className="font-heading text-3xl lg:text-5xl font-black text-white leading-none mb-2">
                   5 JAHRE
                 </h3>
                 <p className="text-sm text-white/90 font-bold tracking-widest uppercase">
@@ -58,7 +60,7 @@ export default function UberUns() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             
             {/* Asymmetrical 4-Image Grid Left */}
-            <div className="grid grid-cols-2 gap-4 min-h-[400px] lg:h-[600px] w-full max-w-xl mx-auto">
+            <div className="grid grid-cols-2 gap-4 h-[300px] sm:h-[400px] lg:h-[600px] w-full max-w-xl mx-auto">
               <div className="space-y-4 h-full flex flex-col">
                 <div className="relative h-[45%] w-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
                   <Image src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" alt="Team meeting" fill className="object-cover" />
@@ -79,7 +81,7 @@ export default function UberUns() {
 
             {/* History Text Right */}
             <div className="flex flex-col justify-center">
-              <h2 className="font-heading text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-8">
+              <h2 className="font-heading text-3xl lg:text-5xl font-bold tracking-tight text-foreground mb-8">
                 Eine Tradition des Vertrauens
               </h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
@@ -108,7 +110,7 @@ export default function UberUns() {
             <h5 className="text-xs font-bold tracking-widest text-primary-container uppercase mb-4">
               UNSER FUNDAMENT
             </h5>
-            <h2 className="font-heading text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+            <h2 className="font-heading text-3xl lg:text-5xl font-bold tracking-tight text-foreground">
               Die Kernpfeiler
             </h2>
           </div>
@@ -178,19 +180,25 @@ export default function UberUns() {
 
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="max-w-2xl bg-black/40 backdrop-blur-md border border-white/10 p-10 lg:p-14 rounded-[2rem] shadow-2xl">
-            <h2 className="font-heading text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
+            <h2 className="font-heading text-3xl lg:text-5xl font-bold tracking-tight text-white mb-6">
               Bereit für atmosphärische Präzision?
             </h2>
             <p className="text-white/80 leading-relaxed font-medium mb-10 text-lg">
               Schließen Sie sich über 1.000 zufriedenen Kunden an, die R&K-GAGGENAU ihre wichtigsten Räume anvertrauen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full">
-              <Button size="lg" className="w-full sm:w-auto h-14 px-8 bg-primary-container text-white hover:bg-primary-container/90 rounded-md shrink-0">
+              <Link 
+                href="/kontakt"
+                className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-auto h-14 px-8 bg-primary-container text-white hover:bg-primary-container/90 rounded-md shrink-0")}
+              >
                 Angebot anfordern
-              </Button>
-              <Button size="lg" variant="outline" className="bg-transparent w-full sm:w-auto h-14 px-8 border-white/30 text-white hover:bg-white hover:text-black rounded-md shrink-0 transition-colors">
+              </Link>
+              <Link 
+                href="/leistungen"
+                className={cn(buttonVariants({ size: "lg", variant: "outline" }), "bg-transparent w-full sm:w-auto h-14 px-8 border-white/30 text-white hover:bg-white hover:text-black rounded-md shrink-0 transition-colors")}
+              >
                 Services ansehen
-              </Button>
+              </Link>
             </div>
           </div>
         </div>

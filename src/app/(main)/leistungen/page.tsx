@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { ArrowRight, Building2, SprayCan, Home, Hammer, Droplets, Snowflake, CheckCircle2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const serviceDetails = [
   {
@@ -88,7 +89,7 @@ export default function Leistungen() {
               <h5 className="text-xs font-bold tracking-widest text-primary uppercase mb-4">
                 EXZELLENZ IN DER INSTANDHALTUNG
               </h5>
-              <h1 className="font-heading text-4xl sm:text-5xl lg:text-[5.5rem] font-black tracking-tight text-foreground leading-none mb-8">
+              <h1 className="font-heading text-3xl sm:text-3xl lg:text-[5.5rem] font-black tracking-tight text-foreground leading-none mb-8">
                 Unsere <span className="text-primary">Leistungen</span>
               </h1>
               <div className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-primary/40">
@@ -98,7 +99,7 @@ export default function Leistungen() {
               </div>
             </div>
 
-            <div className="relative h-[320px] lg:h-[500px] w-full rounded-[2rem] overflow-hidden lg:-mr-20 shadow-2xl">
+            <div className="relative h-[320px] lg:h-[500px] w-full rounded-[2rem] overflow-hidden shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1200&auto=format&fit=crop"
                 alt="Professional cleaner wiping glass"
@@ -159,19 +160,25 @@ export default function Leistungen() {
             </div>
             
             <div className="flex flex-col items-start">
-              <h2 className="font-heading text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
+              <h2 className="font-heading text-3xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
                 Bereit für einen makellosen Raum?
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-10">
                 Kontaktieren Sie uns noch heute für ein unverbindliches Angebot, das genau auf Ihre Anforderungen zugeschnitten ist. Wir sind stolz auf unsere Zuverlässigkeit und höchste Qualitätsstandards.
               </p>
               <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto bg-primary text-primary-foreground h-14 px-8 text-base shadow-xl rounded-md hover:bg-primary/90">
+                <Link 
+                  href="/kontakt"
+                  className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-auto bg-primary text-primary-foreground h-14 px-8 text-base shadow-xl rounded-md hover:bg-primary/90")}
+                >
                   Angebot anfordern
-                </Button>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-base border-primary/20 bg-transparent text-foreground hover:bg-primary/5 transition-all rounded-md">
-                  Portfolio ansehen
-                </Button>
+                </Link>
+                <Link 
+                  href="/leistungen"
+                  className={cn(buttonVariants({ size: "lg", variant: "outline" }), "w-full sm:w-auto h-14 px-8 text-base border-primary/20 bg-transparent text-foreground hover:bg-primary/5 transition-all rounded-md")}
+                >
+                  Alle Leistungen ansehen
+                </Link>
               </div>
             </div>
           </div>

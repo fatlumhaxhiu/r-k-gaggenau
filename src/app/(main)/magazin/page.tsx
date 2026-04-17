@@ -14,9 +14,9 @@ export default async function Magazin() {
   if (publishedPosts.length === 0) {
     return (
       <div className="flex flex-col min-h-screen bg-muted/10 items-center justify-center py-40">
-        <h1 className="font-heading text-4xl font-black mb-4">Magazini vjen së shpejti</h1>
-        <p className="text-muted-foreground">Jemi duke përgatitur artikujt tanë të parë.</p>
-        <Link href="/" className="mt-8 text-primary font-bold hover:underline">Kthehu në fillim</Link>
+        <h1 className="font-heading text-3xl font-black mb-4">Das Magazin erscheint in Kürze</h1>
+        <p className="text-muted-foreground">Wir bereiten derzeit unsere ersten Beiträge vor.</p>
+        <Link href="/" className="mt-8 text-primary font-bold hover:underline">Zurück zur Startseite</Link>
       </div>
     );
   }
@@ -35,7 +35,7 @@ export default async function Magazin() {
               <h5 className="text-xs font-bold tracking-widest text-primary-container uppercase mb-4">
                 EINBLICKE & EXPERTISE
               </h5>
-              <h1 className="font-heading text-4xl sm:text-5xl lg:text-7xl font-black tracking-tight text-foreground leading-[1.05]">
+              <h1 className="font-heading text-3xl sm:text-3xl lg:text-7xl font-black tracking-tight text-foreground leading-[1.05]">
                 Atmosphärische <br/><span className="text-primary-container italic">Präzision.</span>
               </h1>
             </div>
@@ -54,7 +54,7 @@ export default async function Magazin() {
           <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
             
             {/* Massive Highlight Image Card */}
-            <Link href={`/magazin/${highlightArticle.slug}`} className="relative h-[380px] lg:h-[550px] rounded-2xl overflow-hidden shadow-xl group cursor-pointer block">
+            <Link href={`/magazin/${highlightArticle.slug}`} className="relative h-[280px] sm:h-[380px] lg:h-[550px] rounded-2xl overflow-hidden shadow-xl group cursor-pointer block">
               {highlightArticle.cover_image_url ? (
                 <Image 
                   src={highlightArticle.cover_image_url}
@@ -147,7 +147,7 @@ export default async function Magazin() {
           <div className="bg-linear-to-r from-green-50 to-primary/10 rounded-[2rem] p-12 lg:p-20 relative overflow-hidden flex flex-col lg:flex-row items-center gap-12">
             
             <div className="flex-1 max-w-xl z-10">
-              <h2 className="font-heading text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
+              <h2 className="font-heading text-3xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
                 Kuratierte Präzision.
               </h2>
               <p className="text-muted-foreground leading-relaxed">

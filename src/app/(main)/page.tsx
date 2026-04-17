@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight, Building2, Sparkles, Home, Hammer, Droplets, Snowflake, ShieldCheck, Clock, CheckCircle2, ChevronRight, Quote } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { siteData } from "@/data/mockData";
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
@@ -40,7 +41,7 @@ export default async function Startseite() {
                   {siteData.hero.badge}
                 </span>
               </div>
-              <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground leading-[1.05] mb-6">
+              <h1 className="font-heading text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-foreground leading-[1.05] mb-6 wrap-break-word sm:text-wrap">
                 Professionelle <span className="text-primary">Reinigung</span> in Deutschland
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -48,12 +49,18 @@ export default async function Startseite() {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto bg-primary text-primary-foreground h-14 px-8 text-base shadow-xl rounded-md">
+                <Link 
+                  href="/kontakt"
+                  className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-auto bg-primary text-primary-foreground h-14 px-8 text-base shadow-xl rounded-md")}
+                >
                   Angebot anfordern
-                </Button>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-base border-border bg-transparent hover:bg-muted text-foreground transition-all rounded-md">
+                </Link>
+                <Link 
+                  href="/leistungen"
+                  className={cn(buttonVariants({ size: "lg", variant: "outline" }), "w-full sm:w-auto h-14 px-8 text-base border-border bg-transparent hover:bg-muted text-foreground transition-all rounded-md")}
+                >
                   Unsere Leistungen
-                </Button>
+                </Link>
               </div>
             </div>
 
@@ -69,7 +76,7 @@ export default async function Startseite() {
               <div className="absolute inset-0 bg-linear-to-r from-background/60 to-transparent lg:hidden" />
               
               {/* Floating Trust Badge */}
-              <div className="absolute bottom-8 right-8 bg-background/95 backdrop-blur-[10px] p-4 pr-6 rounded-lg shadow-2xl border border-border/50 flex items-center gap-4">
+              <div className="absolute bottom-4 left-4 sm:bottom-8 sm:right-8 sm:left-auto bg-background/95 backdrop-blur-[10px] p-4 pr-6 rounded-lg shadow-2xl border border-border/50 flex items-center gap-4 max-w-[calc(100%-2rem)] sm:max-w-none">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <ShieldCheck className="h-5 w-5" />
                 </div>
@@ -91,7 +98,7 @@ export default async function Startseite() {
               <span className="w-8 h-px bg-muted-foreground/30"></span> 
               Maßgeschneiderte Pflege
             </h5>
-            <h2 className="font-heading text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+            <h2 className="font-heading text-3xl lg:text-5xl font-bold tracking-tight text-foreground">
               Präzisions-Leistungen
             </h2>
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mt-4 gap-6">
@@ -141,14 +148,14 @@ export default async function Startseite() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -bottom-10 lg:bottom-10 lg:-right-10 bg-primary p-8 lg:p-12 rounded-xl shadow-2xl z-20 max-w-[280px]">
+              <div className="relative mt-6 mx-auto lg:absolute lg:bottom-10 lg:-right-10 bg-primary p-8 lg:p-12 rounded-xl shadow-2xl z-20 max-w-[280px]">
                 <h2 className="font-heading text-5xl lg:text-6xl font-black text-primary-foreground leading-none mb-2">5 JAHRE</h2>
                 <p className="text-xl text-primary-foreground/90 font-medium">Exzellenz</p>
               </div>
             </div>
 
             <div className="flex flex-col justify-center pt-16 lg:pt-0">
-              <h2 className="font-heading text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-12">
+              <h2 className="font-heading text-3xl lg:text-5xl font-bold tracking-tight text-foreground mb-12">
                 Atmosphärische <br/>Präzision in jeder Ecke
               </h2>
 
@@ -200,7 +207,7 @@ export default async function Startseite() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <h5 className="text-xs font-bold tracking-widest text-primary uppercase mb-3">Kundenstimmen</h5>
-            <h2 className="font-heading text-4xl font-bold tracking-tight text-foreground">
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground">
               Vertrauen von Experten
             </h2>
           </div>
@@ -285,19 +292,25 @@ export default async function Startseite() {
       {/* 6. Deep Green Footer CTA */}
       <section className="bg-primary pt-24 pb-32">
         <div className="container mx-auto px-6 lg:px-12 text-center flex flex-col items-center">
-          <h2 className="font-heading text-4xl lg:text-5xl font-bold tracking-tight text-primary-foreground mb-6 max-w-3xl">
+          <h2 className="font-heading text-3xl lg:text-5xl font-bold tracking-tight text-primary-foreground mb-6 max-w-3xl">
             Bereit für atmosphärische Präzision?
           </h2>
           <p className="text-lg text-primary-foreground/80 mb-10 max-w-2xl leading-relaxed">
             Kontaktieren Sie uns noch heute für eine kostenlose Beratung und einen maßgeschneiderten Pflegeplan für Ihr Objekt.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Button size="lg" className="bg-background text-foreground hover:bg-muted h-14 px-8 text-base">
+            <Link 
+              href="/kontakt"
+              className={cn(buttonVariants({ size: "lg" }), "bg-background text-foreground hover:bg-muted h-14 px-8 text-base")}
+            >
               Kontaktieren Sie uns
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-white h-14 px-8 text-base">
+            </Link>
+            <Link 
+              href="/uber-uns"
+              className={cn(buttonVariants({ size: "lg", variant: "outline" }), "bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-white h-14 px-8 text-base")}
+            >
               Ablauf entdecken
-            </Button>
+            </Link>
           </div>
         </div>
       </section>
