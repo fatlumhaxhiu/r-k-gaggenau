@@ -57,15 +57,17 @@ export default function Footer() {
             <div className="flex flex-col gap-4 mt-2">
               <div className="flex items-start gap-3 text-sm text-muted-foreground">
                 <MapPin className="h-5 w-5 text-primary shrink-0" />
-                <span>Murgtalstraße 12<br/>76571 Gaggenau</span>
+                <a href="https://maps.google.com/?q=Bäumbachallee+1,+76571+Gaggenau,+Germany" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  Bäumbachallee 1<br/>76571 Gaggenau, Germany
+                </a>
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Phone className="h-5 w-5 text-primary shrink-0" />
-                <span>+49 (0) 7225 123456</span>
+                <a href="tel:+4915776790522" className="hover:text-primary transition-colors">+49 1577 6790522</a>
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Mail className="h-5 w-5 text-primary shrink-0" />
-                <span>info@rk-gaggenau.de</span>
+                <a href="mailto:info@rk-gaggenau.de" className="hover:text-primary transition-colors">info@rk-gaggenau.de</a>
               </div>
             </div>
           </div>

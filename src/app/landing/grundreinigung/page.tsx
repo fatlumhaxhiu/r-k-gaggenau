@@ -7,7 +7,7 @@ export default function GrundreinigungPage() {
     <>
       
 <nav className="bg-emerald-50/80 dark:bg-stone-900/80 backdrop-blur-xl docked full-width top-0 sticky z-50">
-<div className="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div className="flex justify-between items-center w-full px-4 sm:px-8 py-4 max-w-7xl mx-auto">
 <Link href="/" className="flex items-center gap-3">
 <Image src="/RK-Logo-02.png" alt="R&K-Gaggenau Logo" width={200} height={50} className="h-10 w-auto object-contain" priority />
 <span className="font-heading text-lg font-bold tracking-tight text-foreground sm:text-xl">R&amp;K-GAGGENAU</span>
@@ -23,12 +23,12 @@ export default function GrundreinigungPage() {
 </div>
 </nav>
 <header className="relative overflow-hidden pt-20 pb-32 lg:pt-32 lg:pb-48 bg-surface">
-<div className="max-w-7xl mx-auto px-8 grid lg:grid-cols-12 gap-12 items-center">
+<div className="max-w-7xl mx-auto px-8 flex flex-col lg:grid lg:grid-cols-12 gap-12 items-center w-full">
 <div className="lg:col-span-7 z-10">
 <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary-fixed rounded-full font-label">
                     Premium-Service-Stufe
                 </span>
-<h1 className="font-headline text-5xl lg:text-7xl font-extrabold tracking-tight text-on-surface mb-8 leading-[1.1]">
+<h1 className="font-headline text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-on-surface mb-8 leading-[1.1]">
                     Intensive <span className="text-gradient-primary">Grundreinigung</span> für jede Oberfläche
                 </h1>
 <p className="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
@@ -53,12 +53,12 @@ export default function GrundreinigungPage() {
 <div className="max-w-7xl mx-auto px-8">
 <div className="flex flex-col md:flex-row justify-between items-end mb-20">
 <div className="max-w-2xl">
-<h2 className="font-headline text-4xl lg:text-5xl font-bold tracking-tight text-on-surface mb-6">Was enthalten ist</h2>
+<h2 className="font-headline text-3xl lg:text-5xl font-bold tracking-tight text-on-surface mb-6">Was enthalten ist</h2>
 <p className="text-on-surface-variant text-lg">Unser Grundreinigungsprotokoll ist eine architektonische Wiederherstellung Ihrer Wohn- oder Arbeitsumgebung.</p>
 </div>
 <div className="hidden md:block h-px w-32 bg-outline-variant mb-4"></div>
 </div>
-<div className="grid md:grid-cols-3 gap-8">
+<div className="flex flex-col md:grid md:grid-cols-3 gap-8 w-full min-w-0">
 <div className="bg-surface-container-lowest p-10 rounded-3xl group hover:-translate-y-2 transition-transform duration-300">
 <div className="w-14 h-14 bg-primary-fixed rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
 <span className="material-symbols-outlined text-3xl">floor</span>
@@ -84,7 +84,7 @@ export default function GrundreinigungPage() {
 </div>
 </section>
 <section className="py-24 bg-surface relative overflow-hidden">
-<div className="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
+<div className="max-w-7xl mx-auto px-8 flex flex-col lg:grid lg:grid-cols-2 gap-16 items-center w-full min-w-0">
 <div className="relative order-2 lg:order-1">
 <div className="grid grid-cols-2 gap-4">
 <div className="space-y-4">
@@ -106,7 +106,7 @@ export default function GrundreinigungPage() {
 </div>
 </div>
 <div className="order-1 lg:order-2">
-<h2 className="font-headline text-4xl lg:text-5xl font-bold tracking-tight text-on-surface mb-12">Warum Sie uns wählen sollten</h2>
+<h2 className="font-headline text-3xl lg:text-5xl font-bold tracking-tight text-on-surface mb-12">Warum Sie uns wählen sollten</h2>
 <div className="space-y-10">
 <div className="flex gap-6">
 <div className="shrink-0 w-12 h-12 text-secondary">
@@ -165,8 +165,8 @@ export default function GrundreinigungPage() {
 <section className="py-24 bg-surface-container-low scroll-mt-24" id="appointment">
 <div className="max-w-7xl mx-auto px-8">
 <div className="bg-surface-container-lowest rounded-[2rem] shadow-xl overflow-hidden flex flex-col lg:flex-row">
-<div className="lg:w-1/2 p-12 lg:p-20">
-<h2 className="font-headline text-4xl font-bold mb-6">Bereit für eine <span className="text-primary">komplette Erneuerung?</span></h2>
+<div className="lg:w-1/2 p-6 sm:p-12 lg:p-20">
+<h2 className="font-headline text-3xl font-bold mb-6">Bereit für eine <span className="text-primary">komplette Erneuerung?</span></h2>
 <p className="text-on-surface-variant mb-10 text-lg">Vereinbaren Sie noch heute Ihren Beratungstermin für die Grundreinigung. Unsere Spezialisten bewerten Ihre Anforderungen und erstellen einen maßgeschneiderten Plan.</p>
 <LeadForm serviceName="Grundreinigung" />
 </div>
@@ -181,7 +181,7 @@ export default function GrundreinigungPage() {
 <span className="material-symbols-outlined text-yellow-400" >star</span>
 <span className="material-symbols-outlined text-yellow-400" >star</span>
 </div>
-<p className="font-headline text-2xl font-bold">"Der Standard der Reinigung ist unübertroffen. Es fühlt sich wirklich so an, als würde man wieder in ein neues Zuhause einziehen."</p>
+<p className="font-headline text-lg sm:text-2xl font-bold">"Der Standard der Reinigung ist unübertroffen. Es fühlt sich wirklich so an, als würde man wieder in ein neues Zuhause einziehen."</p>
 <p className="mt-4 opacity-80">— Privatkunde, München</p>
 </div>
 </div>
@@ -189,30 +189,7 @@ export default function GrundreinigungPage() {
 </div>
 </div>
 </section>
-<footer className="bg-zinc-100 dark:bg-zinc-950 w-full px-10 py-16 grid grid-cols-1 md:grid-cols-4 gap-12 font-inter text-sm tracking-wide">
-<div className="md:col-span-1">
-<div className="flex items-center gap-3 mb-2">
-<Image src="/RK-Logo-02.png" alt="R&K-Gaggenau Logo" width={200} height={50} className="h-10 w-auto object-contain" />
-<span className="font-heading text-lg font-bold tracking-tight text-foreground sm:text-xl">R&amp;K-GAGGENAU</span>
-</div>
-<p className="text-zinc-500 dark:text-zinc-400">Atmosphärische Präzision in der Reinigung.</p>
-</div>
-<div className="md:col-span-2">
-<div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-<Link className="text-zinc-500 dark:text-zinc-400 hover:text-emerald-500 transition-colors" href="/landing/gewerbereinigung">Gewerblich</Link>
-<Link className="text-zinc-500 dark:text-zinc-400 hover:text-emerald-500 transition-colors" href="/landing/privatreinigung">Privat</Link>
-<Link className="text-zinc-500 dark:text-zinc-400 hover:text-emerald-500 transition-colors" href="/landing/grundreinigung">Grundreinigung</Link>
-<Link className="text-zinc-500 dark:text-zinc-400 hover:text-emerald-500 transition-colors" href="/landing/baureinigung">Baugrundreinigung</Link>
-<Link className="text-zinc-500 dark:text-zinc-400 hover:text-emerald-500 transition-colors" href="/landing/spezialreinigung">Institutionell</Link>
-<Link className="text-zinc-500 dark:text-zinc-400 hover:text-emerald-500 transition-colors" href="/landing/saisonale-pflege">Saisonal</Link>
-<a className="text-zinc-500 dark:text-zinc-400 hover:text-emerald-500 transition-colors" href="#">Datenschutz</a>
-<a className="text-zinc-500 dark:text-zinc-400 hover:text-emerald-500 transition-colors" href="#">AGB</a>
-</div>
-</div>
-<div className="md:col-span-1 md:text-right">
-<p className="text-zinc-500 dark:text-zinc-400">© 2024 R&amp;K-Gaggenau. Atmosphärische Präzision in der Reinigung.</p>
-</div>
-</footer>
+
 
     </>
   );

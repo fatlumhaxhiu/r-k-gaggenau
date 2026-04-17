@@ -8,7 +8,7 @@ export default function Kontakt() {
       
       {/* 1. Cinematic Hero Section */}
       {/* ... keeping sections as they are ... */}
-      <section className="relative h-[380px] lg:h-[550px] w-full flex items-center justify-center">
+      <section className="relative h-[380px] min-h-[380px] lg:h-[550px] w-full flex items-center justify-center">
         <Image 
           src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1920&auto=format&fit=crop"
           alt="Modern corporate building interior"
@@ -25,8 +25,8 @@ export default function Kontakt() {
               <span className="w-6 h-px bg-primary"></span>
               PRÄZISIONSVERBINDUNG
             </h5>
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-[6rem] font-black tracking-tight text-foreground leading-none">
-              Atmosphärische <br/><span className="text-primary">Klarheit.</span>
+            <h1 className="font-heading text-3xl sm:text-3xl lg:text-[6rem] font-black tracking-tight text-foreground leading-none">
+              Atmosphärische <br className="hidden sm:block" /><span className="text-primary">Klarheit.</span>
             </h1>
           </div>
         </div>
@@ -38,7 +38,7 @@ export default function Kontakt() {
           <div className="bg-background rounded-2xl shadow-2xl overflow-hidden border border-border/50 flex flex-col lg:flex-row">
             
             {/* Form Column */}
-            <div className="flex-1 p-10 lg:p-14">
+            <div className="flex-1 p-6 sm:p-10 lg:p-14">
               <h2 className="text-3xl font-heading font-bold text-foreground mb-10">
                 Beginnen Sie die Transformation
               </h2>
@@ -56,8 +56,10 @@ export default function Kontakt() {
                       <MapPin className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <p className="text-xs font-bold tracking-widest text-muted-foreground uppercase mb-1">Unser Studio</p>
-                      <p className="text-sm text-foreground font-medium">742 Precision Ave.<br/>Gaggenau Corporate Park,<br/>Ste. 104</p>
+                      <p className="text-xs font-bold tracking-widest text-muted-foreground uppercase mb-1">UNSER BÜRO</p>
+                      <a href="https://maps.google.com/?q=Bäumbachallee+1,+76571+Gaggenau,+Germany" target="_blank" rel="noopener noreferrer" className="text-sm text-foreground font-medium hover:text-primary transition-colors">
+                        Bäumbachallee 1<br/>76571 Gaggenau,<br/>Germany
+                      </a>
                     </div>
                   </div>
 
@@ -66,8 +68,8 @@ export default function Kontakt() {
                       <PhoneCall className="h-4 w-4 text-blue-600" />
                     </div>
                     <div>
-                      <p className="text-xs font-bold tracking-widest text-muted-foreground uppercase mb-1">Kundenbeziehungen</p>
-                      <p className="text-sm text-foreground font-medium">+1 (800) GAGGENAU</p>
+                      <p className="text-xs font-bold tracking-widest text-muted-foreground uppercase mb-1">KUNDENSERVICE</p>
+                      <a href="tel:+4915776790522" className="text-sm text-foreground font-medium hover:text-blue-600 transition-colors">+49 1577 6790522</a>
                     </div>
                   </div>
 
@@ -76,8 +78,8 @@ export default function Kontakt() {
                       <Mail className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <p className="text-xs font-bold tracking-widest text-muted-foreground uppercase mb-1">Anfragen</p>
-                      <p className="text-sm text-foreground font-medium">precision@rk-gaggenau.com</p>
+                      <p className="text-xs font-bold tracking-widest text-muted-foreground uppercase mb-1">ANFRAGEN</p>
+                      <a href="mailto:info@rk-gaggenau.de" className="text-sm text-foreground font-medium hover:text-primary transition-colors">info@rk-gaggenau.de</a>
                     </div>
                   </div>
                 </div>
@@ -118,7 +120,7 @@ export default function Kontakt() {
             </div>
 
             <div className="flex flex-col items-start lg:pl-10">
-              <h2 className="font-heading text-4xl lg:text-5xl font-black tracking-tight text-foreground mb-8">
+              <h2 className="font-heading text-3xl lg:text-5xl font-black tracking-tight text-foreground mb-8">
                 Kompromisslose<br/>Standards.
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-10">
