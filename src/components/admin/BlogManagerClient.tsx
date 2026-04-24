@@ -6,17 +6,64 @@ import BlogForm from "./BlogForm"
 import BlogTableClient from "./BlogTableClient"
 
 export default function BlogManagerClient({ initialPosts }: { initialPosts: BlogPost[] }) {
+  const [posts, setPosts] = useState<BlogPost[]>(initialPosts)
   const [editingPost, setEditingPost] = useState<BlogPost | undefined>(undefined)
 
   const handleEdit = (post: BlogPost) => {
     setEditingPost(post)
-    // Scroll to form or show modal? 
-    // In this layout, the form is on the right, so we just set the state.
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  const publishedCount = initialPosts.filter(p => p.status === "published").length
-  const draftCount = initialPosts.filter(p => p.status === "draft").length
+  const handleSuccess = (savedPost: BlogPost) => {
+    setPosts(prev => {
+      const exists = prev.find(p => p.id === savedPost.id)
+      if (exists) {
+        return prev.map(p => p.id === savedPost.id ? savedPost : p)
+      }
+      return [savedPost, ...prev]
+    })
+    setEditingPost(undefined)
+  }
+
+  const handleDelete = async (id: string) => {
+    try {
+      const res = await fetch(`/api/blog/${id}`, { method: "DELETE" })
+      if (res.ok) {
+        setPosts(prev => prev.filter(p => p.id !== id))
+      }
+    } catch {
+      console.error("Gabim në server gjatë fshirjes.")
+    }
+  }
+
+  const handleDuplicate = async (post: BlogPost) => {
+    try {
+      const duplicateData = {
+        title: `Kopje: ${post.title}`,
+        slug: `${post.slug}-copy-${Math.floor(Math.random() * 10000)}`,
+        content: post.content,
+        cover_image_url: post.cover_image_url,
+        category: post.category,
+        status: "draft", // Inherit as draft for safety
+      }
+
+      const res = await fetch("/api/blog", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(duplicateData),
+      })
+
+      if (res.ok) {
+        const { post: newPost } = await res.json()
+        setPosts(prev => [newPost, ...prev])
+      }
+    } catch {
+      console.error("Gabim në server gjatë duplifikimit.")
+    }
+  }
+
+  const publishedCount = posts.filter(p => p.status === "published").length
+  const draftCount = posts.filter(p => p.status === "draft").length
 
   return (
     <section className="p-8 max-w-7xl mx-auto">
@@ -47,17 +94,17 @@ export default function BlogManagerClient({ initialPosts }: { initialPosts: Blog
         </div>
         <div className="bg-white p-6 rounded-2xl shadow-sm border border-zinc-100 md:col-span-2 lg:col-span-1">
           <p className="font-label text-[10px] text-zinc-400 font-bold uppercase tracking-widest mb-1">Total Postime</p>
-          <p className="font-headline text-3xl font-bold text-secondary">{initialPosts.length}</p>
+          <p className="font-headline text-3xl font-bold text-secondary">{posts.length}</p>
         </div>
       </div>
 
       {/* Main Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         <div className="lg:col-span-7">
-          <BlogTableClient initialPosts={initialPosts} onEdit={handleEdit} />
+          <BlogTableClient posts={posts} onEdit={handleEdit} onDelete={handleDelete} onDuplicate={handleDuplicate} />
         </div>
         <div className="lg:col-span-5 sticky top-24">
-          <BlogForm key={editingPost?.id || "new"} initialData={editingPost} />
+          <BlogForm key={editingPost?.id || "new"} initialData={editingPost} onSuccess={handleSuccess} />
         </div>
       </div>
     </section>

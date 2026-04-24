@@ -57,9 +57,21 @@ export async function DELETE(
 
     if (post?.cover_image_url && post.cover_image_url.startsWith("/uploads/")) {
       try {
-        const filePath = join(process.cwd(), "public", post.cover_image_url)
-        await unlink(filePath)
-        console.log("Deleted local file:", filePath)
+        // Check if other posts are using this same image URL
+        const otherPostUsingImage = await prisma.blogPost.findFirst({
+          where: {
+            cover_image_url: post.cover_image_url,
+            id: { not: id } // Exclude current post
+          }
+        })
+
+        if (!otherPostUsingImage) {
+          const filePath = join(process.cwd(), "public", post.cover_image_url)
+          await unlink(filePath)
+          console.log("Deleted local file (no other references):", filePath)
+        } else {
+          console.log("Skipping file deletion, other posts are using this image.")
+        }
       } catch (err) {
         console.error("Failed to delete local file:", err)
       }
