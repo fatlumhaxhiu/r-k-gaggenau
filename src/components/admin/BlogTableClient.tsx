@@ -4,26 +4,23 @@ import { useState } from "react"
 import type { BlogPost } from "@prisma/client"
 
 export default function BlogTableClient({ 
-  initialPosts, 
-  onEdit 
+  posts, 
+  onEdit,
+  onDelete,
+  onDuplicate
 }: { 
-  initialPosts: BlogPost[],
-  onEdit: (post: BlogPost) => void
+  posts: BlogPost[],
+  onEdit: (post: BlogPost) => void,
+  onDelete: (id: string) => void,
+  onDuplicate: (post: BlogPost) => void
 }) {
-  const [posts, setPosts] = useState(initialPosts)
 
-  const handleDelete = async (id: string) => {
-    if (!confirm("A jeni të sigurt që dëshironi të fshini këtë artikull?")) return
-
+  const handleCopyLink = async (slug: string) => {
+    const url = `${window.location.origin}/magazin/${slug}`
     try {
-      const res = await fetch(`/api/blog/${id}`, { method: "DELETE" })
-      if (res.ok) {
-        setPosts(posts.filter(p => p.id !== id))
-      } else {
-        alert("Gabim gjatë fshirjes.")
-      }
+      await navigator.clipboard.writeText(url)
     } catch {
-      alert("Gabim në server.")
+      console.error("Dështoi kopjimi i linkut.")
     }
   }
 
@@ -44,10 +41,10 @@ export default function BlogTableClient({
         <table className="w-full text-left">
           <thead>
             <tr className="text-xs font-label uppercase tracking-widest text-zinc-400 border-b border-zinc-100">
-              <th className="pb-4 font-semibold">Postimi</th>
-              <th className="pb-4 font-semibold">Statusi</th>
-              <th className="pb-4 font-semibold">Data</th>
-              <th className="pb-4 font-semibold text-right">Veprimet</th>
+              <th className="pb-4 font-semibold w-[40%]">Postimi</th>
+              <th className="pb-4 font-semibold w-[15%] px-4 text-center">Statusi</th>
+              <th className="pb-4 font-semibold w-[15%] px-4 text-center">Data</th>
+              <th className="pb-4 font-semibold w-[30%] text-right pr-4">Veprimet</th>
             </tr>
           </thead>
           <tbody className="text-sm">
@@ -60,7 +57,7 @@ export default function BlogTableClient({
                 <tr key={post.id} className="group hover:bg-zinc-50/50 transition-colors">
                   <td className="py-5">
                     <div className="flex items-center">
-                      <div className="w-12 h-12 rounded-lg bg-zinc-100 mr-4 overflow-hidden border border-zinc-200">
+                      <div className="w-12 h-12 rounded-lg bg-zinc-100 mr-4 overflow-hidden border border-zinc-200 shrink-0">
                         {post.cover_image_url ? (
                           <img src={post.cover_image_url} alt={post.title} className="w-full h-full object-cover" />
                         ) : (
@@ -75,18 +72,20 @@ export default function BlogTableClient({
                       </div>
                     </div>
                   </td>
-                  <td className="py-5">
-                    <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${getStatusColor(post.status)}`}>
+                  <td className="py-5 px-4 text-center">
+                    <span className={`inline-block px-2.5 py-1 rounded-full text-[8.5px] font-black uppercase tracking-wider whitespace-nowrap ${getStatusColor(post.status)}`}>
                       {post.status === "published" ? "I Publikuar" : "Draft"}
                     </span>
                   </td>
-                  <td className="py-5 text-zinc-500 text-xs">
+                  <td className="py-5 px-4 text-zinc-400 text-[10px] font-medium whitespace-nowrap text-center">
                     {post.created_at ? new Date(post.created_at).toLocaleDateString() : "Pa datë"}
                   </td>
-                  <td className="py-5 text-right">
+                  <td className="py-5 text-right pr-4">
                     <div className="flex justify-end space-x-3 opacity-40 group-hover:opacity-100 transition-opacity">
-                      <button onClick={() => onEdit(post)} className="material-symbols-outlined text-emerald-600 cursor-pointer hover:scale-110">edit</button>
-                      <button onClick={() => handleDelete(post.id)} className="material-symbols-outlined text-error cursor-pointer hover:scale-110">delete</button>
+                      <button onClick={() => handleCopyLink(post.slug)} title="Kopjo Linkun" className="material-symbols-outlined text-zinc-500 cursor-pointer hover:text-emerald-600 hover:scale-110 transition-all">link</button>
+                      <button onClick={() => onDuplicate(post)} title="Duplifiko" className="material-symbols-outlined text-emerald-600 cursor-pointer hover:scale-110 transition-all">content_copy</button>
+                      <button onClick={() => onEdit(post)} title="Edito" className="material-symbols-outlined text-zinc-500 cursor-pointer hover:text-emerald-600 hover:scale-110 transition-all">edit</button>
+                      <button onClick={() => onDelete(post.id)} title="Fshij" className="material-symbols-outlined text-error cursor-pointer hover:scale-110 transition-all">delete</button>
                     </div>
                   </td>
                 </tr>

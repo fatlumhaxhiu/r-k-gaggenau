@@ -2,7 +2,13 @@ import { useState, useRef } from "react"
 import { useRouter } from "next/navigation"
 import type { BlogPost } from "@prisma/client"
 
-export default function BlogForm({ initialData }: { initialData?: BlogPost }) {
+export default function BlogForm({ 
+  initialData, 
+  onSuccess 
+}: { 
+  initialData?: BlogPost,
+  onSuccess?: (post: BlogPost) => void
+}) {
   const router = useRouter()
   const fileInputRef = useRef<HTMLInputElement>(null)
   const [loading, setLoading] = useState(false)
@@ -86,7 +92,12 @@ export default function BlogForm({ initialData }: { initialData?: BlogPost }) {
       })
 
       if (res.ok) {
-        router.refresh()
+        const { post } = await res.json()
+        
+        if (onSuccess) {
+          onSuccess(post)
+        }
+
         if (!isEdit) {
             setFormData({
                 title: "",
@@ -99,7 +110,6 @@ export default function BlogForm({ initialData }: { initialData?: BlogPost }) {
             setPreviewUrl(null)
             if (fileInputRef.current) fileInputRef.current.value = ""
         }
-        alert(isEdit ? "Artikulli u përditësua!" : "Artikulli u krijua!")
       } else {
         alert("Gabim gjatë ruajtjes së postimit.")
       }
@@ -196,6 +206,24 @@ export default function BlogForm({ initialData }: { initialData?: BlogPost }) {
               <option>Lifestyle</option>
               <option>Service</option>
               <option>News</option>
+              <option>Family</option>
+              <option>Education</option>
+              <option>School</option>
+              <option>Kids</option>
+              <option>Nature</option>
+              <option>Products</option>
+              <option>Tech</option>
+              <option>Home</option>
+              <option>Kindergarden</option>
+              <option>Bathroom</option>
+              <option>Bedroom</option>
+              <option>Apartament</option>
+              <option>Hotel</option>
+              <option>Office</option>
+              <option>Season</option>
+              <option>Medical</option>
+              <option>Team</option>
+              <option>Job</option>
             </select>
           </div>
         </div>
