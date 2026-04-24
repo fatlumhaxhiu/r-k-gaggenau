@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -8,6 +9,67 @@ import { buttonVariants } from "@/components/ui/button";
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
+
+const SITE_URL = "https://rk-gaggenau.de";
+const FALLBACK_OG_IMAGE = `${SITE_URL}/og-default.jpg`;
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+  const { slug } = await params;
+
+  const article = await prisma.blogPost.findUnique({
+    where: { slug, status: "published" },
+    select: { title: true, slug: true, excerpt: true, cover_image_url: true },
+  });
+
+  if (!article) {
+    return { title: "Artikel nicht gefunden | RK-Gaggenau" };
+  }
+
+  // Ensure the image URL is always absolute
+  const rawImage = article.cover_image_url ?? "";
+  const ogImage = rawImage
+    ? rawImage.startsWith("http")
+      ? rawImage
+      : `${SITE_URL}${rawImage.startsWith("/") ? rawImage : "/" + rawImage}`
+    : FALLBACK_OG_IMAGE;
+
+  const description =
+    article.excerpt ??
+    "Lesen Sie unseren aktuellen Beitrag im RK-Gaggenau Magazin.";
+
+  const url = `${SITE_URL}/magazin/${article.slug}`;
+
+  return {
+    title: `${article.title} | RK-Gaggenau Magazin`,
+    description,
+    openGraph: {
+      type: "article",
+      url,
+      title: article.title,
+      description,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+      siteName: "RK-Gaggenau",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description,
+      images: [ogImage],
+    },
+    alternates: {
+      canonical: url,
+    },
+  };
+}
 
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
