@@ -7,6 +7,10 @@ import { prisma } from "@/lib/prisma";
 
 export const dynamic = 'force-dynamic';
 
+const stripHtml = (html: string) => {
+  return html.replace(/<[^>]*>?/gm, '');
+};
+
 export default async function Magazin() {
   const publishedPosts = await prisma.blogPost.findMany({
     where: { status: "published" },
@@ -79,7 +83,7 @@ export default async function Magazin() {
                   {highlightArticle.title}
                 </h2>
                 <p className="text-white/80 font-medium leading-relaxed line-clamp-2">
-                  {highlightArticle.excerpt || highlightArticle.content?.substring(0, 150) + "..."}
+                  {highlightArticle.excerpt || (highlightArticle.content ? stripHtml(highlightArticle.content).substring(0, 150) + "..." : "")}
                 </p>
               </div>
             </Link>
@@ -135,7 +139,7 @@ export default async function Magazin() {
                   {article.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-3">
-                  {article.excerpt || article.content?.substring(0, 100) + "..."}
+                  {article.excerpt || (article.content ? stripHtml(article.content).substring(0, 100) + "..." : "")}
                 </p>
               </Link>
             ))}

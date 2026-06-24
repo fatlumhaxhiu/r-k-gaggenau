@@ -1,15 +1,14 @@
 import { useState, useRef } from "react"
-import { useRouter } from "next/navigation"
 import type { BlogPost } from "@prisma/client"
+import RichTextEditor from "./RichTextEditor"
 
 export default function BlogForm({ 
   initialData, 
   onSuccess 
 }: { 
-  initialData?: BlogPost,
-  onSuccess?: (post: BlogPost) => void
+  readonly initialData?: BlogPost,
+  readonly onSuccess?: (post: BlogPost) => void
 }) {
-  const router = useRouter()
   const fileInputRef = useRef<HTMLInputElement>(null)
   const [loading, setLoading] = useState(false)
   const [previewUrl, setPreviewUrl] = useState<string | null>(initialData?.cover_image_url || null)
@@ -52,7 +51,7 @@ export default function BlogForm({
     reader.readAsDataURL(file)
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
 
@@ -125,8 +124,15 @@ export default function BlogForm({
     setFormData({ 
       ...formData, 
       title, 
-      slug: title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '') 
+      slug: title.toLowerCase().replaceAll(' ', '-').replace(/[^\w-]+/g, '') 
     })
+  }
+
+  let submitButtonText = "Publiko Artikullin"
+  if (loading) {
+    submitButtonText = "Duke u ruajtur..."
+  } else if (isEdit) {
+    submitButtonText = "Përditëso Artikullin"
   }
 
   return (
@@ -136,17 +142,18 @@ export default function BlogForm({
           {isEdit ? "Edito Artikullin" : "Krijo Artikull të Ri"}
         </h3>
         {isEdit && (
-            <button onClick={() => window.location.reload()} className="text-white/70 hover:text-white text-xs font-bold">Anulo</button>
+            <button type="button" onClick={() => globalThis.location.reload()} className="text-white/70 hover:text-white text-xs font-bold">Anulo</button>
         )}
       </div>
       <form onSubmit={handleSubmit} className="p-6 space-y-5">
         
         {/* Image Upload Area */}
         <div className="space-y-1">
-          <label className="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Fotografia e Artikullit (Max 2MB, JPG/PNG)</label>
-          <div 
+          <span className="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest block">Fotografia e Artikullit (Max 2MB, JPG/PNG)</span>
+          <button 
+             type="button"
              onClick={() => fileInputRef.current?.click()}
-             className="relative aspect-video rounded-xl bg-zinc-100 border-2 border-dashed border-zinc-200 flex flex-col items-center justify-center cursor-pointer hover:border-emerald-500 transition-all overflow-hidden group"
+             className="w-full relative aspect-video rounded-xl bg-zinc-100 border-2 border-dashed border-zinc-200 flex flex-col items-center justify-center cursor-pointer hover:border-emerald-500 transition-all overflow-hidden group"
           >
             {previewUrl ? (
               <>
@@ -167,13 +174,15 @@ export default function BlogForm({
                accept="image/jpeg,image/png"
                className="hidden" 
                onChange={handleFileChange}
+               tabIndex={-1}
             />
-          </div>
+          </button>
         </div>
 
         <div className="space-y-1">
-          <label className="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Titulli i Artikullit</label>
+          <label htmlFor="title" className="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Titulli i Artikullit</label>
           <input 
+            id="title"
             required
             value={formData.title}
             onChange={(e) => handleTitleChange(e.target.value)}
@@ -185,8 +194,9 @@ export default function BlogForm({
 
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-1">
-            <label className="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Slug (URL)</label>
+            <label htmlFor="slug" className="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Slug (URL)</label>
             <input 
+              id="slug"
               required
               value={formData.slug}
               onChange={(e) => setFormData({...formData, slug: e.target.value})}
@@ -196,8 +206,9 @@ export default function BlogForm({
             />
           </div>
           <div className="space-y-1">
-            <label className="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Kategoria</label>
+            <label htmlFor="category" className="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Kategoria</label>
             <select 
+              id="category"
               value={formData.category}
               onChange={(e) => setFormData({...formData, category: e.target.value})}
               className="w-full bg-white border-none rounded-lg py-3 px-4 text-sm focus:ring-2 focus:ring-emerald-500 transition-all shadow-sm"
@@ -230,8 +241,9 @@ export default function BlogForm({
 
         <div className="grid grid-cols-2 gap-4">
             <div className="space-y-1">
-                <label className="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Statusi</label>
+                <label htmlFor="status" className="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Statusi</label>
                 <select 
+                    id="status"
                     value={formData.status}
                     onChange={(e) => setFormData({...formData, status: e.target.value})}
                     className="w-full bg-white border-none rounded-lg py-3 px-4 text-sm focus:ring-2 focus:ring-emerald-500 transition-all shadow-sm"
@@ -243,13 +255,10 @@ export default function BlogForm({
         </div>
 
         <div className="space-y-1">
-          <label className="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Përmbajtja (Content)</label>
-          <textarea 
-            required
-            value={formData.content}
-            onChange={(e) => setFormData({...formData, content: e.target.value})}
-            className="w-full bg-white border-none rounded-lg py-3 px-4 text-sm focus:ring-2 focus:ring-emerald-500 transition-all shadow-sm min-h-[250px]" 
-            placeholder="Shkruani artikullin këtu..." 
+          <span className="font-label text-[10px] font-bold text-zinc-500 uppercase tracking-widest block">Përmbajtja (Content)</span>
+          <RichTextEditor 
+            content={formData.content}
+            onChange={(content) => setFormData({...formData, content})}
           />
         </div>
 
@@ -259,7 +268,7 @@ export default function BlogForm({
             type="submit"
             className="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-50"
           >
-            {loading ? "Duke u ruajtur..." : (isEdit ? "Përditëso Artikullin" : "Publiko Artikullin")}
+            {submitButtonText}
           </button>
         </div>
       </form>

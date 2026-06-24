@@ -29,11 +29,16 @@ export async function generateMetadata(
 
   // Ensure the image URL is always absolute
   const rawImage = article.cover_image_url ?? "";
-  const ogImage = rawImage
-    ? rawImage.startsWith("http")
-      ? rawImage
-      : `${SITE_URL}${rawImage.startsWith("/") ? rawImage : "/" + rawImage}`
-    : FALLBACK_OG_IMAGE;
+  let ogImage = FALLBACK_OG_IMAGE;
+  if (rawImage) {
+    if (rawImage.startsWith("http")) {
+      ogImage = rawImage;
+    } else if (rawImage.startsWith("/")) {
+      ogImage = `${SITE_URL}${rawImage}`;
+    } else {
+      ogImage = `${SITE_URL}/${rawImage}`;
+    }
+  }
 
   const description =
     article.excerpt ??
@@ -72,7 +77,7 @@ export async function generateMetadata(
 }
 
 
-export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ArticlePage({ params }: { readonly params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   
   const article = await prisma.blogPost.findUnique({
@@ -88,7 +93,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       
       {/* 1. Article Hero / Header */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-32 bg-muted/10">
-        <div className="container mx-auto px-6 lg:px-12 max-w-4xl">
+        <div className="container mx-auto px-6 lg:px-12 max-w-6xl">
           <Link href="/magazin" className="inline-flex items-center text-sm font-bold text-muted-foreground hover:text-primary mb-10 transition-colors group">
             <ChevronRight className="h-4 w-4 mr-2 rotate-180 group-hover:-translate-x-1 transition-transform" /> Zurück zum Magazin
           </Link>
@@ -134,15 +139,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
       {/* 3. Article Content Body */}
       <section className="pb-24">
-        <div className="container mx-auto px-6 lg:px-12 max-w-3xl">
-          <div className="max-w-none prose prose-lg dark:prose-invert">
-            {/* Split content by newlines and render as paragraphs for basic rich text support */}
-            {article.content?.split("\n").map((para, i) => (
-              <p key={i} className="text-lg text-muted-foreground leading-relaxed mb-6">
-                {para}
-              </p>
-            ))}
-          </div>
+        <div className="container mx-auto px-6 lg:px-12 max-w-6xl">
+          <div 
+            className="max-w-none prose prose-lg dark:prose-invert prose-emerald prose-headings:font-heading prose-headings:font-bold prose-img:rounded-xl prose-img:shadow-lg prose-a:text-emerald-600 hover:prose-a:text-emerald-800 [&_.image-gallery-box_img]:m-0!"
+            dangerouslySetInnerHTML={{ __html: article.content || "" }} 
+          />
         </div>
       </section>
 
