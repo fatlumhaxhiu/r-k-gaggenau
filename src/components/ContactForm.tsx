@@ -4,6 +4,7 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { captureMarketingAttribution } from "@/lib/marketingAttribution"
 
 export default function ContactForm() {
   const router = useRouter()
@@ -17,6 +18,7 @@ export default function ContactForm() {
 
     const form = e.currentTarget
     const formData = new FormData(form)
+    const attribution = captureMarketingAttribution()
 
     const fullName = (formData.get("name") as string | null) ?? ""
     const names = fullName.trim().split(/\s+/)
@@ -28,9 +30,11 @@ export default function ContactForm() {
       last_name: lastName,
       email: (formData.get("email") as string | null) ?? "",
       phone: (formData.get("phone") as string | null) ?? "",
+      city: (formData.get("city") as string | null) ?? "",
       message: (formData.get("message") as string | null) ?? "",
       service_requested: "Kontaktformular Anfrage",
       source_page: "/kontakt",
+      ...attribution,
     }
 
     void fetch("/api/leads", {
@@ -90,19 +94,38 @@ export default function ContactForm() {
           />
         </div>
       </div>
-      <div className="space-y-2">
-        <label
-          htmlFor="contact-phone"
-          className="text-xs font-bold tracking-wider text-muted-foreground uppercase"
-        >
-          Telefonnummer
-        </label>
-        <Input
-          id="contact-phone"
-          name="phone"
-          placeholder="+49 (0) 000 0000000"
-          className="h-14 bg-background border border-input focus-visible:ring-primary/20 hover:border-primary/50 transition-colors rounded-md shadow-sm"
-        />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="space-y-2">
+          <label
+            htmlFor="contact-phone"
+            className="text-xs font-bold tracking-wider text-muted-foreground uppercase"
+          >
+            Telefonnummer
+          </label>
+          <Input
+            id="contact-phone"
+            name="phone"
+            type="tel"
+            placeholder="+49 (0) 000 0000000"
+            className="h-14 bg-background border border-input focus-visible:ring-primary/20 hover:border-primary/50 transition-colors rounded-md shadow-sm"
+          />
+        </div>
+        <div className="space-y-2">
+          <label
+            htmlFor="contact-city"
+            className="text-xs font-bold tracking-wider text-muted-foreground uppercase"
+          >
+            Stadt *
+          </label>
+          <Input
+            id="contact-city"
+            name="city"
+            required
+            autoComplete="address-level2"
+            placeholder="Gaggenau"
+            className="h-14 bg-background border border-input focus-visible:ring-primary/20 hover:border-primary/50 transition-colors rounded-md shadow-sm"
+          />
+        </div>
       </div>
       <div className="space-y-2">
         <label

@@ -4,6 +4,12 @@ import { useState } from "react"
 import type { Lead } from "@prisma/client"
 import StatusDropdown from "./StatusDropdown"
 
+type LeadStatus = "new" | "contacted" | "converted" | "archived"
+
+function leadDate(value: Date | null): Date {
+  return value ?? new Date(0)
+}
+
 export default function LeadsTableClient({ initialLeads }: { initialLeads: Lead[] }) {
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null)
   
@@ -45,11 +51,11 @@ export default function LeadsTableClient({ initialLeads }: { initialLeads: Lead[
                   </div>
                 </td>
                 <td className="px-6 py-5">
-                  <p className="text-sm text-on-surface">{new Date(lead.created_at as any).toLocaleDateString("de-DE")}</p>
-                  <p className="text-[10px] text-on-surface-variant">{new Date(lead.created_at as any).toLocaleTimeString("de-DE", { hour: '2-digit', minute: '2-digit'})}</p>
+                  <p className="text-sm text-on-surface">{leadDate(lead.created_at).toLocaleDateString("de-DE")}</p>
+                  <p className="text-[10px] text-on-surface-variant">{leadDate(lead.created_at).toLocaleTimeString("de-DE", { hour: '2-digit', minute: '2-digit'})}</p>
                 </td>
                 <td className="px-6 py-5" onClick={(e) => e.stopPropagation()}>
-                  <StatusDropdown leadId={lead.id} currentStatus={lead.status as any} />
+                  <StatusDropdown leadId={lead.id} currentStatus={(lead.status ?? "new") as LeadStatus} />
                 </td>
                 <td className="px-6 py-5 text-right">
                   <button className="p-2 hover:bg-surface-container rounded-lg transition-colors">
@@ -85,7 +91,7 @@ export default function LeadsTableClient({ initialLeads }: { initialLeads: Lead[
                 <div>
                   <h2 className="font-headline text-2xl font-extrabold text-on-surface">{selectedLead.first_name} {selectedLead.last_name}</h2>
                   <div className="flex items-center gap-2 mt-1">
-                    <span className="text-xs text-on-surface-variant font-medium">Data e krijimit: {new Date(selectedLead.created_at as any).toLocaleDateString("de-DE")}</span>
+                    <span className="text-xs text-on-surface-variant font-medium">Data e krijimit: {leadDate(selectedLead.created_at).toLocaleDateString("de-DE")}</span>
                   </div>
                 </div>
               </div>
@@ -118,7 +124,12 @@ export default function LeadsTableClient({ initialLeads }: { initialLeads: Lead[
                       <span className="material-symbols-outlined text-7xl">cleaning_services</span>
                     </div>
                     <h4 className="font-headline font-bold text-on-surface mb-1">{selectedLead.service_requested}</h4>
-                    <p className="text-xs text-on-surface-variant truncate">Burimi: {selectedLead.source_page}</p>
+                    <div className="mt-3 space-y-2 text-xs text-on-surface-variant">
+                      <p><span className="font-semibold text-on-surface">Burimi:</span> {selectedLead.source_page || "—"}</p>
+                      <p><span className="font-semibold text-on-surface">Stadt:</span> {selectedLead.city || "Nicht erfasst"}</p>
+                      <p><span className="font-semibold text-on-surface">Kanali:</span> {selectedLead.marketing_channel || "Nicht erfasst"}</p>
+                      <p><span className="font-semibold text-on-surface">Emri i fushatës:</span> {selectedLead.campaign_name || "Nicht angegeben"}</p>
+                    </div>
                   </div>
                 </section>
                 
@@ -126,7 +137,7 @@ export default function LeadsTableClient({ initialLeads }: { initialLeads: Lead[
                   <section>
                     <p className="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-3">Mesazhi / Shënime</p>
                     <div className="bg-white border-l-4 border-primary p-4 editorial-shadow italic text-sm text-on-surface-variant">
-                      "{selectedLead.message}"
+                      {`“${selectedLead.message}”`}
                     </div>
                   </section>
                 )}

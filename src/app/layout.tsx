@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
+import MarketingAttributionTracker from "@/components/MarketingAttributionTracker";
 import "./globals.css";
 
 
@@ -65,6 +66,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col font-sans overflow-x-hidden`}>
+        <MarketingAttributionTracker />
         {children}
       </body>
     </html>

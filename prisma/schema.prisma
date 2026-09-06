@@ -18,9 +18,9 @@ model Admin {
   created_at    DateTime? @default(now()) @db.Timestamptz
   updated_at    DateTime? @default(now()) @db.Timestamptz
 
-  leads         Lead[]
-  blog_posts    BlogPost[]
-  sessions      Session[]
+  leads      Lead[]
+  blog_posts BlogPost[]
+  sessions   Session[]
 
   @@map("admins")
 }
@@ -43,8 +43,11 @@ model Lead {
   last_name         String    @db.VarChar(100)
   email             String    @db.VarChar(255)
   phone             String?   @db.VarChar(50)
+  city              String?   @db.VarChar(100)
   service_requested String?   @db.VarChar(100)
   source_page       String?   @db.VarChar(255)
+  marketing_channel String?   @db.VarChar(50)
+  campaign_name     String?   @db.VarChar(255)
   message           String?   @db.Text
   status            String?   @default("new") @db.VarChar(50)
   assigned_to       String?   @db.Uuid
