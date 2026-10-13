@@ -13,10 +13,10 @@ const statusStyles: Record<Status, string> = {
 }
 
 const statusLabels: Record<Status, string> = {
-  new: "Neu",
-  contacted: "Kontaktiert",
-  converted: "Konvertiert",
-  archived: "Archiviert",
+  new: "I ri",
+  contacted: "Kontaktuar",
+  converted: "Konvertuar",
+  archived: "Arkivuar",
 }
 
 export default function StatusDropdown({ leadId, currentStatus }: { leadId: string, currentStatus: Status }) {

@@ -5,7 +5,7 @@ import LeadForm from "@/components/LeadForm";
 export default function GewerbereinigungPage() {
   return (
     <>
-      
+
 {/*  TopNavBar  */}
 <nav className="bg-emerald-50/80 dark:bg-stone-900/80 backdrop-blur-xl docked full-width top-0 sticky z-50 tonal-shift">
 <div className="flex justify-between items-center w-full px-4 sm:px-8 py-4 max-w-7xl mx-auto">
@@ -29,7 +29,7 @@ export default function GewerbereinigungPage() {
 {/*  Hero Section  */}
 <section className="relative min-h-svh flex items-center overflow-hidden bg-surface">
 <div className="absolute inset-0 z-0">
-<img className="w-full h-full object-cover opacity-20 grayscale scale-105" data-alt="ultra-modern glass office interior with immaculate surfaces and bright natural morning light reflecting off polished floors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg0oriSjJ3b-d7s96eZ9Ql6C1ZJxaUfXakDOBwH1zDkcuCVFXVZUc6bVoUEnSwkDWXRJFbWIZ528mVjm4MM8Lq8EgWjciX85uCDAIg11myxLpGwSXgwVvN3AY-oez6X187bW6C2Df3-EYR4UyHpJ9iD69OoBUyhNRAonyXnEb5v84juKbp7yqQnv6BFzl1S7W0IzCyRQyAIdf0bJ0Y3NDI0jM6gopG5xF_XBZ8uN4pdnYn-ALvnWcFr_yQL3TPj8WnzTll7I0Rc4A"  />
+<img className="w-full h-full object-cover opacity-20 grayscale scale-105" data-alt="ultra-modern glass office interior with immaculate surfaces and bright natural morning light reflecting off polished floors" src="/assets/images/5c2b08e29c1c31d0d1bf.png"  />
 </div>
 <div className="container mx-auto px-8 relative z-10 flex flex-col lg:grid lg:grid-cols-12 gap-12 items-center w-full">
 <div className="lg:col-span-7">
@@ -54,7 +54,7 @@ export default function GewerbereinigungPage() {
 <div className="lg:col-span-5 hidden lg:block">
 <div className="relative">
 <div className="absolute -top-12 -left-12 w-64 h-64 bg-primary-fixed/30 rounded-full blur-3xl"></div>
-<img className="rounded-2xl shadow-2xl relative z-10 border-12 border-surface-container-lowest" data-alt="a professional cleaning expert in premium uniform standing in a brightly lit modern corporate lobby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9GGMr3Hxn03yWIkD5coPVPags4uRtAgCKCu3JUPFhOVzRxkQglHcMeVL5yFMWkQgYyXveldCeqe5yUAzCYxhvjefw-NCOgglsDijEXlmg6qT-WgTBc2TxegwMO0UNaCChlHTMI6PrVgVB-li-JPX1txWsdf3C-UNzVyf_sTh3qne-Ykm5VUA-RteTVWtJHTBeLeCUpVEyRC8z09oQB12jfKuO4ypBcIbepkAwmZx9BIHaduWfBoHkI2lcDEqwTE_A66fqH9nUVOA"  />
+<img className="rounded-2xl shadow-2xl relative z-10 border-12 border-surface-container-lowest" data-alt="a professional cleaning expert in premium uniform standing in a brightly lit modern corporate lobby" src="/assets/images/06ef8a29a68bcf6134ed.png"  />
 </div>
 </div>
 </div>
@@ -70,7 +70,7 @@ export default function GewerbereinigungPage() {
 {/*  Office Cleaning  */}
 <div className="group bg-surface-container-lowest p-1 shadow-sm hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden">
 <div className="relative h-64 overflow-hidden rounded-t-xl">
-<img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="organized modern coworking space with clean desks and large windows highlighting dust-free surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2B_xFWx2-uCJKXooBNgmUHgbqJfVw_3y5UGRbEN7aSnnoKD3NF1uMZJyba1uGh0a6KJfgRj4RUV2wET6tUZ8iL1WguO8fBQe0Lt8nqurak-OYtTRnwZWoDW7lISWXCWdx6j1jF-WHS_ch6v7k_USSU5BIveQWcmshp7lVmKzXhnNB5dJvH0fDiH_RxaDVRX8G0dLcr-18YnTisrW1AyZi55_keT4XDpp_9UBKD9hDB28uGOQxQnmV8FxVe9LJkVJzxS6p1wjP3Kg"  />
+<img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="organized modern coworking space with clean desks and large windows highlighting dust-free surfaces" src="/assets/images/6562f6ee22f72c14b440.png"  />
 <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
 <div className="absolute bottom-6 left-6">
 <h3 className="text-2xl font-bold text-white font-headline" >Büroreinigung</h3>
@@ -91,7 +91,7 @@ export default function GewerbereinigungPage() {
 {/*  Building Maintenance  */}
 <div className="group bg-surface-container-lowest p-1 shadow-sm hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden md:mt-12">
 <div className="relative h-64 overflow-hidden rounded-t-xl">
-<img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="exterior of a high-rise glass building during sunset with clean reflective windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJwFOmraKWNj6-xvwUEiq4f_Onu0LKyoRamb-uGbkAKsX56BcIAieAxRqxqd9VpQHRGg11xSsZIEE3ki22Ny55MMScj66aRl4mVrYVpnrdY9WzdFevN_X0iNDS55A0j5QCDNC3tTiUP7_GX9QQawFJrbZNhjmQ9RrgqX5dK2tukd1MgqK_uNmLZsMQI1CCcAy5v-Lw_OBeEzOpUrcz4DqzFUcV9nxEMvvj0TvemPuc2yINP7Q9WYP7GpIuJ208nW0HH8O_6sJonPo"  />
+<img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="exterior of a high-rise glass building during sunset with clean reflective windows" src="/assets/images/262c82629b186fbd4095.png"  />
 <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
 <div className="absolute bottom-6 left-6">
 <h3 className="text-2xl font-bold text-white font-headline" >Gebäudeunterhalt</h3>
@@ -112,7 +112,7 @@ export default function GewerbereinigungPage() {
 {/*  Staircase Cleaning  */}
 <div className="group bg-surface-container-lowest p-1 shadow-sm hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden">
 <div className="relative h-64 overflow-hidden rounded-t-xl">
-<img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="wide shot of a clean modern architectural staircase with wooden steps and glass railings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBum2oN4VoV4txFPs_QByMzYGVVgsEag4sOwvkOcIFueoKTc0hiWZ24iVkLXtHlNThUlTZlOs-1uHRuUFkNYVI0gmQlW5Q5fvgYPcZjmaz7yMJEPHRms3c8x0xC09G2Y7UB1zJG-euWosVQYXgWP0MLStRTSevpg_ivpVG7DNIpGxXMcbPzTKQwW2R5yHIzTVbAREtw_AntAzmvNlU-xLguhRVMECekN3yJnVtQauzeI4-jF__Iv9U8Cxp06x37huPUiZ6MVorkJ-k"  />
+<img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="wide shot of a clean modern architectural staircase with wooden steps and glass railings" src="/assets/images/454a9006d3ce32c1a1ca.png"  />
 <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
 <div className="absolute bottom-6 left-6">
 <h3 className="text-2xl font-bold text-white font-headline" >Treppenhausreinigung</h3>
@@ -187,7 +187,7 @@ export default function GewerbereinigungPage() {
 {/*  Trust Section  */}
 <section className="py-24 bg-inverse-surface text-inverse-on-surface overflow-hidden relative">
 <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
-<img className="w-full h-full object-cover" data-alt="team of professionals collaborating in a clean modern office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4ChyfU3ZIi1SfcFhh5H7QzcjzpRgnxq3VR9UnQIB0dJt5E_TXc25uZ3P4JaAB_WPqN7F16q5DtdQtyN-j2gZB470MpDTnCtSSZVVi4M7i2BJ0kVI8vD1QeLCFlYCzmjMxLDVw2UeL9cjCcqEUaN_7ssalRv1H94rfNJHuGlHNKB84PqMX3gIRlztCIGP8OTABgSwqIfbZD7EhTFzN6CrLA12issB5F0OG7ja5kZ1b2KTCh3fdbcOlf4W2ak6QyL9-3Z6KqONLyPM"  />
+<img className="w-full h-full object-cover" data-alt="team of professionals collaborating in a clean modern office environment" src="/assets/images/be2ec0e1bca6cd9c3d3b.png"  />
 </div>
 <div className="container mx-auto px-8 relative z-10">
 <div className="flex flex-col lg:grid lg:grid-cols-2 gap-20 items-center w-full min-w-0">
@@ -212,14 +212,14 @@ export default function GewerbereinigungPage() {
 <div className="bg-white/5 backdrop-blur-md p-5 md:p-10 rounded-3xl border border-white/10">
 <div className="flex items-center gap-4 mb-8">
 <div className="w-16 h-16 rounded-full overflow-hidden">
-<img className="w-full h-full object-cover" data-alt="portrait of a confident business executive in a high-end office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDa_D1lUw5EXfZLAkiKlTBvdkYd--pemhTKLZZRRM63d9rl4BVv0ylcGDaJ4bt5kZvfDn-zFYzBIJyVUJYUnBdEBr5HrWVf_QHWwxl3W2em2uM-UisQmINityLa_KfKNrT2inGOZTVHu32__qN022coc5W0KavKYS48hH8HNu4v7ZCj7HQQf4MgFI7MxmibSunOZKejiNUfGrRqZxVW79qMSWN5-wd7Jp4UjBjyWbeBZENQS29IhqHxR5yy6GHJajbBNMOIRg7Vp4"  />
+<img className="w-full h-full object-cover" data-alt="portrait of a confident business executive in a high-end office" src="/assets/images/ee3be739cf2eb561f5f5.png"  />
 </div>
 <div>
 <h4 className="font-bold text-lg" >Marcus Thornton</h4>
 <p className="text-sm text-outline-variant" >COO, Global Tech Hub</p>
 </div>
 </div>
-<p className="italic text-xl md:text-2xl font-light leading-relaxed" >"Der Wechsel zu R&amp;K-Gaggenau verlief nahtlos. Sie reinigen nicht nur; sie pflegen die physische Präsenz unserer Marke. Ihre Liebe zum Detail in den Vorstandsetagen ist unerreicht."</p>
+<p className="italic text-xl md:text-2xl font-light leading-relaxed" >&quot;Der Wechsel zu R&amp;K-Gaggenau verlief nahtlos. Sie reinigen nicht nur; sie pflegen die physische Präsenz unserer Marke. Ihre Liebe zum Detail in den Vorstandsetagen ist unerreicht.&quot;</p>
 </div>
 </div>
 </div>
@@ -227,11 +227,12 @@ export default function GewerbereinigungPage() {
 {/*  Contact Form Section  */}
 <section className="py-24 bg-surface scroll-mt-24" id="contact">
 <div className="container mx-auto px-8">
+<p className="text-center text-sm font-semibold text-on-surface-variant mb-6">Dieses Formular ist für Reinigungsanfragen, nicht für Bewerbungen.</p>
 <div className="max-w-6xl mx-auto bg-surface-container-low rounded-[2rem] overflow-hidden flex flex-col lg:grid lg:grid-cols-5 shadow-2xl w-full min-w-0">
 <div className="lg:col-span-2 bg-primary-container p-6 sm:p-12 text-on-primary-container flex flex-col justify-between">
 <div>
-<h2 className="text-3xl md:text-4xl font-black font-headline mb-6" >Werten wir Ihren Arbeitsplatz auf.</h2>
-<p className="text-emerald-100/80 mb-8 leading-relaxed" >Füllen Sie das Formular aus für eine maßgeschneiderte Objektbewertung und ein Angebot innerhalb von 24 Stunden.</p>
+<h2 className="text-3xl md:text-4xl font-black font-headline mb-6" >Kostenlose Beratung zur Reinigung</h2>
+<p className="text-emerald-100/80 mb-8 leading-relaxed" >Beschreiben Sie kurz Ihren Reinigungsbedarf. Beratung und Besichtigung sind kostenlos und unverbindlich. Ihr Preisangebot erhalten Sie nach der ersten Beratung.</p>
 <div className="space-y-6">
 <div className="flex items-center gap-4">
 <span className="material-symbols-outlined p-2 bg-white/10 rounded-lg" >call</span>

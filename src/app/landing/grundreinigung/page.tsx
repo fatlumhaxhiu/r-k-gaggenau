@@ -5,7 +5,7 @@ import LeadForm from "@/components/LeadForm";
 export default function GrundreinigungPage() {
   return (
     <>
-      
+
 <nav className="bg-emerald-50/80 dark:bg-stone-900/80 backdrop-blur-xl docked full-width top-0 sticky z-50">
 <div className="flex justify-between items-center w-full px-4 sm:px-8 py-4 max-w-7xl mx-auto">
 <Link href="/" className="flex items-center gap-3">
@@ -43,7 +43,7 @@ export default function GrundreinigungPage() {
 </div>
 <div className="lg:col-span-5 relative">
 <div className="aspect-4/5 rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
-<img alt="Makellose moderne weiße Küche" className="w-full h-full object-cover" data-alt="Close up of a minimalist luxury kitchen with marble countertops and sunlight reflecting off pristine stainless steel appliances" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP8Us3akmYDdMb-w60oH17sUviYDQHQKKl_Ao6X4n6VdRHmZ5dnWtLbNYX0X6XYseX2Flz1ZOO0F5Emv8e3dQ0-n_XsqegZix_M-V9OKVO6QOAjMEc2bLDLv5EQ2r4dTAdmEUCcKz9HtFm_I7B3iMoDIV2FJiMr3a3O5rF2AvJUitEDej5GvD2rlRPKjDV60a4PVurLcehbelCFGAptagkxcXpKdh-Fe_HEV3TjKqOWZfxRUnFMAaCP44dsNJxzvwIzUrbhwyczuk"/>
+<img alt="Makellose moderne weiße Küche" className="w-full h-full object-cover" data-alt="Close up of a minimalist luxury kitchen with marble countertops and sunlight reflecting off pristine stainless steel appliances" src="/assets/images/458fcdc7a435ce1ee2b1.png"/>
 </div>
 <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-secondary-fixed-dim rounded-2xl -z-10 mix-blend-multiply opacity-50 blur-2xl"></div>
 </div>
@@ -89,18 +89,18 @@ export default function GrundreinigungPage() {
 <div className="grid grid-cols-2 gap-4">
 <div className="space-y-4">
 <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
-<img alt="Sauberes modernes Badezimmer" className="w-full h-full object-cover" data-alt="Ultra-clean bathroom with white tiles and minimalist fixtures under bright natural morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJTq1iLt6pKYXxoZi8rOcaeiKkNstqfeqna3AJIG1MANcSnCRlo9S-sLoKyHAkvsHGwHlz-_OtPbpNIa2f83Yk4Ue2J2lCJSqFAuX5zBatUFhO7CnSM87s4AhmqUECK3jv5WsN1rz2fR8K14h1l6hx_2D50gtT_O0fBy8yphu4nbhAkJCpMe9tcx6uCTd5l7geYiEm04-KQIu-T1GHGAWkRuNOLinspnbSY75vRYP_QES2sojgdC4KRbr8JSyoYEbGOV3FmiMIC6Y"/>
+<img alt="Sauberes modernes Badezimmer" className="w-full h-full object-cover" data-alt="Ultra-clean bathroom with white tiles and minimalist fixtures under bright natural morning light" src="/assets/images/cf335f7cd3bd109721dd.png"/>
 </div>
 <div className="aspect-3/4 rounded-2xl overflow-hidden shadow-lg">
-<img alt="Saubere Küchendetails" className="w-full h-full object-cover" data-alt="Macro shot of a sparkling clean kitchen faucet and marble sink with water droplets reflecting the light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRLeMyNRATGU0-ZrkFKF_bLd5LIeRVQheHCrnxMmmUTMCK04hx8inBdaThbXtTcAUnyEmDVvdBfNKspOv7I_BuUi1Ev7JPoFSWzmXBppx7OVU8oA6PEogwyjXWEqMDX3CKagSB1DJGhLXyrYwH2BXNSY-KPlIY99dOFPCuV8fH7asCbTIB9ks0FmE09DwEtMSvWvmMfN7kIYxkoJ4mNIPjRUBya1A0yd3Nx08r4WSc3JnwSes2BZJue_ZrrVmqmcIIupeK2u4thys"/>
+<img alt="Saubere Küchendetails" className="w-full h-full object-cover" data-alt="Macro shot of a sparkling clean kitchen faucet and marble sink with water droplets reflecting the light" src="/assets/images/04844cce1976266ba201.png"/>
 </div>
 </div>
 <div className="space-y-4 pt-8">
 <div className="aspect-3/4 rounded-2xl overflow-hidden shadow-lg">
-<img alt="Organisierter moderner Wohnraum" className="w-full h-full object-cover" data-alt="Sunlit modern living room with perfectly arranged furniture and immaculate hardwood floors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6SbrTAAvIJwHUiyEtKE62WGB_WmIAicHHOPTSpP-K9tZmf_eW1fgtk6XldU4eYyF_crY8LK6cuxVrx9MMB3tc3x_1ycraw40uCG1ZKdQJI2miFCKmFCEBS9aWdfsrHb2nBAq5UTwkGTnbyAMry84p9mYfU21HTgnWJ3wBvuEv-USdiWnrvPC6HdKrtyL5un-sTLuygdU3KQhFhjsRgwuecNEnCbOe0o9lSyzSMPrN-YKNTL8EoWLVkhPqynYlW53FKqEVDKBdRKU"/>
+<img alt="Organisierter moderner Wohnraum" className="w-full h-full object-cover" data-alt="Sunlit modern living room with perfectly arranged furniture and immaculate hardwood floors" src="/assets/images/7de674a991424e3428b2.png"/>
 </div>
 <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
-<img alt="Sauberes architektonisches Detail" className="w-full h-full object-cover" data-alt="Detailed view of white minimalist stairs and pristine glass railing in a luxury home" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXS9UXsq4uVPt6rcxi37tHHQijEtlrHG8lox9wPmEHKj0fwW6OFeHZeMDthinEzOHImkTnXEaL9XCZODRsMGnEDm241tZX5fk6LRDRkPwGdU9RXW3Glb3KuyThEw0T8_cKMa_FTlgXTU-o6LO91xWV52R1K5E5g1SRqftiala_3TcK-XJ1TuyyKF_fhQeCRma1CJJcLZv2BL-QtuJnTVSMxoFIYkm0n1q0pcZPLvHfVIJddXY8LwvtspUbeqRJRmKML-aCaX4hVTI"/>
+<img alt="Sauberes architektonisches Detail" className="w-full h-full object-cover" data-alt="Detailed view of white minimalist stairs and pristine glass railing in a luxury home" src="/assets/images/bf291d9ddf19e578c9b4.png"/>
 </div>
 </div>
 </div>
@@ -153,7 +153,7 @@ export default function GrundreinigungPage() {
 <span className="material-symbols-outlined text-6xl mb-8" >shield</span>
 <h2 className="font-headline text-3xl lg:text-4xl font-bold mb-6">Unser Qualitätsversprechen</h2>
 <p className="text-xl opacity-90 leading-relaxed font-light italic">
-                "Atmosphärische Präzision ist nicht nur unser Slogan; es ist unser Versprechen. Wenn sich Ihr Raum nicht spürbar verwandelt anfühlt, haben wir unsere Arbeit noch nicht beendet."
+                &quot;Atmosphärische Präzision ist nicht nur unser Slogan; es ist unser Versprechen. Wenn sich Ihr Raum nicht spürbar verwandelt anfühlt, haben wir unsere Arbeit noch nicht beendet.&quot;
             </p>
 <div className="mt-8 flex justify-center items-center gap-4">
 <div className="h-px w-12 bg-on-primary/30"></div>
@@ -164,14 +164,15 @@ export default function GrundreinigungPage() {
 </section>
 <section className="py-24 bg-surface-container-low scroll-mt-24" id="appointment">
 <div className="max-w-7xl mx-auto px-8">
+<p className="text-center text-sm font-semibold text-on-surface-variant mb-6">Dieses Formular ist für Reinigungsanfragen, nicht für Bewerbungen.</p>
 <div className="bg-surface-container-lowest rounded-[2rem] shadow-xl overflow-hidden flex flex-col lg:flex-row">
 <div className="lg:w-1/2 p-6 sm:p-12 lg:p-20">
-<h2 className="font-headline text-3xl font-bold mb-6">Bereit für eine <span className="text-primary">komplette Erneuerung?</span></h2>
-<p className="text-on-surface-variant mb-10 text-lg">Vereinbaren Sie noch heute Ihren Beratungstermin für die Grundreinigung. Unsere Spezialisten bewerten Ihre Anforderungen und erstellen einen maßgeschneiderten Plan.</p>
+<h2 className="font-headline text-3xl font-bold mb-6">Kostenlose Beratung zur Reinigung</h2>
+<p className="text-on-surface-variant mb-10 text-lg">Beschreiben Sie kurz Ihren Reinigungsbedarf. Beratung und Besichtigung sind kostenlos und unverbindlich. Ihr Preisangebot erhalten Sie nach der ersten Beratung.</p>
 <LeadForm serviceName="Grundreinigung" />
 </div>
 <div className="lg:w-1/2 bg-surface-container-highest relative min-h-[400px]">
-<img alt="Luxuriöses Wohninterieur" className="absolute inset-0 w-full h-full object-cover" data-alt="Wide angle shot of a luxury modern penthouse living room with expansive windows and pristine furniture layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqdfp7H0lMAZBQxPPIeG4n0heLmXyNY3KVpUKt9EArj3jPyFG44pauJW8P8WZalucis3AtbaXpnf513iPAEU-iF9F_Jeon1KM8OrC4BFAnWI86tqNBD0z31lZoQr2k7bvO31We1Mc_XPPM3cWDxHT-2ypys7iSiKkBjd7TVrBlIdjWhT0CJJphRszmMlynZa7KpFqPR-hB5jW7K_kEtCxjH1SK0hrPuw1rW7PsFr4JHUNFcEuhAzcfYZHKePnnPJ-b7ejZRuYIyJk"/>
+<img alt="Luxuriöses Wohninterieur" className="absolute inset-0 w-full h-full object-cover" data-alt="Wide angle shot of a luxury modern penthouse living room with expansive windows and pristine furniture layout" src="/assets/images/e4827bf999217d14ab60.png"/>
 <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent flex items-end p-12">
 <div className="text-white">
 <div className="flex gap-1 mb-2">
@@ -181,7 +182,7 @@ export default function GrundreinigungPage() {
 <span className="material-symbols-outlined text-yellow-400" >star</span>
 <span className="material-symbols-outlined text-yellow-400" >star</span>
 </div>
-<p className="font-headline text-lg sm:text-2xl font-bold">"Der Standard der Reinigung ist unübertroffen. Es fühlt sich wirklich so an, als würde man wieder in ein neues Zuhause einziehen."</p>
+<p className="font-headline text-lg sm:text-2xl font-bold">&quot;Der Standard der Reinigung ist unübertroffen. Es fühlt sich wirklich so an, als würde man wieder in ein neues Zuhause einziehen.&quot;</p>
 <p className="mt-4 opacity-80">— Privatkunde, München</p>
 </div>
 </div>

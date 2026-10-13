@@ -30,7 +30,7 @@ export default function UberUns() {
             <div className="relative w-full max-w-lg mx-auto lg:ml-auto">
               <div className="relative h-[450px] lg:h-[650px] w-full rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=800&auto=format&fit=crop"
+                  src="/assets/images/6e0f4b028c277ae8213e.jpg"
                   alt="High-end corporate building interior"
                   fill
                   className="object-cover"
@@ -63,18 +63,18 @@ export default function UberUns() {
             <div className="grid grid-cols-2 gap-4 h-[300px] sm:h-[400px] lg:h-[600px] w-full max-w-xl mx-auto">
               <div className="space-y-4 h-full flex flex-col">
                 <div className="relative h-[45%] w-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
-                  <Image src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" alt="Team meeting" fill className="object-cover" />
+                  <Image src="/assets/images/d68ebcb7a45834172359.jpg" alt="Team meeting" fill className="object-cover" />
                 </div>
                 <div className="relative h-[55%] w-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
-                  <Image src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=600&auto=format&fit=crop" alt="Cleaning session" fill className="object-cover" />
+                  <Image src="/assets/images/34cf0fbbf668d6871fde.jpg" alt="Cleaning session" fill className="object-cover" />
                 </div>
               </div>
               <div className="space-y-4 h-full flex flex-col pt-12">
                 <div className="relative h-[55%] w-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
-                  <Image src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop" alt="Conference room" fill className="object-cover" />
+                  <Image src="/assets/images/fd4ac1eeedac917f3e03.jpg" alt="Conference room" fill className="object-cover" />
                 </div>
                 <div className="relative h-[45%] w-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hue-rotate-15">
-                  <Image src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=600&auto=format&fit=crop" alt="Antique detail" fill className="object-cover" />
+                  <Image src="/assets/images/2cb848ab9e3c32b1cf5a.jpg" alt="Antique detail" fill className="object-cover" />
                 </div>
               </div>
             </div>
@@ -170,7 +170,7 @@ export default function UberUns() {
       <section className="py-32 relative flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=1920&auto=format&fit=crop"
+            src="/assets/images/26ae0736c80060257a1f.jpg"
             alt="Dark architecture"
             fill
             className="object-cover grayscale brightness-50"

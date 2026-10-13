@@ -47,7 +47,7 @@ export default function SaisonalePflegePage() {
 </div>
 <div className="lg:col-span-5 relative h-full min-h-[500px]">
 <div className="absolute inset-0 bg-primary/5 rounded-3xl -rotate-3 transform scale-105"></div>
-<img className="w-full h-full object-cover rounded-3xl editorial-shadow relative z-10" data-alt="Modernes minimalistisches Hausäußeres im Winter mit geräumter Einfahrt und klarem Morgenlicht" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCatpfZ7Xzhq8iDIj4_TD0t5ruwBAsdBsRqwS43XUi8eWuTWGPTGGTh4AZosLB9tj6cp5cejt9ioT_K0bLXu2dC7DtP_B7sGNok-oJC_ZMB6SmwCN1r8San04AfHNsrvSD_oedpi89DirLPuzPAHjzHyALgeE5YT9bwLjwbbdqvM993PP-pblvBf0-GwAIrm1ZXEqWQ_xe06dGrMGheZl_YfRGzDYKt9Pva7xAmvCljIgH8_Nx6Ith53EAQ89yv5s-O7sQ02LCJjUE"  />
+<img className="w-full h-full object-cover rounded-3xl editorial-shadow relative z-10" data-alt="Modernes minimalistisches Hausäußeres im Winter mit geräumter Einfahrt und klarem Morgenlicht" src="/assets/images/682f398082ac799607e9.png"  />
 </div>
 </div>
 </section>
@@ -165,11 +165,12 @@ export default function SaisonalePflegePage() {
 {/*  Contact Form Section  */}
 <section className="py-24 bg-surface-container-low relative scroll-mt-24" id="contact">
 <div className="max-w-4xl mx-auto px-4 sm:px-8 relative z-10">
+<p className="text-center text-sm font-semibold text-on-surface-variant mb-6">Dieses Formular ist für Reinigungsanfragen, nicht für Bewerbungen.</p>
 <div className="bg-surface-container-lowest rounded-3xl editorial-shadow overflow-hidden flex flex-col md:flex-row">
 <div className="md:w-2/5 primary-gradient p-6 sm:p-12 text-on-primary flex flex-col justify-between">
 <div>
-<h2 className="font-headline text-3xl font-bold leading-tight mb-4" >Angebot für Saisonpflege anfordern</h2>
-<p className="text-on-primary/80 font-body" >Sichern Sie sich Ihren Platz in unserem Winterplan. Die Plätze für garantierten Priority-Service sind begrenzt.</p>
+<h2 className="font-headline text-3xl font-bold leading-tight mb-4" >Kostenlose Beratung zur Reinigung</h2>
+<p className="text-on-primary/80 font-body" >Beschreiben Sie kurz Ihren Reinigungsbedarf. Beratung und Besichtigung sind kostenlos und unverbindlich. Ihr Preisangebot erhalten Sie nach der ersten Beratung.</p>
 </div>
 <div className="space-y-6 mt-12 md:mt-0">
 <div className="flex items-center gap-4">

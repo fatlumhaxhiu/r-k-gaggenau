@@ -69,7 +69,7 @@ export default async function Startseite() {
             {/* Image Content with overlapping Trust Badge */}
             <div className="relative h-[420px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=1200&auto=format&fit=crop"
+                src="/assets/images/a02d51705e9f15d383d3.jpg"
                 alt="Professional cleaner working"
                 fill
                 className="object-cover object-center"
@@ -144,7 +144,7 @@ export default async function Startseite() {
             <div className="relative">
               <div className="relative h-[600px] w-full max-w-lg mx-auto lg:h-[700px] rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000&auto=format&fit=crop"
+                  src="/assets/images/e92f0cff052e84eda5b0.jpg"
                   alt="Modern clean interior space"
                   fill
                   className="object-cover"

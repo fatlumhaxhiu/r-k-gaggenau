@@ -5,7 +5,7 @@ export const siteData = {
     subheadline: "Wir definieren gewerbliche Räume und Luxusresidenzen neu – durch akribische, maßgeschneiderte Reinigungslösungen auf höchstem Niveau.",
     ctaPrimary: "Angebot anfordern",
     ctaSecondary: "Unsere Leistungen",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop"
+    image: "/assets/images/7ca37ac7d95cf26bc401.jpg"
   },
   benefits: [
     {
@@ -77,28 +77,28 @@ export const siteData = {
       tag: "GESUNDHEIT",
       title: "Neue Hygienestandards für 2024",
       desc: "Lichtblicke. Neuste gesetzlich Anforderungen für medizinische und gewerbliche Räume in Deutschland.",
-      image: "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=600&auto=format&fit=crop"
+      image: "/assets/images/8e8735a466649edf5753.jpg"
     },
     {
       id: 2,
       tag: "NACHHALTIGKEIT",
       title: "Die Kraft biologischer Reinigung",
       desc: "Wie grüne Lösungen Ihr Gebäude und die Umwelt schützen, ohne Kompromisse bei der Qualität.",
-      image: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?q=80&w=600&auto=format&fit=crop"
+      image: "/assets/images/cfeeec560e81fde21aaa.jpg"
     },
     {
       id: 3,
       tag: "ARBEITSPLATZ",
       title: "Sauberkeit & Produktivität",
       desc: "Wissenschaftliche Daten zeigen den direkten Link zwischen Arbeitshygiene und Mitarbeiterfokus.",
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop"
+      image: "/assets/images/fd4ac1eeedac917f3e03.jpg"
     },
     {
       id: 4,
       tag: "PFLEGE",
       title: "Pflege von Luxusoberflächen",
       desc: "Expertenrat zur Instandhaltung von Marmor, Granit und hochwertigen Parkettböden.",
-      image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=600&auto=format&fit=crop"
+      image: "/assets/images/2cb848ab9e3c32b1cf5a.jpg"
     }
   ],
   blogArticles: [
@@ -109,7 +109,7 @@ export const siteData = {
       date: "24. OKTOBER 2023",
       title: "Die Psychologie der Sauberkeit: Warum minimalistische Räume die kognitive Präzision fördern",
       desc: "Wie wissenschaftliches Umweltmanagement den Cortisolspiegel senkt und eine leistungsfördernde häusliche Atmosphäre schafft.",
-      image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=1200&auto=format&fit=crop",
+      image: "/assets/images/6e196b859c9cb4c4ec4c.jpg",
       isHighlight: true,
       content: {
         intro: "In einer Welt konstanter visueller Überreizung ist die Reduzierung von physischem Chaos der effizienteste Weg, mentale Klarheit zu gewinnen. Psychologische Studien zeigen eindrucksvoll, wie stark unser Gehirn auf organisierte Strukturen reagiert.",
@@ -137,7 +137,7 @@ export const siteData = {
       date: "15. Okt",
       title: "Veredelung von Oberflächen: Die Wissenschaft der nicht-abrasiven Pflege",
       desc: "Der Schutz der Integrität seltener Stein- und Metalloberflächen erfordert mehr als nur Chemikalien; es erfordert ein Verständnis der molekularen Stabilität.",
-      image: "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=600&auto=format&fit=crop",
+      image: "/assets/images/8e8735a466649edf5753.jpg",
       isHighlight: false,
       content: {
         intro: "Hochwertige Architekturmaterialien wie Carrara-Marmor, unbehandelte Edelhölzer oder gebürstete Metalle reagieren hochsensibel auf ihre Umgebung. Falsche Pflege kann irreparable mikroskopische Schäden anrichten.",
@@ -165,7 +165,7 @@ export const siteData = {
       date: "08. Okt",
       title: "Der unsichtbare Luxus: Der Einfluss der Luftqualität auf den Schlaf",
       desc: "HEPA-Filtration und die Entfernung mikroskopisch kleiner Partikel als fundamentale Säule moderner Wellness-Architektur.",
-      image: "https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=600&auto=format&fit=crop",
+      image: "/assets/images/13170c8147d1a91f1239.jpg",
       isHighlight: false,
       content: {
         intro: "Im Pantheon des luxuriösen Wohnens diskutieren wir oft über die Textur ägyptischer Baumwolle, die Resonanz der Schalldämmung oder die Ergonomie einer maßgeschneiderten Matratze. Doch das wichtigste Element der nächtlichen Erholung bleibt unsichtbar.",
@@ -197,7 +197,7 @@ export const siteData = {
       date: "29. Sep",
       title: "Operational Excellence: Hinter unseren Präzisions-Checklisten",
       desc: "Ein Blick hinter die Kulissen des 120-Punkte-Inspektionsprotokolls, das jeden Einsatz von R&K-Gaggenau definiert.",
-      image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600&auto=format&fit=crop",
+      image: "/assets/images/9996243c30624c167ed9.jpg",
       isHighlight: false,
       content: {
         intro: "Wie stellt man sicher, dass Exzellenz zu einer wiederholbaren Konstante und nicht zu einem Zufallsergebnis wird? Die Antwort liegt in unseren kompromisslosen, standardisierten Arbeitsprozessen.",

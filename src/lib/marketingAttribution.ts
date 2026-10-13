@@ -1,3 +1,5 @@
+import { readConsent } from "./consent"
+
 export type MarketingChannel =
   | "Google Ads"
   | "Facebook Ads"
@@ -25,7 +27,7 @@ export function channelFromVisit(params: URLSearchParams, referrer: string): Mar
     return "Google Ads"
   }
 
-  if (params.has("fbclid") || (FACEBOOK_SOURCES.has(source) && PAID_MEDIA.has(medium))) {
+  if (FACEBOOK_SOURCES.has(source) && PAID_MEDIA.has(medium)) {
     return "Facebook Ads"
   }
 
@@ -57,6 +59,10 @@ export function captureMarketingAttribution(): MarketingAttribution {
   }
 
   if (typeof window === "undefined") return fallback
+  if (!readConsent()?.marketing) {
+    try { window.sessionStorage.removeItem(STORAGE_KEY) } catch { /* Storage is optional. */ }
+    return fallback
+  }
 
   const params = new URLSearchParams(window.location.search)
 

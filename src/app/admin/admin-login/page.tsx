@@ -46,7 +46,7 @@ export default function AdminLoginPage() {
 {/*  Background Imagery (Asymmetric Layout)  */}
 <div className="absolute inset-0 z-0 flex pointer-events-none">
 <div className="hidden lg:block w-1/2 h-full opacity-10">
-<img alt="Minimalist corporate lobby" className="w-full h-full object-cover" data-alt="Ultra-clean minimalist corporate lobby with white marble floors, floor-to-ceiling windows, and architectural lighting in a bright morning atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwvsabc9wd4BHJoJLZq52qtWPo2yCQTIst1-VBMqj9ttH88r1HD_SWqejnBP7HwGpadIYF0534QFOBM9PaM2Y5y-iopxZnqz-pjtkf1PKT7VMXzPJ9kWfx2KZVoguikH3IpYWDot0bBuAXkD1CnaD_3zVr3kw7awTHuI7pFrrhG93goss9Do9ZXpBMZ31b02aRjUiIXm0rpv8hgaNfePSFWoARHevmRHb6naklhsp5_uF0UNDUBQiX4FDAVXVqnDBECXrfx5IXBxI"/>
+<img alt="Minimalist corporate lobby" className="w-full h-full object-cover" data-alt="Ultra-clean minimalist corporate lobby with white marble floors, floor-to-ceiling windows, and architectural lighting in a bright morning atmosphere" src="/assets/images/48b45a79970b4731cd52.png"/>
 </div>
 <div className="w-full lg:w-1/2 h-full bg-surface"></div>
 </div>
@@ -55,13 +55,13 @@ export default function AdminLoginPage() {
 {/*  Branding/Image Side  */}
 <div className="hidden lg:flex relative flex-col justify-end p-12 overflow-hidden">
 <div className="absolute inset-0">
-<img alt="Glass boardroom" className="w-full h-full object-cover" data-alt="A pristine modern glass-walled conference room with reflecting surfaces and sophisticated architectural geometry, bright and airy lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJBPif2HIu9ZxrUAOPDb6K7JsSjavLWge8EOUPcC4oyGO3elZ8qJfE8e6nCXd_YMbnPUCA1qmBTv4vuNFNz7YGoTJic70ppoCAt__Z_qTvp8RKDuukgnECVZHvxzNHLxVng-IUElJwdnaRWW81SWzDSZVy_VQQ25lZeVN9nn2Qp1JNzBbB3CKEV18ectju6OPI8elvXnAhjCFi9u0lGm1G6fhdRwGGmD7Wgbw3TnUbELeSRrMahjfoB5rGOTuuwSEvCQunWxQ0IWk"/>
+<img alt="Glass boardroom" className="w-full h-full object-cover" data-alt="A pristine modern glass-walled conference room with reflecting surfaces and sophisticated architectural geometry, bright and airy lighting" src="/assets/images/cb085ffbd5c58658471c.png"/>
 <div className="absolute inset-0 bg-linear-to-t from-primary/80 to-transparent"></div>
 </div>
 <div className="relative z-20 text-on-primary">
 <span className="font-label text-xs tracking-widest uppercase opacity-80 mb-2 block">Atmospheric Precision</span>
 <h1 className="font-headline text-4xl font-extrabold tracking-tight mb-4 leading-tight">Elevating Facility Management.</h1>
-<p className="text-body-lg opacity-90 max-w-sm">Access the administrative core of R&amp;K-Gaggenau's precision systems.</p>
+<p className="text-body-lg opacity-90 max-w-sm">Access the administrative core of R&amp;K-Gaggenau&apos;s precision systems.</p>
 </div>
 </div>
 {/*  Form Side  */}

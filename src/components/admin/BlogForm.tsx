@@ -112,8 +112,8 @@ export default function BlogForm({
       } else {
         alert("Gabim gjatë ruajtjes së postimit.")
       }
-    } catch (err: any) {
-      alert(err.message || "Gabim në server.")
+    } catch (err: unknown) {
+      alert(err instanceof Error ? err.message : "Gabim në server.")
     } finally {
       setLoading(false)
     }

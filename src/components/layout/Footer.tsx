@@ -24,7 +24,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-              Atmospheric Precision. We don't just clean spaces—we elevate them. Premium facility management and commercial cleaning solutions.
+              Atmospheric Precision. We don&apos;t just clean spaces—we elevate them. Premium facility management and commercial cleaning solutions.
             </p>
           </div>
 

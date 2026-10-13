@@ -26,7 +26,7 @@ export default function SpezialreinigungPage() {
 {/*  Hero Section  */}
 <header className="relative min-h-svh flex items-center overflow-hidden">
 <div className="absolute inset-0 z-0">
-<img className="w-full h-full object-cover grayscale-20 opacity-90" data-alt="Moderne High-End-Zahnklinik mit makellosen weißen Oberflächen, präziser chirurgischer Beleuchtung und architektonischen Glastrennwänden in einer sanften Tageslichtatmosphäre" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4BVmIY4y3QmVwZmeLxww0P4frIvGlhVftF76Xo2L10f4H4Tm2xO6zXtrHh_UOD_UwDY6SpHFCaz--0mCphXLMmMsozLUkeDJEdcxutAl0kSjft8ib0IOIa9GM4i8oYqUM_pMl93Ncp00oQY-1aZeHoXd5c6D7kxYkCQVXXQCDtk40B_86c3awQIg34ROuqnUEJt9fIN1Usi-abl0lW18F15O6czo7ejnL8H2trQv0e05i8EgHk4Z8637IkaPHmLrwHxWKHh0AGpQ"  />
+<img className="w-full h-full object-cover grayscale-20 opacity-90" data-alt="Moderne High-End-Zahnklinik mit makellosen weißen Oberflächen, präziser chirurgischer Beleuchtung und architektonischen Glastrennwänden in einer sanften Tageslichtatmosphäre" src="/assets/images/7018d7311cf164ad0f89.png"  />
 <div className="absolute inset-0 bg-linear-to-r from-surface via-surface/60 to-transparent"></div>
 </div>
 <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
@@ -75,7 +75,7 @@ export default function SpezialreinigungPage() {
 <p className="text-on-secondary-container/80 text-sm leading-relaxed" >Kontinuierliche Fortbildung im Management von Hochrisikoflächen.</p>
 </div>
 <div className="md:col-span-3 relative rounded-xl overflow-hidden min-h-[300px]">
-<img className="absolute inset-0 w-full h-full object-cover" data-alt="Professioneller Reinigungstechniker in einem minimalistischen medizinischen Büro mit modernster Sanierungsausrüstung, klaren architektonischen Linien und weichem natürlichem Licht" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrWogrDKLnEj-ozPSsh0pvOLLUTIy_wsrzOm8mPvAbPE4ZBur2TD64h6PC0bQo-P16eAhIGEQRqSygPJd2oHbSHxxYeVp2OaJWEoEoN28mFLZqbTHRSn_PWB3Ayo9MSNwouPRrYlZ7tFv4KFEugdN4Kj6uAK6QQ3AWFCA66Il_0XWhw3clqN3bmtYk87AXZ7AYpPMYcWkCO6t0m8omR9IIr0rvMvRWu9vxSUMU-541y_DEV1nektwLQzr6SqvJbSs103vtdbj6wlk"  />
+<img className="absolute inset-0 w-full h-full object-cover" data-alt="Professioneller Reinigungstechniker in einem minimalistischen medizinischen Büro mit modernster Sanierungsausrüstung, klaren architektonischen Linien und weichem natürlichem Licht" src="/assets/images/b8307fd32cbe2c3c7110.png"  />
 <div className="absolute inset-0 bg-linear-to-t from-on-surface/80 via-transparent to-transparent"></div>
 <div className="absolute bottom-0 left-0 p-10">
 <h4 className="text-white font-headline text-2xl font-bold" >Der Goldstandard in der Präzision</h4>
@@ -98,7 +98,7 @@ export default function SpezialreinigungPage() {
 <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 w-full min-w-0">
 {/*  Service 1  */}
 <div className="group relative aspect-4/5 overflow-hidden rounded-xl bg-surface-container-lowest transition-transform hover:-translate-y-2 duration-500">
-<img className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="Steriler moderner Arztpraxis-Untersuchungsraum mit hochwertigen klinischen Möbeln und makellosen Oberflächen in kühler chirurgischer Beleuchtung" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6UwcMQuVjBpBuO2g92O81wAUjkIzgvMclcGSRLt9auSX7j-Pb7uwgWQhOFzzbMWdSZAiud6j7jiaULUAArtP4X9xiMoMSmdcpdgu02POagqdfE-3hpvxwsCyz8LdReclpjKgIuJPjk6Wh7OlXr1RodKCu_irj19UtiXxyxBcVbF1ayaR93Si5z5WjORGN5p6PoY-HJKIakUM0nHyV1_zee3DL_SDRLtilXUCckAWNdHYRkexLR2HnL-XW244NLal0upmvhHzxfZA"  />
+<img className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="Steriler moderner Arztpraxis-Untersuchungsraum mit hochwertigen klinischen Möbeln und makellosen Oberflächen in kühler chirurgischer Beleuchtung" src="/assets/images/e56a7597335231d536c5.png"  />
 <div className="absolute inset-0 bg-linear-to-t from-surface-container-lowest via-surface-container-lowest/20 to-transparent"></div>
 <div className="absolute bottom-0 p-8 w-full">
 <span className="text-secondary font-bold text-4xl opacity-20 mb-2 block font-headline" >01</span>
@@ -108,7 +108,7 @@ export default function SpezialreinigungPage() {
 </div>
 {/*  Service 2  */}
 <div className="group relative aspect-4/5 overflow-hidden rounded-xl bg-surface-container-lowest transition-transform hover:-translate-y-2 duration-500 md:mt-12">
-<img className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="Heller moderner High-School-Korridor mit minimalistischen Schließfächern und polierten architektonischen Betonböden in heller Nachmittagssonne" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrbr5-uUtST7WmsAmPpkrfjlznEyZri_A5JORUR0UNE7fUc6mNNowBIVSLhJ7GeUHC5Ybv4dwtgms3UgxboPICJjEL3AijVIrrsFzrZ9uoqMZPo0P8oNtqPa_KAIgh41AkK1N72o7FM646TAIkTrXCnEkFBQPbxPpK-118YcgnH8Vg1G_FhatNw5EBm24gDT7LRzSZSuOk3kF-yEyZC_6Gd2e1oRdkvzqhj4bFWT30lhR4KrXHSyg5kCXtddv1reuA1A44H2gOg6g"  />
+<img className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="Heller moderner High-School-Korridor mit minimalistischen Schließfächern und polierten architektonischen Betonböden in heller Nachmittagssonne" src="/assets/images/3062f574399e329ab711.png"  />
 <div className="absolute inset-0 bg-linear-to-t from-surface-container-lowest via-surface-container-lowest/20 to-transparent"></div>
 <div className="absolute bottom-0 p-8 w-full">
 <span className="text-secondary font-bold text-4xl opacity-20 mb-2 block font-headline" >02</span>
@@ -118,7 +118,7 @@ export default function SpezialreinigungPage() {
 </div>
 {/*  Service 3  */}
 <div className="group relative aspect-4/5 overflow-hidden rounded-xl bg-surface-container-lowest transition-transform hover:-translate-y-2 duration-500">
-<img className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="Lebendiges, gehobenes Kindergarten-Spielzimmer mit Designer-Holzspielzeug und umweltfreundlichen Oberflächen in warmem, sonnigem Morgenlicht" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqEh7GfHE9Ajz7UcxC1XE8IbPWZLPs6Kzcdq3y47yh3I_n1BtfGs3X8cYZ1V7hv2i1QjiUtxfKTlL0GlhKTttZtLFXslPZW0JC3c6W54X63G4D0AcFS-YECVuCVb0RlewiGufOTsRTblaEoS8BiatLxAxeM_cdl6K4ktRoRvbqAPt_qG1JkNB7MLEFanlFk4FFrBjVlLsXk3R2-CXUj4ZWA78qZpty3tx9hIeOrApfajQbKqkdG7dE5i0b-suGqDy4FmHVvwtTpwU"  />
+<img className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="Lebendiges, gehobenes Kindergarten-Spielzimmer mit Designer-Holzspielzeug und umweltfreundlichen Oberflächen in warmem, sonnigem Morgenlicht" src="/assets/images/6d6da8454564f75a5e2e.png"  />
 <div className="absolute inset-0 bg-linear-to-t from-surface-container-lowest via-surface-container-lowest/20 to-transparent"></div>
 <div className="absolute bottom-0 p-8 w-full">
 <span className="text-secondary font-bold text-4xl opacity-20 mb-2 block font-headline" >03</span>
@@ -128,7 +128,7 @@ export default function SpezialreinigungPage() {
 </div>
 {/*  Service 4  */}
 <div className="group relative aspect-4/5 overflow-hidden rounded-xl bg-surface-container-lowest transition-transform hover:-translate-y-2 duration-500 md:mt-12">
-<img className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="Nahaufnahme einer modernen Wolkenkratzer-Glasfassade, die einen blauen Himmel mit funkelnder Kristallklarheit widerspiegelt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbyDPekcWr72T3naGkyjUn8Ql2UZHStcoCsQPGgDTYfEVRuDHHwGilaCN0LB0NR34W0BDUwgC-hd-Ca-yuHCEhWqXK0jvO4E-3AEvA9PD-EIAXeUkNV39wTU-JB5vLvPxJxiRZWZvry84e6GS1t0ZaNgYjJFxONMDUlvQ5OsOgiscvXgRCu3FIP9-NumvX_UJo4jGUkuJzRa9vT15WJBTBFQm8MR1QwImCCWbIcWYpZEode0LDsDLAA2o3NcMkZNQIGcEOQWIlEZ4"  />
+<img className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="Nahaufnahme einer modernen Wolkenkratzer-Glasfassade, die einen blauen Himmel mit funkelnder Kristallklarheit widerspiegelt" src="/assets/images/fc42731b59c47ffbc240.png"  />
 <div className="absolute inset-0 bg-linear-to-t from-surface-container-lowest via-surface-container-lowest/20 to-transparent"></div>
 <div className="absolute bottom-0 p-8 w-full">
 <span className="text-secondary font-bold text-4xl opacity-20 mb-2 block font-headline" >04</span>
@@ -195,10 +195,11 @@ export default function SpezialreinigungPage() {
 {/*  Contact Form Section  */}
 <section className="py-24 bg-surface scroll-mt-24" id="contact">
 <div className="max-w-7xl mx-auto px-8">
+<p className="text-center text-sm font-semibold text-on-surface-variant mb-6">Dieses Formular ist für Reinigungsanfragen, nicht für Bewerbungen.</p>
 <div className="bg-surface-container-low rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
 <div className="lg:w-2/5 p-6 sm:p-12 lg:p-16 bg-primary text-on-primary">
-<h2 className="font-headline text-3xl font-extrabold mb-6" >Technisches Audit anfordern</h2>
-<p className="text-primary-fixed/80 mb-12" >Lassen Sie unsere Spezialisten den Hygienebedarf Ihrer Einrichtung bewerten. Wir erstellen einen individuellen Sanierungsplan für Ihre Anforderungen.</p>
+<h2 className="font-headline text-3xl font-extrabold mb-6" >Kostenlose Beratung zur Reinigung</h2>
+<p className="text-primary-fixed/80 mb-12" >Beschreiben Sie kurz Ihren Reinigungsbedarf. Beratung und Besichtigung sind kostenlos und unverbindlich. Ihr Preisangebot erhalten Sie nach der ersten Beratung.</p>
 <div className="space-y-8">
 <div className="flex items-center gap-4">
 <span className="material-symbols-outlined" >call</span>

@@ -101,7 +101,7 @@ export default function Leistungen() {
 
             <div className="relative h-[320px] lg:h-[500px] w-full rounded-[2rem] overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1200&auto=format&fit=crop"
+                src="/assets/images/54139156c16cf83fb2b9.jpg"
                 alt="Professional cleaner wiping glass"
                 fill
                 className="object-cover"
@@ -152,7 +152,7 @@ export default function Leistungen() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative h-[320px] lg:h-[450px] w-full rounded-[2rem] overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=1200&auto=format&fit=crop"
+                src="/assets/images/a02d51705e9f15d383d3.jpg"
                 alt="Cleaner wiping floor"
                 fill
                 className="object-cover"

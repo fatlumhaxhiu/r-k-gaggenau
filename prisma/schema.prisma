@@ -38,7 +38,11 @@ model Session {
 }
 
 model Lead {
+  request_id        String?   @unique @db.Uuid
+  request_hash      String?   @db.VarChar(64)
   id                String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  full_name         String?   @db.VarChar(255)
+  object_type       String?   @db.VarChar(100)
   first_name        String    @db.VarChar(100)
   last_name         String    @db.VarChar(100)
   email             String    @db.VarChar(255)
@@ -55,6 +59,10 @@ model Lead {
   lead_score        Int?      @default(0)
   responded_at      DateTime? @db.Timestamptz
   converted_at      DateTime? @db.Timestamptz
+  closed_at         DateTime? @db.Timestamptz
+  closure_reason    String?   @db.VarChar(500)
+  retention_hold_reason String? @db.VarChar(500)
+  retention_review_at DateTime? @db.Timestamptz
   created_at        DateTime? @default(now()) @db.Timestamptz
   updated_at        DateTime? @default(now()) @db.Timestamptz
 

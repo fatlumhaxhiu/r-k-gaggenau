@@ -10,7 +10,7 @@ export default function Kontakt() {
       {/* ... keeping sections as they are ... */}
       <section className="relative h-[380px] min-h-[380px] lg:h-[550px] w-full flex items-center justify-center">
         <Image 
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1920&auto=format&fit=crop"
+          src="/assets/images/79eb6725c9e41ac14641.jpg"
           alt="Modern corporate building interior"
           fill
           className="object-cover"
@@ -35,13 +35,15 @@ export default function Kontakt() {
       {/* 2. Overlapping Contact Details Box */}
       <section className="relative -mt-24 lg:-mt-32 z-20 pb-24">
         <div className="container mx-auto px-6 lg:px-12 max-w-[1100px]">
+          <p className="text-center text-sm font-semibold text-on-surface-variant mb-6">Dieses Formular ist für Reinigungsanfragen, nicht für Bewerbungen.</p>
           <div className="bg-background rounded-2xl shadow-2xl overflow-hidden border border-border/50 flex flex-col lg:flex-row">
             
             {/* Form Column */}
             <div className="flex-1 p-6 sm:p-10 lg:p-14">
               <h2 className="text-3xl font-heading font-bold text-foreground mb-10">
-                Beginnen Sie die Transformation
+                Kostenlose Beratung zur Reinigung
               </h2>
+              <p className="text-muted-foreground mb-8 leading-relaxed">Beschreiben Sie kurz Ihren Reinigungsbedarf. Beratung und Besichtigung sind kostenlos und unverbindlich. Ihr Preisangebot erhalten Sie nach der ersten Beratung.</p>
               <ContactForm />
             </div>
 
@@ -88,7 +90,7 @@ export default function Kontakt() {
               {/* Map Image container */}
               <div className="h-[250px] relative mt-auto border-t border-border/40 saturate-0 opacity-80 hover:saturate-100 hover:opacity-100 transition-all duration-700">
                 <Image
-                  src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=800&auto=format&fit=crop"
+                  src="/assets/images/762d4d1665beaf55a193.jpg"
                   alt="City map layout"
                   fill
                   className="object-cover"
@@ -108,7 +110,7 @@ export default function Kontakt() {
             <div className="relative">
               <div className="relative h-[400px] lg:h-[650px] w-full max-w-md rounded-[1.5rem] overflow-hidden shadow-xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800&auto=format&fit=crop"
+                  src="/assets/images/88ccf8979f40ce7e5562.jpg"
                   alt="Cleaning professional focused on work"
                   fill
                   className="object-cover"

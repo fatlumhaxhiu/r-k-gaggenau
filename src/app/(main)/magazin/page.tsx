@@ -1,7 +1,5 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 
@@ -143,34 +141,6 @@ export default async function Magazin() {
                 </p>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Curated Precision Newsletter Box */}
-      <section className="pb-32">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="bg-linear-to-r from-green-50 to-primary/10 rounded-[2rem] p-12 lg:p-20 relative overflow-hidden flex flex-col lg:flex-row items-center gap-12">
-            
-            <div className="flex-1 max-w-xl z-10">
-              <h2 className="font-heading text-3xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
-                Kuratierte Präzision.
-              </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Werden Sie Teil unserer Community für monatliche Updates zu Umweltschutz, High-End-Design und Lifestyle-Ergonomie.
-              </p>
-            </div>
-
-            <div className="w-full lg:w-auto flex-1 z-10 flex border border-border/40 p-2 bg-background/50 backdrop-blur-md rounded-lg shadow-sm">
-              <Input 
-                placeholder="email@adresse.de" 
-                className="flex-1 h-12 bg-transparent border-none outline-none focus-visible:ring-0 px-4 placeholder:text-muted-foreground shadow-none" 
-              />
-              <Button className="h-12 px-8 bg-[#151515] hover:bg-black text-white rounded-md shadow-lg shadow-black/10">
-                ABONNIEREN
-              </Button>
-            </div>
-            
           </div>
         </div>
       </section>

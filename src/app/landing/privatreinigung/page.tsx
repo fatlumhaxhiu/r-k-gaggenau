@@ -5,7 +5,7 @@ import LeadForm from "@/components/LeadForm";
 export default function PrivatreinigungPage() {
   return (
     <>
-      
+
 {/*  TopNavBar  */}
 <nav className="docked full-width top-0 sticky z-50 bg-emerald-50/80 dark:bg-stone-900/80 backdrop-blur-xl no-border tonal-shift">
 <div className="flex justify-between items-center w-full px-4 sm:px-8 py-4 max-w-7xl mx-auto">
@@ -28,7 +28,7 @@ export default function PrivatreinigungPage() {
 {/*  Hero Section  */}
 <section className="relative min-h-svh flex items-center overflow-hidden">
 <div className="absolute inset-0 z-0">
-<img className="w-full h-full object-cover grayscale-20 brightness-90" data-alt="Luxurious modern minimalist living room with floor-to-ceiling windows, natural wood accents, and pristine white surfaces in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIrQyfr4B6vnQ97uepnUgFiA1jXL10Ydu9ARmZm6xpyaGDQm59YTkjEEW_RICkx1oLuqR_TqwZA8VCjk7VJAYvyUSTsQpYU26afhCBGaZyQF4iLfN1vahJ8RoXtYGjGbVsqaM1EUuXMkIxpisdRzw4-F9HNiQSFCOGaFbBfAkRzTMRqRNt3gXzF3TnXpsc4QNzBIswXEVfTQsjeJmCJkhLii1pYfp-V5Kx_67JVM6AHy71bWGJ_V-NKTOKotHgQ1LtIC3_KEkYBsI"  />
+<img className="w-full h-full object-cover grayscale-20 brightness-90" data-alt="Luxurious modern minimalist living room with floor-to-ceiling windows, natural wood accents, and pristine white surfaces in soft morning light" src="/assets/images/9037a60f184fb299f1c0.png"  />
 <div className="absolute inset-0 bg-linear-to-r from-surface via-surface/40 to-transparent"></div>
 </div>
 <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 w-full">
@@ -137,7 +137,7 @@ export default function PrivatreinigungPage() {
 </div>
 </div>
 <div className="w-full md:col-span-2 rounded-xl overflow-hidden h-[300px] min-w-0">
-<img className="w-full h-full object-cover" data-alt="Close-up of a professional cleaner's gloved hand dusting a minimalist sculpture with extreme care and focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3SiLMZgWiw7731x8qMCTp9d0G7TS-YDg5QFKWxIu19kQ0K5txTCKwmL9Lmh1g1in36_EqNqIgWSsbcIStzLP4LkNNoKpPNHjVc9C-QLIu9tf3_5KXx-9t2ve60ZCd4euSxO42od6XH316tIfnn5_54ZtnrzcVdm2HjKzGz92SghHxgVKXsFVU7O6MBg14gzhdaOTm4TEAFIwtKsVEjpfAgfLppzxjzaGI1Q3En10s0kKRGytmwx-bL3DNVvsv2qYWsr8gJrsGDYo"  />
+<img className="w-full h-full object-cover" data-alt="Close-up of a professional cleaner's gloved hand dusting a minimalist sculpture with extreme care and focus" src="/assets/images/16b3fe4514e67f80fafc.png"  />
 </div>
 </div>
 </div>
@@ -160,11 +160,11 @@ export default function PrivatreinigungPage() {
 </div>
 <div className="flex flex-col md:grid md:grid-cols-2 gap-12 w-full">
 <blockquote className="border-l-2 border-primary pl-8 py-4" >
-<p className="text-lg sm:text-2xl font-body italic mb-6 leading-relaxed" >"Die Liebe zum Detail ist unübertroffen. Das Haus ist nicht nur sauber; es fühlt sich kuratiert an. R&amp;K-Gaggenau bringt jede Woche ein Hotel-Luxus-Gefühl in unser Heim."</p>
+<p className="text-lg sm:text-2xl font-body italic mb-6 leading-relaxed" >&quot;Die Liebe zum Detail ist unübertroffen. Das Haus ist nicht nur sauber; es fühlt sich kuratiert an. R&amp;K-Gaggenau bringt jede Woche ein Hotel-Luxus-Gefühl in unser Heim.&quot;</p>
 <cite className="font-headline font-bold not-italic">— Eleanor Vance, <span className="font-normal text-white/50" >Privatbesitzerin</span></cite>
 </blockquote>
 <blockquote className="border-l-2 border-primary pl-8 py-4" >
-<p className="text-lg sm:text-2xl font-body italic mb-6 leading-relaxed" >"Der Umzug in ein neues Penthouse verlief reibungslos. Ihr Einzugsteam war unsichtbar und doch gründlich und hinterließ den Raum in Showroom-Zustand."</p>
+<p className="text-lg sm:text-2xl font-body italic mb-6 leading-relaxed" >&quot;Der Umzug in ein neues Penthouse verlief reibungslos. Ihr Einzugsteam war unsichtbar und doch gründlich und hinterließ den Raum in Showroom-Zustand.&quot;</p>
 <cite className="font-headline font-bold not-italic">— Julian Thorne, <span className="font-normal text-white/50" >Projektentwickler</span></cite>
 </blockquote>
 </div>
@@ -173,30 +173,28 @@ export default function PrivatreinigungPage() {
 {/*  Contact Form & Booking  */}
 <section className="py-24 bg-surface scroll-mt-24" id="contact">
   <div className="w-full max-w-7xl mx-auto px-4 md:px-8">
+<p className="text-center text-sm font-semibold text-on-surface-variant mb-6">Dieses Formular ist für Reinigungsanfragen, nicht für Bewerbungen.</p>
     <div className="bg-surface-container-lowest rounded-[2rem] shadow-2xl overflow-hidden flex flex-col md:flex-row w-full border border-outline-variant/20">
-      
+
       {/* Left Column - Form */}
       <div className="w-full md:w-1/2 p-6 sm:p-10 md:p-14 flex flex-col justify-center">
-        <h2 className="font-headline text-3xl md:text-5xl font-extrabold tracking-tighter mb-6 text-on-surface">
-          Erleben Sie den <span className="text-primary">Gaggenau Unterschied</span>
-        </h2>
-        <p className="text-on-surface-variant mb-12 text-lg leading-relaxed">
-          Geben Sie Ihre Daten an und unser Concierge wird Sie kontaktieren, um einen maßgeschneiderten Reinigungsplan für Ihre Residenz zu besprechen.
-        </p>
-        
-        <LeadForm serviceName="Privatreinigung" />
+        <h2 className="font-headline text-3xl md:text-5xl font-extrabold tracking-tighter mb-6 text-on-surface">Kostenlose Beratung zur Reinigung</h2>
+        <p className="text-on-surface-variant mb-12 text-lg leading-relaxed">Beschreiben Sie kurz Ihren Reinigungsbedarf. Beratung und Besichtigung sind kostenlos und unverbindlich. Ihr Preisangebot erhalten Sie nach der ersten Beratung.</p>
+
+
+<LeadForm serviceName="Privatreinigung" />
       </div>
 
       {/* Right Column - Image */}
       <div className="w-full md:w-1/2 relative min-h-[500px] md:min-h-0 hidden md:block">
-        <img 
-          className="absolute inset-0 w-full h-full object-cover" 
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWQhHCerv4vsaveG2ev5-VphwwDwGwyLYHqMw8EshvKr7J-bDsX_gwXDIk9RoBK_9I9Zio470zKU_tOQeTKa2fnYCdQD0XTrg-uHmmv2UUteNu7iwz8Ajl4Cvw_oS_eD8gDBOLNmriY2QC5RjB6MKOti9pX8z2onQEBEJ2mpJLpOrFhKnaST8lGNnVmGeRwusiQKpKOTMEE1_AjhI7LdR73rwcR_hZ7-dldpU1rSa64FduDfhEhQ5Y0wHiGTA6XZup8PcOd-T7V-I" 
-          alt="Interior clean hallway" 
+        <img
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/assets/images/408c90b3a3012e5369fe.png"
+          alt="Interior clean hallway"
         />
         {/* Gradient Overlay for text readability */}
         <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
-        
+
         {/* Quote Overlay */}
         <div className="absolute bottom-0 left-0 right-0 p-12 text-white">
           <div className="flex gap-1 mb-6 text-amber-500">

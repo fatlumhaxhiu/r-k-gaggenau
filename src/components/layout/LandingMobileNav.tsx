@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+
+const subscribeToMount = () => () => {};
 
 const links = [
   { name: "Gewerblich", href: "/landing/gewerbereinigung" },
@@ -21,12 +23,8 @@ interface LandingMobileNavProps {
 
 export default function LandingMobileNav({ activePath }: LandingMobileNavProps) {
   const [open, setOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  // Mount after hydration so createPortal works
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // The server and first hydration render omit the portal; it appears after hydration.
+  const mounted = useSyncExternalStore(subscribeToMount, () => true, () => false);
 
   // Lock body scroll when drawer is open
   useEffect(() => {

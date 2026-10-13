@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
-import MarketingAttributionTracker from "@/components/MarketingAttributionTracker";
+import ConsentManager from "@/components/ConsentManager";
 import "./globals.css";
 
 
@@ -47,26 +46,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Local development never sends telemetry unless explicitly opted into a controlled test.
+  const localReview = process.env.NODE_ENV !== "production" &&
+    (process.env.RK_LOCAL_ENABLE_TRACKING !== "1" || process.env.RK_LOCAL_DISABLE_TRACKING === "1");
   return (
     <html lang="de" suppressHydrationWarning>
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-        {/* Google tag (gtag.js) – Google Ads AW-18267690559 */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18267690559"
-          strategy="afterInteractive"
-        />
-        <Script id="google-ads-gtag" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-18267690559');
-          `}
-        </Script>
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col font-sans overflow-x-hidden`}>
-        <MarketingAttributionTracker />
+        <ConsentManager trackingEnabled={!localReview} />
         {children}
       </body>
     </html>

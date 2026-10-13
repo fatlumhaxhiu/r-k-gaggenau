@@ -5,7 +5,7 @@ import LeadForm from "@/components/LeadForm";
 export default function BaureinigungPage() {
   return (
     <>
-      
+
 {/*  TopNavBar  */}
 <nav className="bg-emerald-50/80 dark:bg-stone-900/80 backdrop-blur-xl docked full-width top-0 sticky z-50 tonal-shift">
 <div className="flex justify-between items-center w-full px-4 sm:px-8 py-4 max-w-7xl mx-auto">
@@ -50,7 +50,7 @@ export default function BaureinigungPage() {
 </div>
 <div className="hidden md:block col-span-5 relative h-full min-h-[600px]">
 <div className="absolute inset-0 bg-primary/5 rounded-[2rem] -rotate-3 translate-x-4 translate-y-4"></div>
-<img alt="Pristine modern architectural space" className="absolute inset-0 w-full h-full object-cover rounded-[2rem] shadow-2xl z-10 grayscale hover:grayscale-0 transition-all duration-700" data-alt="Modern architectural interior with clean lines and large windows, reflecting sunlight on a perfectly polished concrete floor in a minimalist building." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFWug9_ZaFrLm9zUDJogRVW6sYx4y4GXbZ3P-K-8dbKj6wsOtsOSsoSojD2QpUUht_3Z6NrwGubgLPl9ZHNcJwEQ1TM_Mlco9WxjqAVjuZpQorSyB8Q_o1PoEc-bnhS482Te5C7Kpq3yHixqxdT7OqkxDgocdTJcNNz8LqVli4rTTFSAD4BMYz4XhUlmpSBl4z7eBAJhwIazhYGJdjDHPJqKropI-DLbTczEwAEl8OaybOYkcKyw-_i5GalzLwAdVNggr5eyvsTrc"  />
+<img alt="Pristine modern architectural space" className="absolute inset-0 w-full h-full object-cover rounded-[2rem] shadow-2xl z-10 grayscale hover:grayscale-0 transition-all duration-700" data-alt="Modern architectural interior with clean lines and large windows, reflecting sunlight on a perfectly polished concrete floor in a minimalist building." src="/assets/images/26c19a0843036f547ac3.png"  />
 </div>
 </div>
 {/*  Decorative Element  */}
@@ -116,7 +116,7 @@ export default function BaureinigungPage() {
 </ul>
 </div>
 <div className="md:w-1/2 w-full h-64 relative rounded-2xl overflow-hidden">
-<img alt="Construction site interior" className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0" data-alt="Interior of a large modern construction site with professional grade cleaning equipment and a clear, dust-free atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByKR5klSRWgLM8jki43aT-sIwsqi_jUkqPNq7PmLIiKwqv9uuM_-OtysVo3ldRfWNnUZ0JTH1t52B63RHd7RwdkYmwZHvwZ13fpAIo7utuRHrvx8T5p8lEiHiDriEbOGx4tOTjF_9yLc7p3xBtY1h_6U_mvUnIZy2UKyy8nRLYdT5VCpAsaLYGKxXsIQHQH1X96WyDqACORTT_QHspJhmDn0umpuZzTqdSmkNjPjmQN5EtqGLlW7iP7MNyuS3hvqnQSL_k893-4-I"  />
+<img alt="Construction site interior" className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0" data-alt="Interior of a large modern construction site with professional grade cleaning equipment and a clear, dust-free atmosphere." src="/assets/images/407ad3b18fe4620ef79a.png"  />
 </div>
 </div>
 </div>
@@ -127,7 +127,7 @@ export default function BaureinigungPage() {
 <div className="max-w-7xl mx-auto px-8 relative">
 <div className="text-center mb-24">
 <h2 className="font-headline text-3xl md:text-6xl font-extrabold tracking-tight" >Auf Exzellenz programmiert</h2>
-<p className="mt-4 text-on-surface-variant max-w-2xl mx-auto italic" >"Präzision ist kein Zufall; sie ist unser Standard."</p>
+<p className="mt-4 text-on-surface-variant max-w-2xl mx-auto italic" >&quot;Präzision ist kein Zufall; sie ist unser Standard.&quot;</p>
 </div>
 <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
 {/*  Feature 1  */}
@@ -194,8 +194,10 @@ export default function BaureinigungPage() {
 <section className="py-32 bg-surface scroll-mt-24" id="contact">
 <div className="max-w-7xl mx-auto px-8 flex flex-col lg:grid lg:grid-cols-2 gap-16 items-center w-full">
 <div className="order-2 lg:order-1">
+<p className="text-center text-sm font-semibold text-on-surface-variant mb-6">Dieses Formular ist für Reinigungsanfragen, nicht für Bewerbungen.</p>
 <div className="bg-surface-container-lowest p-6 sm:p-10 rounded-[2rem] shadow-2xl shadow-primary/5">
-<h3 className="font-headline text-3xl font-bold mb-8" >Angebot anfordern</h3>
+<h3 className="font-headline text-3xl font-bold mb-8" >Kostenlose Beratung zur Reinigung</h3>
+<p className="text-on-surface-variant mb-8 leading-relaxed">Beschreiben Sie kurz Ihren Reinigungsbedarf. Beratung und Besichtigung sind kostenlos und unverbindlich. Ihr Preisangebot erhalten Sie nach der ersten Beratung.</p>
 <LeadForm serviceName="Baureinigung" />
 </div>
 </div>

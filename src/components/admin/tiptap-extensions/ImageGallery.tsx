@@ -1,5 +1,5 @@
 import { Node, mergeAttributes } from '@tiptap/core'
-import { ReactNodeViewRenderer, NodeViewWrapper } from '@tiptap/react'
+import { ReactNodeViewRenderer, NodeViewWrapper, type NodeViewProps } from '@tiptap/react'
 
 export const ImageGalleryBox = Node.create({
   name: 'imageGalleryBox',
@@ -50,7 +50,7 @@ export const ImageGalleryBox = Node.create({
   },
 })
 
-const ImageGalleryBoxComponent = (props: any) => {
+const ImageGalleryBoxComponent = (props: NodeViewProps) => {
   const images: string[] = props.node.attrs.images || []
   
   return (
