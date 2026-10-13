@@ -55,9 +55,11 @@ export function syncMetaTracking() {
     script.src = "https://connect.facebook.net/en_US/fbevents.js"
     document.head.appendChild(script)
   }
-  if (lastPage !== location.href) {
+  // Scrolling to an approved form anchor is still the same page visit.
+  const page = location.origin + location.pathname + location.search
+  if (lastPage !== page) {
     w.fbq?.("trackSingle", META_PIXEL_ID, "PageView")
-    lastPage = location.href
+    lastPage = page
   }
 }
 

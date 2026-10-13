@@ -20,6 +20,10 @@ function command(...args: unknown[]) {
   w.gtag?.(...args)
 }
 
+function measuredReferrer() {
+  try { return document.referrer ? new URL(document.referrer).origin : "" } catch { return "" }
+}
+
 function measuredUrl() {
   const url = new URL(location.origin + location.pathname)
   const params = new URLSearchParams(location.search)
@@ -62,8 +66,7 @@ export function syncTracking() {
     ad_personalization: consent.marketing ? "granted" : "denied",
   })
   const page = measuredUrl()
-  let referrer = ""
-  try { referrer = document.referrer ? new URL(document.referrer).origin : "" } catch { /* Invalid referrer. */ }
+  const referrer = measuredReferrer()
   if (consent.analytics && !analyticsConfigured) {
     // Explicitly enabled local previews appear in DebugView; production never gets this flag.
     const debug = process.env.NODE_ENV === "development" && ["localhost", "127.0.0.1", "[::1]"].includes(location.hostname)
@@ -99,13 +102,14 @@ export async function trackSavedLead(eventId: unknown): Promise<void> {
     if (measured.has(eventId)) return
     try { if (sessionStorage.getItem(storageKey)) return } catch { /* In-memory deduplication still works. */ }
     syncTracking()
+    const pageContext = { page_location: measuredUrl(), page_referrer: measuredReferrer() }
     measured.add(eventId)
     try { sessionStorage.setItem(storageKey, "1") } catch { /* Storage is optional. */ }
     await new Promise<void>(resolve => {
       const timer = window.setTimeout(resolve, 1000)
       const done = () => { clearTimeout(timer); resolve() }
-      if (consent.analytics) command("event", "generate_lead", { send_to: GA4_ID, event_id: eventId, event_callback: done, event_timeout: 1000 })
-      if (consent.marketing && ADS_READY) command("event", "conversion", { send_to: ADS_SEND_TO, transaction_id: eventId, event_callback: done, event_timeout: 1000 })
+      if (consent.analytics) command("event", "generate_lead", { send_to: GA4_ID, event_id: eventId, ...pageContext, event_callback: done, event_timeout: 1000 })
+      if (consent.marketing && ADS_READY) command("event", "conversion", { send_to: ADS_SEND_TO, transaction_id: eventId, ...pageContext, event_callback: done, event_timeout: 1000 })
     })
   } catch { /* A measurement failure must never turn a saved lead into a failed form submission. */ }
 }
