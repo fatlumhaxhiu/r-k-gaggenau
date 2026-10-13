@@ -48,14 +48,14 @@ export default function ThankYouPage() {
         Wir haben Ihre Nachricht erhalten und melden uns innerhalb von{" "}
         <strong className="text-emerald-700">2 Werktagsstunden</strong> bei Ihnen.
       </p>
-      <p className="text-sm text-gray-400 max-w-xs mb-12">
-        Bitte überprüfen Sie auch Ihren Spam-Ordner, falls Sie keine E-Mail von uns erhalten.
+      <p className="text-sm text-gray-600 max-w-sm mb-12">
+        Wir kontaktieren Sie über die angegebenen Kontaktdaten. Eine automatische Eingangsbestätigung per E-Mail wird nicht versendet.
       </p>
 
       {/* Info cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl w-full mb-14">
         {[
-          { icon: "⏱️", label: "Schnelle Antwort", sub: "Innerhalb von 2 Stunden" },
+          { icon: "⏱️", label: "Schnelle Antwort", sub: "Innerhalb von 2 Werktagsstunden" },
           { icon: "📋", label: "Individuelle Beratung", sub: "Maßgeschneidertes Angebot" },
           { icon: "✅", label: "Kostenlos & Unverbindlich", sub: "Keine versteckten Kosten" },
         ].map(({ icon, label, sub }) => (
@@ -90,6 +90,10 @@ export default function ThankYouPage() {
         </svg>
       </Link>
 
+      <nav aria-label="Rechtliche Informationen" className="mt-4 flex gap-6 text-xs text-gray-600">
+        <Link href="/impressum" className="underline underline-offset-4">Impressum</Link>
+        <Link href="/datenschutz" className="underline underline-offset-4">Datenschutz</Link>
+      </nav>
       <p className="mt-10 text-xs text-gray-400">
         © {new Date().getFullYear()} R&K-Gaggenau – Professionelle Reinigung
       </p>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Sparkles, MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import Image from "next/image";
 
 export default function Footer() {
@@ -32,11 +32,11 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h4 className="font-heading font-semibold text-foreground tracking-tight">Leistungen</h4>
             <nav className="flex flex-col gap-3">
-              <Link href="/leistungen/privatreinigung" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privatreinigung</Link>
-              <Link href="/leistungen/gewerbereinigung" className="text-sm text-muted-foreground hover:text-primary transition-colors">Gewerbereinigung</Link>
-              <Link href="/leistungen/baureinigung" className="text-sm text-muted-foreground hover:text-primary transition-colors">Baureinigung</Link>
-              <Link href="/leistungen/spezialreinigung" className="text-sm text-muted-foreground hover:text-primary transition-colors">Spezialreinigung</Link>
-              <Link href="/leistungen/grundreinigung" className="text-sm text-muted-foreground hover:text-primary transition-colors">Grundreinigung</Link>
+              <Link href="/landing/privatreinigung" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privatreinigung</Link>
+              <Link href="/landing/gewerbereinigung" className="text-sm text-muted-foreground hover:text-primary transition-colors">Gewerbereinigung</Link>
+              <Link href="/landing/baureinigung" className="text-sm text-muted-foreground hover:text-primary transition-colors">Baureinigung</Link>
+              <Link href="/landing/spezialreinigung" className="text-sm text-muted-foreground hover:text-primary transition-colors">Spezialreinigung</Link>
+              <Link href="/landing/grundreinigung" className="text-sm text-muted-foreground hover:text-primary transition-colors">Grundreinigung</Link>
             </nav>
           </div>
 
@@ -46,7 +46,6 @@ export default function Footer() {
             <nav className="flex flex-col gap-3">
               <Link href="/uber-uns" className="text-sm text-muted-foreground hover:text-primary transition-colors">Über uns</Link>
               <Link href="/magazin" className="text-sm text-muted-foreground hover:text-primary transition-colors">Magazin</Link>
-              <Link href="/karriere" className="text-sm text-muted-foreground hover:text-primary transition-colors">Karriere</Link>
               <Link href="/kontakt" className="text-sm text-muted-foreground hover:text-primary transition-colors">Kontakt</Link>
             </nav>
           </div>
@@ -80,7 +79,6 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <Link href="/impressum" className="text-xs text-muted-foreground hover:text-primary transition-colors">Impressum</Link>
             <Link href="/datenschutz" className="text-xs text-muted-foreground hover:text-primary transition-colors">Datenschutz</Link>
-            <Link href="/agb" className="text-xs text-muted-foreground hover:text-primary transition-colors">AGB</Link>
           </div>
         </div>
       </div>
