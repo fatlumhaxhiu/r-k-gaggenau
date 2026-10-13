@@ -221,3 +221,73 @@ test('expired consent requests a new choice; blocked storage still allows reject
   await expect(page).toHaveURL(/\/thank-you$/)
   expect(await prisma.lead.count({where:{email}})).toBe(1)
 })
+
+// Mock only persistence here: these cases exercise the real landing CTA, form and Pixel queue.
+const metaLandingPages = [
+  { route: '/landing/baureinigung', service: 'Baureinigung', anchor: '#contact' },
+  { route: '/landing/gewerbereinigung', service: 'Gewerbereinigung', anchor: '#contact' },
+  { route: '/landing/grundreinigung', service: 'Grundreinigung', anchor: '#appointment' },
+  { route: '/landing/privatreinigung', service: 'Privatreinigung', anchor: '#contact' },
+  { route: '/landing/saisonale-pflege', service: 'Saisonale Pflege', anchor: '#contact' },
+  { route: '/landing/spezialreinigung', service: 'Spezialreinigung', anchor: '#contact' },
+]
+
+for (const [index, landing] of metaLandingPages.entries()) {
+  for (const mobile of (landing.service === 'Grundreinigung' ? [false, true] : [false])) {
+  test(`Meta landing CTA sends one opaque Lead ${landing.route}${mobile ? ' mobile menu' : ''}`, async ({ page }) => {
+    const eventId = 'a'.repeat(63) + index.toString(16)
+    const email = `test-meta-anchor-${index}@example.invalid`
+    let submitted: Record<string, unknown> | undefined
+    await page.route('**/api/leads', async route => {
+      submitted = route.request().postDataJSON() as Record<string, unknown>
+      await route.fulfill({ status: 201, json: { ok: true, event_id: eventId } })
+    })
+    if (mobile) await page.setViewportSize({ width: 390, height: 844 })
+    await page.goto(landing.route)
+    await page.getByRole('checkbox', { name: 'Marketing (Google Ads und Meta)', exact: true }).check()
+    await page.getByRole('button', { name: 'Auswahl speichern', exact: true }).click()
+    await expect(page.locator('#rk-meta-pixel')).toHaveCount(1)
+    if (mobile) {
+      await page.getByRole('button', { name: 'Menü öffnen', exact: true }).click()
+      await page.getByRole('dialog', { name: 'Navigationsmenü', exact: true }).getByRole('link', { name: 'Jetzt buchen', exact: true }).click()
+    } else {
+      await page.locator(`a[href="${landing.anchor}"]`).first().click()
+    }
+    await expect(page.locator(landing.anchor)).toBeInViewport()
+    await expect(page).toHaveURL(new RegExp(`${landing.anchor}$`))
+    const form = page.locator('form')
+    await expect(form.locator('[name=service_requested]')).toHaveValue(landing.service)
+    await form.locator('[name=full_name]').fill('TEST Meta Anchor')
+    await form.locator('[name=object_type]').selectOption({ label: 'Wohnung / Haus' })
+    await form.locator('[name=email]').fill(email)
+    await form.locator('[name=phone]').fill('+49 000000')
+    await form.locator('[name=city]').fill('Gaggenau')
+    await form.getByRole('button', { name: 'Kostenlose Beratung anfragen', exact: true }).click()
+    await expect(page).toHaveURL(/\/thank-you$/)
+    expect(submitted).toMatchObject({ source_page: landing.route, service_requested: landing.service })
+    const rows = await metaEvents(page)
+    expect(rows.filter(row => row[2] === 'Lead')).toEqual([
+      ['trackSingle', '1408138801461432', 'Lead', {}, { eventID: eventId }],
+    ])
+    expect(JSON.stringify(rows)).not.toContain(email)
+    expect(JSON.stringify(rows)).not.toContain('TEST Meta Anchor')
+    await page.reload()
+    expect((await metaEvents(page)).filter(row => row[2] === 'Lead')).toEqual([])
+  })
+  }
+}
+
+for (const route of [
+  '/landing/gewerbereinigung#private@example.invalid',
+  '/landing/gewerbereinigung#appointment',
+  '/landing/gewerbereinigung?email=private@example.invalid#contact',
+  '/kontakt#contact',
+]) {
+  test(`Meta landing guard rejects unreviewed URL ${route}`, async ({ page }) => {
+    await page.goto(route)
+    await page.getByRole('checkbox', { name: 'Marketing (Google Ads und Meta)', exact: true }).check()
+    await page.getByRole('button', { name: 'Auswahl speichern', exact: true }).click()
+    await expect(page.locator('#rk-meta-pixel')).toHaveCount(0)
+    expect(await metaEvents(page)).toEqual([])
+  })
+}

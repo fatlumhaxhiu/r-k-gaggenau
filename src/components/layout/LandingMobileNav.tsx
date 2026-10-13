@@ -19,9 +19,10 @@ const links = [
 interface LandingMobileNavProps {
   /** The href of the currently active link, to highlight it */
   activePath: string;
+  contactHref?: "#contact" | "#appointment";
 }
 
-export default function LandingMobileNav({ activePath }: LandingMobileNavProps) {
+export default function LandingMobileNav({ activePath, contactHref = "#contact" }: LandingMobileNavProps) {
   const [open, setOpen] = useState(false);
   // The server and first hydration render omit the portal; it appears after hydration.
   const mounted = useSyncExternalStore(subscribeToMount, () => true, () => false);
@@ -152,7 +153,7 @@ export default function LandingMobileNav({ activePath }: LandingMobileNavProps) 
           borderTop: "1px solid #e5e7eb",
         }}>
           <Link
-            href="#contact"
+            href={contactHref}
             onClick={() => setOpen(false)}
             style={{
               display: "flex",

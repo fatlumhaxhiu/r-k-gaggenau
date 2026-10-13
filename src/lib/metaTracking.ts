@@ -15,7 +15,10 @@ const measured = new Set<string>()
 function safeUrl(value: string, ownPage: boolean) {
   try {
     const url = new URL(value)
-    if (url.hash) return false
+    // Only the fixed form anchors on reviewed landing pages may reach the SDK.
+    const formAnchor = url.pathname.replace(/\/$/, "") === "/landing/grundreinigung" ? "#appointment"
+      : /^\/landing\/(baureinigung|gewerbereinigung|privatreinigung|saisonale-pflege|spezialreinigung)\/?$/.test(url.pathname) ? "#contact" : ""
+    if (url.hash && (url.origin !== location.origin || url.hash !== formAnchor)) return false
     if (ownPage && !/^\/(|kontakt|leistungen|uber-uns|datenschutz|impressum|thank-you|landing\/(baureinigung|gewerbereinigung|grundreinigung|privatreinigung|saisonale-pflege|spezialreinigung))\/?$/.test(url.pathname)) return false
     if (!ownPage && url.pathname !== "/" && url.origin !== location.origin) return false
     if (!ownPage && url.origin === location.origin && !safeUrl(value, true)) return false
