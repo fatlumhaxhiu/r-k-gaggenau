@@ -21,7 +21,7 @@ const landingPages = [
   ['/landing/spezialreinigung', '#contact'],
 ];
 const routes = [...landingPages.map(([route]) => route), '/kontakt'];
-const compiled = new Map(['consent', 'metaTracking', 'tracking', 'leadRequest'].map(name => [
+const compiled = new Map(['consent', 'trackingContext', 'enhancedConversions', 'metaTracking', 'tracking', 'leadRequest'].map(name => [
   name,
   ts.transpileModule(readFileSync(resolve(__dirname, `../src/lib/${name}.ts`), 'utf8'), {
     compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 },
@@ -50,18 +50,18 @@ function harness({
   }
   const localStorage = storage();
   localStorage.setItem('rk_consent_v1', JSON.stringify({
-    version: 2, analytics, marketing, savedAt: Date.now(),
+    version: 3, analytics, marketing, savedAt: Date.now(),
   }));
   const scripts = [];
   const context = vm.createContext({
-    URL, URLSearchParams, Date, Set, crypto: webcrypto, location, localStorage,
+    URL, URLSearchParams, Date, Set, TextEncoder, crypto: webcrypto, location, localStorage,
     sessionStorage: storage(session), clearTimeout,
     process: { env: {
       NODE_ENV: 'production', NEXT_PUBLIC_META_PIXEL_ENABLED: '1',
       NEXT_PUBLIC_GOOGLE_ADS_LEAD_SEND_TO: adsDestination,
     } },
     document: {
-      referrer,
+      referrer, cookie: '',
       getElementById: id => scripts.find(script => script.id === id),
       createElement: () => ({}),
       head: { appendChild: script => scripts.push(script) },
@@ -237,4 +237,3 @@ test('real request preparation preserves retry ID and gives edited request a fre
   assert.notEqual(edited.key, first.key);
   assert.match(edited.key, /^[a-f0-9-]{36}$/);
 });
-

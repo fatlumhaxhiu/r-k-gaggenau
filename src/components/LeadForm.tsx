@@ -4,6 +4,7 @@ import { useRef, useState } from "react"
 import PrivacyNotice from "./PrivacyNotice"
 import { prepareLeadRequest, type PendingLeadRequest } from "@/lib/leadRequest"
 import { trackSavedLead } from "@/lib/tracking"
+import { buildTrackingContext } from "@/lib/trackingContext"
 import CleaningRequestFields from "./CleaningRequestFields"
 import { useRouter } from "next/navigation"
 import { captureMarketingAttribution } from "@/lib/marketingAttribution"
@@ -42,12 +43,12 @@ export default function LeadForm({ serviceName }: LeadFormProps) {
     void fetch("/api/leads", {
       method: "POST",
       headers: { "Content-Type": "application/json", "Idempotency-Key": pending.current.key },
-      body: pending.current.body,
+      body: JSON.stringify({ ...JSON.parse(pending.current.body), tracking: buildTrackingContext() }),
     })
       .then(async (res) => {
         if (res.ok) {
           const result = await res.json().catch(() => null)
-          await trackSavedLead(result?.event_id)
+          await trackSavedLead(result?.event_id, { email: data.email, phone: data.phone })
           pending.current = null
           router.push("/thank-you")
           form.reset()

@@ -1,9 +1,12 @@
-import { NextResponse } from "next/server"
+import { after, NextResponse } from "next/server"
 import { prisma } from "@/lib/prisma"
 import { revalidatePath } from "next/cache"
 import { auth } from "@/auth"
 import { createHash } from "node:crypto"
 import { Prisma } from "@prisma/client"
+import { buildMetaLeadEvent } from "@/lib/metaConversions"
+import { consumeTrackingJson, isSameOriginTrackingRequest, parseTrackingContext, requestMetaClient } from "@/lib/trackingRequest"
+import { drainTrackingOutbox, enqueueTrackingEvent, metaCapiConfigured } from "@/lib/trackingOutbox"
 
 const MARKETING_CHANNELS = new Set(["Google Ads", "Facebook Ads", "Organik", "Direkt / Unbekannt"])
 
@@ -14,7 +17,8 @@ function cleanText(value: unknown, maxLength: number): string {
 // Krijimi i një Lead-i të ri (publik, pa kërkuar auth)
 export async function POST(req: Request) {
   try {
-    const body = await req.json().catch(() => null)
+    const parsed = await consumeTrackingJson(req, 32768)
+    const body = parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed as Record<string, unknown> : null
     
     if (!body) {
       return NextResponse.json({ error: "Invalid JSON" }, { status: 400 })
@@ -83,6 +87,24 @@ export async function POST(req: Request) {
 
     // Kthejmë një përgjigje minimale për të shmangur çdo gabim serializimi
     const eventId = createHash("sha256").update(`lead:${lead.id}`).digest("hex")
+    // Tracking metadata is excluded from the business fingerprint and never added to CRM fields.
+    // A delivery failure must not change the successful saved enquiry response.
+    try {
+      if (metaCapiConfigured() && isSameOriginTrackingRequest(req)) {
+        const tracking = parseTrackingContext(body.tracking)
+        if (tracking) {
+          const event = buildMetaLeadEvent({
+            eventId, sourceUrl: `https://rk-gaggenau.de${data.source_page}`, consent: tracking.consent,
+            eventTime: Math.floor((lead.created_at?.getTime() ?? Date.now()) / 1000),
+            fbp: tracking.fbp, fbc: tracking.fbc, ...requestMetaClient(req),
+          })
+          if (event) {
+            const result = await enqueueTrackingEvent(event, tracking)
+            if (result.queued) after(async () => { try { await drainTrackingOutbox({ limit: 1, eventId }) } catch { /* Delivery cannot disrupt a saved enquiry. */ } })
+          }
+        }
+      }
+    } catch { /* Measurement stays optional; the lead is already saved. */ }
     return NextResponse.json({ ok: true, event_id: eventId }, { status: 201 })
   } catch (error) {
     console.error("Error in POST /api/leads:", error)

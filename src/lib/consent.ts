@@ -1,5 +1,5 @@
 export const CONSENT_KEY = "rk_consent_v1"
-export type Consent = { analytics: boolean; marketing: boolean; savedAt: number; version: 2 }
+export type Consent = { analytics: boolean; marketing: boolean; savedAt: number; version: 3 }
 const MAX_AGE = 180 * 24 * 60 * 60 * 1000
 let current: Consent | null | undefined
 
@@ -7,7 +7,7 @@ export function readConsent(): Consent | null {
   if (typeof window === "undefined") return null
   try {
     const value = JSON.parse(localStorage.getItem(CONSENT_KEY) || "null")
-    if (value?.version === 2 && typeof value.analytics === "boolean" && typeof value.marketing === "boolean" &&
+    if (value?.version === 3 && typeof value.analytics === "boolean" && typeof value.marketing === "boolean" &&
         typeof value.savedAt === "number" && value.savedAt <= Date.now() && Date.now() - value.savedAt < MAX_AGE) {
       current = value
       return value
@@ -21,7 +21,7 @@ export function readConsent(): Consent | null {
 }
 
 export function saveConsent(analytics: boolean, marketing: boolean): Consent {
-  current = { analytics, marketing, savedAt: Date.now(), version: 2 }
+  current = { analytics, marketing, savedAt: Date.now(), version: 3 }
   try { localStorage.setItem(CONSENT_KEY, JSON.stringify(current)) } catch { /* In-memory choice for this visit. */ }
   return current
 }
