@@ -15,7 +15,7 @@ const contact = { email: ' TEST.User@Gmail.COM ', phone: '+49 (1577) 679-0522' }
 const expectedHashes = { sha256_email_address: sha('testuser@gmail.com'), sha256_phone_number: sha('+4915776790522') };
 const id = 'e'.repeat(64);
 
-function harness({ url = origin + '/kontakt', analytics = true, marketing = true, version = 3, savedAt = Date.now(), session = new Map(), cookie = '', gtm = 'GTM-SYNTHETIC123', capi = false, manualTimers = false, networkFailures = 0, blockStorage = false, cryptoOverride } = {}) {
+function harness({ url = origin + '/kontakt', analytics = true, marketing = true, version = 3, savedAt = Date.now(), session = new Map(), cookie = '', gtm = 'GTM-SYNTHETIC123', capi = false, manualTimers = false, networkFailures = 0, blockStorage = false, cryptoOverride, responseStatuses = [], onRequest } = {}) {
   let currentUrl = new URL(url), failures = networkFailures, clock = Date.now();
   class TimerDate extends Date {
     constructor(...args) { if (args.length) super(...args); else super(clock); }
@@ -48,7 +48,9 @@ function harness({ url = origin + '/kontakt', analytics = true, marketing = true
     fetch: async (endpoint, options) => {
       requests.push({ endpoint, ...options, body: JSON.parse(options.body) });
       if (failures-- > 0) throw new Error('Synthetic network failure');
-      return { ok: true, status: 202 };
+      onRequest?.();
+      const status = responseStatuses[requests.length - 1] ?? 202;
+      return { ok: status >= 200 && status < 300, status };
     },
   });
   const loaded = new Map();
@@ -363,4 +365,23 @@ test('granting Marketing after Statistik-only initializes Ads on the same clean 
   const navigated = app.events('rk_page_view')[2];
   assert.equal(navigated.analytics_consent, true); assert.equal(navigated.marketing_consent, true);
   assert.equal(app.meta('PageView').length, 2, 'A real subsequent navigation still counts.');
+});
+for (const [status, expectedAttempts] of [[200, 1], [400, 1], [403, 1], [429, 2], [500, 2], [503, 2]]) {
+  test(`browser CAPI response ${status} stays bounded at ${expectedAttempts} attempt(s) with the same event ID`, async () => {
+    const app = harness({ capi: true, cookie: `_fbp=fb.1.${Date.now()}.123456789`, responseStatuses: [status, status] });
+    app.tracking.syncTracking(); await tick();
+    const requests = app.requests.filter(request => request.endpoint === '/api/tracking/page-view');
+    assert.equal(requests.length, expectedAttempts);
+    assert.equal(app.meta('PageView').length, 1);
+    for (const request of requests) assert.equal(request.body.event_id, app.meta('PageView')[0][4].eventID);
+    if (expectedAttempts === 2) assert.deepEqual(requests[0].body, requests[1].body);
+  });
+}
+
+test('a transient browser CAPI failure cannot retry after Marketing is withdrawn', async () => {
+  let app;
+  app = harness({ capi: true, cookie: `_fbp=fb.1.${Date.now()}.123456789`, responseStatuses: [503], onRequest: () => app.setConsent(false, false) });
+  app.tracking.syncTracking(); await tick();
+  assert.equal(app.requests.filter(request => request.endpoint === '/api/tracking/page-view').length, 1);
+  assert.equal(app.meta('PageView').length, 1);
 });

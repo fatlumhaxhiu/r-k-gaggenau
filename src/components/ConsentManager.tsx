@@ -1,14 +1,15 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { usePathname } from "next/navigation"
-import { CONSENT_KEY, clearMarketingStorage, readConsent, saveConsent } from "@/lib/consent"
+import { CONSENT_KEY, clearMarketingStorage, readConsent, saveConsent, type Consent } from "@/lib/consent"
 import { configureTracking, privatePage, syncTracking, trackingStarted } from "@/lib/tracking"
 import { captureMarketingAttribution } from "@/lib/marketingAttribution"
 import { withdrawTrackingContext } from "@/lib/trackingContext"
 
 export default function ConsentManager({ trackingEnabled }: { trackingEnabled: boolean }) {
   const pathname = usePathname()
+  const appliedConsent = useRef<Consent | null>(null)
   const [open, setOpen] = useState(false)
   const [analytics, setAnalytics] = useState(false)
   const [marketing, setMarketing] = useState(false)
@@ -16,6 +17,7 @@ export default function ConsentManager({ trackingEnabled }: { trackingEnabled: b
   useEffect(() => {
     configureTracking(trackingEnabled)
     const consent = readConsent()
+    appliedConsent.current = consent
     // Cancel this tab's queued server events when its shared consent is no longer valid.
     if (!consent?.marketing) withdrawTrackingContext()
     if (privatePage()) {
@@ -33,8 +35,13 @@ export default function ConsentManager({ trackingEnabled }: { trackingEnabled: b
     syncTracking()
     function changedInAnotherTab(event: StorageEvent) {
       if (event.key !== CONSENT_KEY && event.key !== null) return
-      if (!readConsent()?.marketing) withdrawTrackingContext()
-      // A fresh document applies the other tab's choice before loading any tags.
+      const next = readConsent()
+      if (!next?.marketing) withdrawTrackingContext()
+      const previous = appliedConsent.current
+      appliedConsent.current = next
+      // Renewing the same choice must not reload every open tab and emit page views.
+      if (previous?.analytics === next?.analytics && previous?.marketing === next?.marketing) return
+      // A fresh document applies changed consent before loading any tags.
       location.reload()
     }
     window.addEventListener("storage", changedInAnotherTab)
@@ -51,7 +58,7 @@ export default function ConsentManager({ trackingEnabled }: { trackingEnabled: b
     const previous = readConsent()
     const withdrawing = (previous?.analytics && !allowAnalytics) || (previous?.marketing && !allowMarketing)
     if (previous?.marketing && !allowMarketing) withdrawTrackingContext()
-    saveConsent(allowAnalytics, allowMarketing)
+    appliedConsent.current = saveConsent(allowAnalytics, allowMarketing)
     setAnalytics(allowAnalytics)
     setMarketing(allowMarketing)
     setOpen(false)

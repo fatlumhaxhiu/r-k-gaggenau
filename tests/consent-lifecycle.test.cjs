@@ -18,7 +18,7 @@ const compiled = new Map([
   compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020, jsx: ts.JsxEmit.ReactJSX },
 }).outputText]))
 
-function harness({ consent = approved(), sessionId = randomUUID(), path = '/kontakt', loadedTracking = false } = {}) {
+function harness({ consent = approved(), sessionId = randomUUID(), path = '/kontakt', loadedTracking = false, showSettings = false } = {}) {
   const log = [], requests = [], effects = [], cleanups = [], timers = []
   const listeners = new Map()
   const localValues = new Map()
@@ -52,9 +52,11 @@ function harness({ consent = approved(), sessionId = randomUUID(), path = '/kont
     },
   })
   const modules = new Map()
+  let firstState = true
+  let rendered
   const jsx = (type, props) => ({ type, props })
   function load(name) {
-    if (name === 'react') return { useEffect: effect => effects.push(effect), useState: initial => [initial, () => {}] }
+    if (name === 'react') return { useEffect: effect => effects.push(effect), useState: initial => { const value = firstState && showSettings ? true : initial; firstState = false; return [value, () => {}] }, useRef: initial => ({ current: initial }) }
     if (name === 'react/jsx-runtime') return { jsx, jsxs: jsx, Fragment: 'Fragment' }
     if (name === 'next/navigation') return { usePathname: () => path }
     if (name === '@/lib/tracking') return {
@@ -74,11 +76,22 @@ function harness({ consent = approved(), sessionId = randomUUID(), path = '/kont
   return {
     log, requests, sessionValues, sessionId,
     mount: () => {
-      component({ trackingEnabled: true })
+      rendered = component({ trackingEnabled: true })
       for (const effect of effects.splice(0)) {
         const cleanup = effect()
         if (typeof cleanup === 'function') cleanups.push(cleanup)
       }
+    },
+    clickChoice: label => {
+      const visit = node => {
+        if (Array.isArray(node)) return node.map(visit).find(Boolean)
+        if (!node || typeof node !== 'object') return undefined
+        if (node.type === 'button' && node.props.children === label) return node
+        return visit(node.props?.children)
+      }
+      const button = visit(rendered)
+      assert(button, `Missing consent choice ${label}`)
+      button.props.onClick()
     },
     unmount: () => { for (const cleanup of cleanups.splice(0)) cleanup() },
     updateConsent: value => {
@@ -171,4 +184,77 @@ test('stale consent cancels the leftover session before a loaded-tracker private
   assertCancellation(app)
   assert.ok(app.log.indexOf('withdraw-request') < app.log.indexOf('reload'))
   assert.ok(!app.log.includes('sync'))
+})
+test('renewing the same consent in another tab does not reload or create another page visit', () => {
+  const app = harness({ consent: approved({ savedAt: Date.now() - 60000 }) })
+  app.mount()
+  app.updateConsent(approved())
+  app.storageEvent(consentKey)
+  assert.equal(app.requests.length, 0)
+  assert.ok(!app.log.includes('reload'), 'timestamp-only renewal must not reload loaded trackers')
+})
+
+test('withdrawal still cancels and reloads after a timestamp-only renewal', () => {
+  const app = harness({ consent: approved({ savedAt: Date.now() - 60000 }) })
+  app.mount()
+  app.updateConsent(approved())
+  app.storageEvent(consentKey)
+  app.updateConsent(approved({ marketing: false }))
+  app.storageEvent(consentKey)
+  assertCancellation(app)
+  assert.equal(app.log.filter(entry => entry === 'reload').length, 1)
+})
+test('a local grant updates the applied consent before a remote withdrawal', () => {
+  const app = harness({ consent: approved({ analytics: false, marketing: false }), sessionId: null, showSettings: true })
+  app.mount()
+  app.clickChoice('Alle akzeptieren')
+  app.log.length = 0
+  app.updateConsent(approved({ analytics: false, marketing: false }))
+  app.storageEvent(consentKey)
+  assert.ok(app.log.includes('reload'), 'a remote withdrawal must not compare against stale startup consent')
+})
+
+test('a remote grant reloads a tab whose effective consent was denied', () => {
+  const app = harness({ consent: approved({ analytics: false, marketing: false }), sessionId: null })
+  app.mount()
+  app.updateConsent(approved())
+  app.storageEvent(consentKey)
+  assert.ok(app.log.includes('reload'))
+})
+
+for (const [analytics, marketing] of [[false, false], [false, true], [true, false]]) {
+  test(`same-choice renewal avoids reload for analytics=${analytics}, marketing=${marketing}`, () => {
+    const app = harness({ consent: approved({ analytics, marketing, savedAt: Date.now() - 60000 }), sessionId: null })
+    app.mount()
+    app.updateConsent(approved({ analytics, marketing }))
+    app.storageEvent(consentKey)
+    assert.ok(!app.log.includes('reload'))
+    assert.equal(app.requests.length, 0)
+  })
+}
+test('a first explicit denial in another tab applies the stored choice even without optional tracking', () => {
+  const app = harness({ consent: null, sessionId: null })
+  app.mount()
+  app.updateConsent(approved({ analytics: false, marketing: false }))
+  app.storageEvent(consentKey)
+  assert.equal(app.requests.length, 0)
+  assert.ok(app.log.includes('reload'))
+})
+
+test('removing an existing denied choice reloads so the missing consent can be shown again', () => {
+  const app = harness({ consent: approved({ analytics: false, marketing: false }), sessionId: null })
+  app.mount()
+  app.updateConsent(null)
+  app.storageEvent(consentKey)
+  assert.equal(app.requests.length, 0)
+  assert.ok(app.log.includes('reload'))
+})
+
+test('a repeated missing-consent notification creates no session or request', () => {
+  const app = harness({ consent: null, sessionId: null })
+  app.mount()
+  app.storageEvent(null)
+  assert.equal(app.requests.length, 0)
+  assert.equal(app.sessionValues.size, 0)
+  assert.ok(!app.log.includes('reload'))
 })
